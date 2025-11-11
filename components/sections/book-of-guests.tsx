@@ -205,7 +205,7 @@ export function BookOfGuests() {
                       {/* Guest Info */}
                       <div className="flex-1 min-w-0">
                         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-3">
-                          <div className="flex-1">
+                          <div className="flex-1 pr-14 sm:pr-0">
                             <h4 className="font-sans text-base sm:text-lg md:text-xl font-semibold text-[#0A3428] mb-1 group-hover:text-[#106552] transition-colors duration-200">
                               {guest.Name}
                             </h4>
@@ -217,7 +217,7 @@ export function BookOfGuests() {
                             )}
                           </div>
                           {/* Guest count badge */}
-                          <div className="flex items-center gap-2">
+                          <div className="absolute right-3 top-3 sm:static sm:right-auto sm:top-auto flex items-center gap-1.5 sm:gap-2">
                             <User className="h-4 w-4 text-[#C3A161] flex-shrink-0" />
                             <span className="inline-flex items-center justify-center px-3 py-1 bg-[#C3A161]/10 text-[#106552] rounded-full text-xs sm:text-sm font-semibold border border-[#C3A161]/30">
                               {guest.Guest ? (parseInt(String(guest.Guest)) || 1) : 1} {parseInt(String(guest.Guest || '1')) === 1 ? 'guest' : 'guests'}

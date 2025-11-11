@@ -157,11 +157,11 @@ export function Hero() {
               }}
             >
               <span className="inline-block transform transition-all duration-700 hover:scale-105">
-                {siteConfig.couple.brideNickname}
+                {siteConfig.couple.groomNickname}
               </span>
               <span className="mx-2 sm:mx-3 md:mx-4 text-[#C3A161]">&</span>
               <span className="inline-block transform transition-all duration-700 hover:scale-105">
-                {siteConfig.couple.groomNickname}
+                {siteConfig.couple.brideNickname}
               </span>
             </h1>
             {/* Elegant divider */}

@@ -9,17 +9,17 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400", variable: "--font-serif" })
 
 export const metadata: Metadata = {
-  title: "Airez & Brendan - Wedding Invitation",
+  title: "Brendan & Airez - Wedding Invitation",
   description:
-    "You're invited to the wedding of Airez & Brendan! Join us on December 28, 2025 in Alta Guia, Taguig, Metro Manila. RSVP, read our love story, view our gallery, and leave a message for the couple.",
+    "You're invited to the wedding of Brendan & Airez! Join us on December 28, 2025 in Alta Guia, Taguig, Metro Manila. RSVP, read our love story, view our gallery, and leave a message for the couple.",
   keywords:
-    "Airez Brendan wedding, Filipino wedding, RSVP, wedding gallery, wedding message wall, wedding invitation, 2025 weddings, love story, guestbook, wedding registry, wedding details, wedding venues Alta Guia, Taguig, Metro Manila, #AirezAndBrendanWedding",
+    "Brendan Airez wedding, Filipino wedding, RSVP, wedding gallery, wedding message wall, wedding invitation, 2025 weddings, love story, guestbook, wedding registry, wedding details, wedding venues Alta Guia, Taguig, Metro Manila, #BrendanAndAirezWedding",
   authors: [
-    { name: "Airez" },
     { name: "Brendan" },
+    { name: "Airez" },
   ],
-  creator: "Airez & Brendan",
-  publisher: "Airez & Brendan",
+  creator: "Brendan & Airez",
+  publisher: "Brendan & Airez",
   formatDetection: {
     email: false,
     address: false,
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon_io/site.webmanifest",
   openGraph: {
-    title: "Airez & Brendan Wedding | December 28, 2025",
+    title: "Brendan & Airez Wedding | December 28, 2025",
     description:
-      "Celebrate the union of Airez & Brendan on December 28, 2025 in Alta Guia, Taguig, Metro Manila. Discover our love story, RSVP, view the gallery, and leave your wishes!",
+      "Celebrate the union of Brendan & Airez on December 28, 2025 in Alta Guia, Taguig, Metro Manila. Discover our love story, RSVP, view the gallery, and leave your wishes!",
     url: "https://Airez-and-Brendan-invitation.vercel.app/",
     siteName: "Airez and Brendan Wedding ",
     locale: "en_PH",
@@ -61,15 +61,15 @@ export const metadata: Metadata = {
         url: "https://Airez-and-Brendan-invitation.vercel.app/desktop-background/couple (1).jpg",
         width: 1200,
         height: 630,
-        alt: "Airez & Brendan Wedding Invitation - December 28, 2025",
+        alt: "Brendan & Airez Wedding Invitation - December 28, 2025",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Airez & Brendan Wedding Invitation",
+    title: "Brendan & Airez Wedding Invitation",
     description:
-      "You're invited to the wedding of Airez & Brendan! December 28, 2025. RSVP, view our gallery, and leave a message! #AirezAndBrendanWedding",
+      "You're invited to the wedding of Brendan & Airez! December 28, 2025. RSVP, view our gallery, and leave a message! #BrendanAndAirezWedding",
     images: ["https://Airez-and-Brendan-invitation.vercel.app/desktop-background/couple (1).jpg"],
     creator: "@airezandbrendan",
   },
@@ -109,10 +109,10 @@ export const metadata: Metadata = {
       ],
       image: ["https://Airez-and-Brendan-invitation.vercel.app/desktop-background/couple (1).jpg"],
       description:
-        "You're invited to the wedding of Airez & Brendan! Join us on December 28, 2025 in Alta Guia, Taguig, Metro Manila. RSVP, read our love story, view our gallery, and leave a message for the couple.",
+        "You're invited to the wedding of Brendan & Airez! Join us on December 28, 2025 in Alta Guia, Taguig, Metro Manila. RSVP, read our love story, view our gallery, and leave a message for the couple.",
       organizer: {
         "@type": "Person",
-        name: "Airez & Brendan",
+        name: "Brendan & Airez",
       },
       offers: {
         "@type": "Offer",
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
         price: "0",
         priceCurrency: "PHP",
       },
-      eventHashtag: "#AirezAndBrendanWedding",
+      eventHashtag: "#BrendanAndAirezWedding",
     }),
   },
 }

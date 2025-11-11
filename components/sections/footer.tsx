@@ -184,7 +184,7 @@ export function Footer() {
                 <div className="w-12 h-12 bg-white/15 rounded-full flex items-center justify-center border border-white/20">
                   <Heart className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="font-serif text-3xl md:text-4xl font-bold text-white">Airez & Brendan</h3>
+                <h3 className="font-serif text-3xl md:text-4xl font-bold text-white">Brendan & Airez</h3>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 font-lora text-white/95">
@@ -260,7 +260,7 @@ export function Footer() {
               </h4>
               <div className="flex items-center gap-3 flex-wrap">
                 <a 
-                  href="https://www.facebook.com" 
+                  href="https://www.facebook.com/airezjoy" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="inline-flex items-center justify-center h-11 w-11 rounded-full bg-white/5 ring-1 ring-white/15 hover:bg-white/10 transition-colors hover:scale-110"
@@ -315,7 +315,7 @@ export function Footer() {
         <motion.div className="border-t border-white/20 pt-8" variants={fadeInUp}>
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
-              <p className="text-white/85 font-lora text-sm">© {year} Airez & Brendan. All rights reserved.</p>
+              <p className="text-white/85 font-lora text-sm">© {year} Brendan & Airez. All rights reserved.</p>
               <p className="text-white/90 font-lora text-sm mt-1">
                 Made with 💕 for our special day
               </p>

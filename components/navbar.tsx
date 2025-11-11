@@ -112,7 +112,7 @@ export function Navbar() {
                 </div>
                 
                 <div className="text-base sm:text-2xl md:text-3xl font-serif font-bold group-hover:text-[#C3A161] group-active:text-[#C3A161] transition-all duration-500 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)] text-[#FFFFFF] group-hover:drop-shadow-[0_2px_15px_rgba(195,161,97,0.6)]">
-                  {siteConfig.couple.brideNickname} & {siteConfig.couple.groomNickname}
+                  {siteConfig.couple.groomNickname} & {siteConfig.couple.brideNickname}
                 </div>
                 
                 {/* Decorative dots with gold accent */}

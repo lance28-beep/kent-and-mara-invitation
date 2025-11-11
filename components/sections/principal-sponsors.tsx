@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { useEffect, useMemo, useState } from "react"
 import { Section } from "@/components/section"
 
@@ -10,18 +11,36 @@ interface PrincipalSponsor {
 
 export function PrincipalSponsors() {
   // Helper component for elegant section titles
-  const SectionTitle = ({ children }: { children: React.ReactNode }) => (
-    <h3 className="text-[18px] sm:text-base md:text-lg lg:text-xl font-serif font-semibold text-[#0A3428] mb-2 sm:mb-2.5 md:mb-3 text-center tracking-wide">
-      {children}
-    </h3>
-  )
+  const SectionTitle = ({
+    children,
+    align = "center",
+    className = "",
+  }: {
+    children: React.ReactNode
+    align?: "left" | "center" | "right"
+    className?: string
+  }) => {
+    const textAlign =
+      align === "right" ? "text-right" : align === "left" ? "text-left" : "text-center"
+    return (
+      <h3 className={`anton-regular text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase text-[#BB8A3D] mb-2 sm:mb-3 md:mb-4 tracking-[0.15em] ${textAlign} ${className}`}>
+        {children}
+      </h3>
+    )
+  }
 
-  // Helper component for name items
-  const NameItem = ({ name }: { name: string }) => (
-    <div className="flex items-center justify-center py-1 sm:py-1.5 md:py-2 px-1 sm:px-1.5 w-full min-h-[2.5rem] sm:min-h-[3rem]">
-      <p className="text-[#0A3428] text-xs sm:text-sm md:text-base font-light text-center leading-tight break-words">{name}</p>
-    </div>
-  )
+  // Helper component for name items with alignment
+  const NameItem = ({ name, align = "center" }: { name: string, align?: "left" | "center" | "right" }) => {
+    const containerAlign =
+      align === "right" ? "items-end" : align === "left" ? "items-start" : "items-center"
+    const textAlign =
+      align === "right" ? "text-right" : align === "left" ? "text-left" : "text-center"
+    return (
+      <div className={`flex flex-col ${containerAlign} justify-center py-1 sm:py-1.5 md:py-2 w-full`}>
+        <p className={`text-slate-700 text-[13px] sm:text-sm md:text-base font-medium leading-snug break-words ${textAlign}`}>{name}</p>
+      </div>
+    )
+  }
 
   // Remote data state
   const [sponsors, setSponsors] = useState<PrincipalSponsor[]>([])
@@ -83,29 +102,38 @@ export function PrincipalSponsors() {
 
       {/* Section Header */}
       <div className="relative z-10 text-center mb-8 sm:mb-10 md:mb-12 px-4">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-[#FFFFFF] mb-3 sm:mb-4 text-balance">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-[#FFFFFF] mb-4 sm:mb-6 drop-shadow-md">
           Principal Sponsors
         </h2>
-        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif font-semibold text-[#C3A161] mb-3 sm:mb-4">
+        <p className="text-sm sm:text-base md:text-lg text-[#FFFFFF]/90 font-light max-w-xl mx-auto leading-relaxed">
           Our Beloved Godparents
-        </h3>
+        </p>
       </div>
 
       {/* Sponsors content */}
       <div className="relative z-10 max-w-5xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* White card with elegant border */}
-        <div className="relative bg-white/95 backdrop-blur-sm border border-[#C3A161]/30 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden">
+        <div className="relative bg-white/85 backdrop-blur-sm border border-[#F1EDE2]/30 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden">
           {/* Inner gold border */}
-          <div className="absolute inset-2 sm:inset-3 md:inset-4 border border-[#C3A161] rounded-lg sm:rounded-xl pointer-events-none" />
+          <div className="absolute inset-2 sm:inset-3 md:inset-4 border border-[#F1EDE2] rounded-lg sm:rounded-xl pointer-events-none" />
           
           {/* Card content */}
           <div className="relative p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
+            {/* Global font for Anton to match Entourage section */}
+            <style jsx global>{`
+              @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+              .anton-regular {
+                font-family: "Anton", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+              }
+            `}</style>
             <div className="relative z-10 w-full">
               {isLoading ? (
                 <div className="flex items-center justify-center py-24">
                   <div className="flex flex-col items-center gap-4">
-                    <div className="w-12 h-12 border-4 border-[#C3A161]/30 border-t-[#C3A161] rounded-full animate-spin" />
-                    <span className="text-[#0A3428] font-serif text-lg">Loading sponsors...</span>
+                    <div className="w-12 h-12 border-4 border-[#F1EDE2]/30 border-t-[#F1EDE2] rounded-full animate-spin" />
+                    <span className="text-[#AFC8E6] font-serif text-lg">Loading sponsors...</span>
                   </div>
                 </div>
               ) : error ? (
@@ -114,7 +142,7 @@ export function PrincipalSponsors() {
                     <p className="text-red-500 font-serif text-lg mb-2">{error}</p>
                     <button
                       onClick={fetchSponsors}
-                      className="text-[#0A3428] hover:text-[#106552] font-serif underline"
+                      className="text-[#AFC8E6] hover:text-[#D8B0B0] font-serif underline"
                     >
                       Try again
                     </button>
@@ -122,41 +150,33 @@ export function PrincipalSponsors() {
                 </div>
               ) : sponsorPairs.length === 0 ? (
                 <div className="text-center py-24">
-                  <p className="text-[#0A3428] font-serif text-lg">No sponsors yet</p>
+                  <p className="text-[#AFC8E6] font-serif text-lg">No sponsors yet</p>
                 </div>
               ) : (
-                <div className="mb-5 sm:mb-6 md:mb-8">
-                  <div className="grid grid-cols-1 min-[350px]:grid-cols-2 gap-x-3 sm:gap-x-4 md:gap-x-6 lg:gap-x-8 mb-3 sm:mb-4 md:mb-6">
-                    <SectionTitle>Male Principal Sponsors</SectionTitle>
-                    <SectionTitle>Female Principal Sponsors</SectionTitle>
+                <div className="mb-5 sm:mb-7 md:mb-9 lg:mb-12">
+                  <div className="grid grid-cols-1 min-[350px]:grid-cols-2 gap-x-2 sm:gap-x-3 md:gap-x-4 mb-2.5 sm:mb-3.5 md:mb-5">
+                    <SectionTitle align="right" className="pr-3 sm:pr-4 md:pr-6">Male Principal Sponsors</SectionTitle>
+                    <SectionTitle align="left" className="pl-3 sm:pl-4 md:pl-6">Female Principal Sponsors</SectionTitle>
                   </div>
-                  <div className="grid grid-cols-1 min-[350px]:grid-cols-2 gap-x-3 sm:gap-x-4 md:gap-x-6 gap-y-2 sm:gap-y-3 items-stretch">
-                    {sponsorPairs.flatMap((pair, idx) => [
-                      <div 
-                        key={`male-${idx}-${pair.MalePrincipalSponsor || 'empty'}`}
-                        className="bg-[#C3A161]/10 hover:bg-[#C3A161]/20 rounded-lg transition-all duration-300 border border-[#C3A161]/30 hover:border-[#C3A161]/50 min-h-[2.5rem] sm:min-h-[3rem] flex items-center justify-center w-full"
-                      >
-                        {pair.MalePrincipalSponsor ? (
-                          <NameItem name={pair.MalePrincipalSponsor} />
-                        ) : (
-                          <div className="py-1 sm:py-1.5 md:py-2 min-h-[2.5rem] sm:min-h-[3rem] flex items-center justify-center w-full">
-                            <p className="text-[#0A3428]/30 text-[10px] sm:text-xs">—</p>
-                          </div>
-                        )}
-                      </div>,
-                      <div 
-                        key={`female-${idx}-${pair.FemalePrincipalSponsor || 'empty'}`}
-                        className="bg-[#C3A161]/10 hover:bg-[#C3A161]/20 rounded-lg transition-all duration-300 border border-[#C3A161]/30 hover:border-[#C3A161]/50 min-h-[2.5rem] sm:min-h-[3rem] flex items-center justify-center w-full"
-                      >
-                        {pair.FemalePrincipalSponsor ? (
-                          <NameItem name={pair.FemalePrincipalSponsor} />
-                        ) : (
-                          <div className="py-1 sm:py-1.5 md:py-2 min-h-[2.5rem] sm:min-h-[3rem] flex items-center justify-center w-full">
-                            <p className="text-[#0A3428]/30 text-[10px] sm:text-xs">—</p>
-                          </div>
-                        )}
-                      </div>
-                    ])}
+                  <div className="grid grid-cols-1 min-[350px]:grid-cols-2 gap-x-2 sm:gap-x-3 md:gap-x-4 gap-y-1.5 sm:gap-y-2 md:gap-y-3 items-stretch">
+                    {sponsorPairs.map((pair, idx) => (
+                      <>
+                        <div key={`male-${idx}-${pair.MalePrincipalSponsor || 'empty'}`} className="px-3 sm:px-4 md:px-6">
+                          {pair.MalePrincipalSponsor ? (
+                            <NameItem name={pair.MalePrincipalSponsor} align="right" />
+                          ) : (
+                            <div className="py-1 sm:py-1.5 md:py-2" />
+                          )}
+                        </div>
+                        <div key={`female-${idx}-${pair.FemalePrincipalSponsor || 'empty'}`} className="px-3 sm:px-4 md:px-6">
+                          {pair.FemalePrincipalSponsor ? (
+                            <NameItem name={pair.FemalePrincipalSponsor} align="left" />
+                          ) : (
+                            <div className="py-1 sm:py-1.5 md:py-2" />
+                          )}
+                        </div>
+                      </>
+                    ))}
                   </div>
                 </div>
               )}
