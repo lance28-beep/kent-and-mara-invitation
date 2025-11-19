@@ -24,8 +24,8 @@ export function SnapShare() {
     typeof window !== "undefined"
       ? window.location.href
       : "https://example.com";
-  const hashtags = ["#MarvinAndJoy2026", "#MarvinHeartJoy"];
-  const shareText = `Join us in celebrating Marvin & Joy's special day! Check out their wedding website: ${websiteUrl} ${hashtags.join(" ")} 💕`;
+  const hashtags = ["#KennethAndAngel2026", "#KAZaragozaWedding"];
+  const shareText = `Join us in celebrating Kenneth & Angel's special day! Check out their wedding website: ${websiteUrl} ${hashtags.join(" ")} 💕`;
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -309,7 +309,7 @@ export function SnapShare() {
 
               <div className="text-center">
                 <span className="block text-xl sm:text-2xl md:text-3xl font-[family-name:var(--font-ephesis)] text-[#1A1A1A] font-normal">
-                  – Marvin & Joy –
+                  – Kenneth & Angel –
                 </span>
               </div>
             </div>

@@ -24,7 +24,7 @@ export function Hero() {
             <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56">
               <Image
                 src="/monogram/image.png"
-                alt="Marvin & Annie Monogram"
+                alt="Kenneth & Angel Monogram"
                 fill
                 className="object-contain"
                 priority
@@ -39,7 +39,7 @@ export function Hero() {
 
           {/* Groom Name */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-[family-name:var(--font-crimson)] font-normal text-[#3C3C3C] uppercase tracking-[0.12em] sm:tracking-[0.15em] leading-tight px-2">
-            MARVIN ROY
+            KENNETH ADRIAN ZARAGOZA
           </h1>
 
           {/* And - Script Style */}
@@ -49,7 +49,7 @@ export function Hero() {
 
           {/* Bride Name */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-[family-name:var(--font-crimson)] font-normal text-[#3C3C3C] uppercase tracking-[0.12em] sm:tracking-[0.15em] leading-tight px-2">
-            ANNIE JOY
+            ANGEL MARIE CLARO
           </h1>
 
           {/* Request Text */}
@@ -62,15 +62,15 @@ export function Hero() {
             <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4">
               <div className="h-px w-8 sm:w-12 md:w-16 bg-[#3C3C3C]/30" />
               <p className="text-sm sm:text-base md:text-lg lg:text-xl font-[family-name:var(--font-crimson)] font-normal text-[#3C3C3C]">
-                March
+                January
               </p>
               <div className="h-px w-8 sm:w-12 md:w-16 bg-[#3C3C3C]/30" />
             </div>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 md:gap-3 text-[#3C3C3C]">
-              <span className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] uppercase tracking-wider">SATURDAY</span>
-              <span className="text-5xl sm:text-5xl md:text-6xl font-[family-name:var(--font-crimson)] font-light my-1 sm:my-0">14</span>
-              <span className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] uppercase tracking-wider">2 O'CLOCK</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] uppercase tracking-wider">SUNDAY</span>
+              <span className="text-5xl sm:text-5xl md:text-6xl font-[family-name:var(--font-crimson)] font-light my-1 sm:my-0">11</span>
+              <span className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] uppercase tracking-wider">4 O'CLOCK</span>
             </div>
             
             <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-light text-[#3C3C3C]">
@@ -80,19 +80,19 @@ export function Hero() {
 
           {/* Ceremony and Reception */}
           <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-ephesis)] text-[#3C3C3C] pt-2 sm:pt-4 px-4">
-            Ceremony and Reception
+            Ceremony
           </p>
 
           {/* Venue Details */}
           <div className="space-y-1 pb-4 sm:pb-6 px-4">
             <p className="text-xs sm:text-sm md:text-base lg:text-lg font-[family-name:var(--font-crimson)] font-semibold text-[#3C3C3C] uppercase tracking-wider">
-              ILOILO CONVENTION CENTER
+              CAMP EDGAR GARDEN
             </p>
             <p className="text-[10px] sm:text-xs md:text-sm lg:text-base font-[family-name:var(--font-crimson)] font-normal text-[#3C3C3C] leading-relaxed">
-              Megaworld Blvd, Iloilo Business Park, Mandurriao
+              Nature's Village Resort
             </p>
             <p className="text-[10px] sm:text-xs md:text-sm lg:text-base font-[family-name:var(--font-crimson)] font-normal text-[#3C3C3C]">
-              Iloilo City, Philippines
+              Talisay City, Negros Occidental 6115, Philippines
             </p>
           </div>
 

@@ -13,22 +13,27 @@ const faqItems: FAQItem[] = [
   {
     question: "When and where is the wedding?",
     answer:
-      "The wedding ceremony and reception will be held on Saturday, March 14, 2026, at 2 O'CLOCK at the Iloilo Convention Center, Megaworld Blvd, Iloilo Business Park, Mandurriao, Iloilo City, Philippines.",
+      "The wedding ceremony will be held on Sunday, January 11, 2026, at 4:00 PM at Camp Edgar Garden, Nature's Village Resort, Talisay City, Negros Occidental 6115, Philippines.\n\nThe reception will follow at Padre Pio BC, Nature's Village Resort, same location.",
   },
   {
     question: "What is the dress code?",
     answer:
-      "Principal Sponsors (Ninong): Black suit\nPrincipal Sponsors (Ninang): Long gown in Black or Emerald Green\n\nGuests (Gentlemen): Long-sleeved shirt or suit (optional)\nGuests (Ladies): Long gown or long dress in Beige, Chocolate brown, or Taupe\n\nPlease note: T-shirts, denim, and sports shoes are not permitted.",
+      "Principal Sponsors (Men): Black suit, white dress shirt, tie, black dress pants, and black dress shoes\nPrincipal Sponsors (Women): Pastel-colored gowns\n\nGuests (Men): Long-sleeved formal shirt (with or without a jacket) in muted tones such as light grey, beige, taupe, champagne, or soft brown, dress pants, and dress shoes\nGuests (Women): Formal wear in pastel shades\n\nPlease strictly follow the dress code indicated on your invitation.",
   },
   {
     question: "When is the RSVP deadline?",
     answer:
-      "Please confirm by January 14, 2026. We have reserved seats for you, and we look forward to celebrating with you! Your response helps us finalize our guest list and seating arrangements.\n\nFor any questions or concerns, contact us at: 09088993835 / 09453324669\n\n[RSVP_LINK]Click here to RSVP[/RSVP_LINK]",
+      "Please confirm by January 5, 2026. We have reserved seats for you, and we look forward to celebrating with you! Your response helps us finalize our guest list and seating arrangements.\n\n[RSVP_LINK]Click here to RSVP[/RSVP_LINK]",
   },
   {
     question: "Can I bring a plus one?",
     answer:
-      "We kindly ask that any additional guests be included or declared in your RSVP so we can make the proper arrangements. Thank you so much for your understanding — we can't wait to celebrate together on our special day!",
+      "Due to limited space, we are unable to accommodate additional guests beyond those named on your invitation. Please do not bring plus ones unless specifically included in your invitation. Thank you for your understanding!",
+  },
+  {
+    question: "Are children allowed?",
+    answer:
+      "This is an adults-only event. We appreciate your understanding that children are not included, with the exception of those specifically invited from our immediate family.",
   },
   {
     question: "What if I have dietary restrictions or allergies?",
@@ -36,14 +41,19 @@ const faqItems: FAQItem[] = [
       "Please mention any dietary restrictions, allergies, or special meal requirements in the message field when you submit your RSVP.",
   },
   {
+    question: "Important: Scent-free event",
+    answer:
+      "The bride has a sensitivity to fragrances. We kindly ask all guests to refrain from wearing perfume, cologne, or any scented products. Your cooperation is greatly appreciated!",
+  },
+  {
     question: "Do you have a gift registry?",
     answer:
-      "Your presence at our wedding is the most precious gift. Should you wish to share a blessing, red envelopes will be provided for your convenience.",
+      "Your presence is the greatest gift! However, if you wish to honor us with a gift, we would gratefully accept monetary contributions as we prepare for our new journey together and upcoming migration.",
   },
   {
     question: "Is there parking available?",
     answer:
-      "Yes! The Iloilo Convention Center has ample parking facilities. We recommend arriving 15-20 minutes early to secure a spot and get settled comfortably.",
+      "Yes! Nature's Village Resort has parking facilities. We recommend arriving 15-20 minutes early to secure a spot and get settled comfortably.",
   },
   {
     question: "Can I take photos during the ceremony?",
@@ -53,7 +63,7 @@ const faqItems: FAQItem[] = [
   {
     question: "How do I get to the venue?",
     answer:
-      "The Iloilo Convention Center is located at Megaworld Blvd, Iloilo Business Park. You can use the 'Get Directions' button in the Event Details section to open Google Maps for easy navigation.",
+      "Nature's Village Resort is located in Talisay City, Negros Occidental. You can use the 'Get Directions' button in the Event Details section to open Google Maps for easy navigation to both the ceremony (Camp Edgar Garden) and reception (Padre Pio BC) venues.",
   },
   {
     question: "What should I do if I need to cancel my RSVP?",

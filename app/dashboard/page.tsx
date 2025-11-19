@@ -129,7 +129,7 @@ export default function DashboardPage() {
   })
 
   // Password - you can change this!
-  const DASHBOARD_PASSWORD = "142026" // Change this to your preferred password
+  const DASHBOARD_PASSWORD = "112026" // Change this to your preferred password
 
   // Check if already authenticated
   useEffect(() => {
@@ -878,7 +878,7 @@ export default function DashboardPage() {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-[#3C3C3C]/5 rounded-full mb-4">
                 <Lock className="h-10 w-10 text-[#3C3C3C]" />
               </div>
-              <div className="text-xs tracking-[0.25em] uppercase font-[family-name:var(--font-crimson)] font-semibold text-[#3C3C3C]/60 mb-2">Welcome Marvin & Joy</div>
+              <div className="text-xs tracking-[0.25em] uppercase font-[family-name:var(--font-crimson)] font-semibold text-[#3C3C3C]/60 mb-2">Welcome Kenneth & Angel</div>
               <h1 className="text-3xl font-[family-name:var(--font-crimson)] font-bold text-[#3C3C3C] mb-2">
                 Wedding Dashboard
               </h1>

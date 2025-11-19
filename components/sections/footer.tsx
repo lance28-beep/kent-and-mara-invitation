@@ -116,7 +116,7 @@ export function Footer() {
               {/* Month - Elegant script style */}
               <div className="mb-4 sm:mb-5 md:mb-6">
                 <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-ephesis)] text-[#1A1A1A] leading-none">
-                  March
+                  January
                 </p>
               </div>
 
@@ -124,7 +124,7 @@ export function Footer() {
               <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8">
                 {/* Day - Large and bold focal point */}
                 <p className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-[family-name:var(--font-crimson)] font-bold text-[#3C3C3C] leading-none drop-shadow-lg">
-                  14
+                  11
                 </p>
 
                 {/* Vertical divider */}
@@ -138,7 +138,7 @@ export function Footer() {
 
               {/* Day of Week */}
               <p className="text-lg sm:text-xl md:text-2xl font-[family-name:var(--font-crimson)] font-light text-[#1A1A1A]/80 mb-6 sm:mb-8">
-                Saturday
+                Sunday
               </p>
             </div>
 
@@ -153,7 +153,7 @@ export function Footer() {
 
               {/* Time */}
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-[family-name:var(--font-crimson)] font-medium text-[#1A1A1A] tracking-wide mb-4 sm:mb-5">
-                2 O'CLOCK
+                4 O'CLOCK
               </p>
 
               {/* Bottom decorative line */}
@@ -180,17 +180,17 @@ export function Footer() {
                   <Heart className="w-6 h-6 text-[#E8DCC8]" />
                 </div>
                 <h3 className="text-3xl md:text-4xl font-[family-name:var(--font-ephesis)] text-[#1A1A1A]">
-                  Marvin & Joy
+                  Kenneth & Angel
                 </h3>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 font-[family-name:var(--font-crimson)] text-[#1A1A1A]">
                   <Calendar className="w-5 h-5 text-[#1A1A1A]/70" />
-                  <span className="text-lg">March 14, 2026 • Saturday</span>
+                  <span className="text-lg">January 11, 2026 • Sunday</span>
                 </div>
                 <div className="flex items-center gap-3 font-[family-name:var(--font-crimson)] text-[#1A1A1A]">
                   <MapPin className="w-5 h-5 text-[#1A1A1A]/70" />
-                  <span>Iloilo Convention Center</span>
+                  <span>Nature's Village Resort, Talisay City, Negros Occidental 6115, Philippines</span>
                 </div>
               </div>
             </div>
@@ -226,17 +226,17 @@ export function Footer() {
                   <Clock className="w-5 h-5 text-[#E8DCC8]" />
                 </div>
                 <h4 className="font-[family-name:var(--font-crimson)] font-bold text-xl text-[#1A1A1A]">
-                  Wedding Ceremony
+                  Ceremony
                 </h4>
               </div>
               <div className="space-y-3 font-[family-name:var(--font-crimson)] text-[#1A1A1A] text-sm">
                 <div className="flex items-center gap-3">
                   <MapPin className="w-4 h-4 text-[#1A1A1A]/70" />
-                  <span>Iloilo Convention Center</span>
+                  <span>Camp Edgar Garden</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="w-4 h-4 text-[#1A1A1A]/70" />
-                  <span>2 O'CLOCK</span>
+                  <span>4 O'CLOCK</span>
                 </div>
               </div>
             </motion.div>
@@ -256,11 +256,11 @@ export function Footer() {
               <div className="space-y-3 font-[family-name:var(--font-crimson)] text-[#1A1A1A] text-sm">
                 <div className="flex items-center gap-3">
                   <MapPin className="w-4 h-4 text-[#1A1A1A]/70" />
-                  <span>Iloilo Convention Center</span>
+                  <span>Padre Pio BC</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="w-4 h-4 text-[#1A1A1A]/70" />
-                  <span>2 O'CLOCK</span>
+                  <span>Following Ceremony</span>
                 </div>
               </div>
             </motion.div>
@@ -275,7 +275,7 @@ export function Footer() {
               </h4>
               <div className="flex items-center gap-3 flex-wrap">
                 <a
-                  href="https://www.facebook.com/piaroxan.depra"
+                  href="https://www.facebook.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center h-11 w-11 rounded-full bg-white/60 border-2 border-[#1A1A1A]/20 hover:border-[#1A1A1A]/40 hover:bg-white/80 transition-all hover:scale-110 shadow-md"
@@ -340,7 +340,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
               <p className="text-[#1A1A1A] font-[family-name:var(--font-crimson)] text-sm">
-                © {year} Marvin & Joy. All rights reserved.
+                © {year} Kenneth & Angel. All rights reserved.
               </p>
               <p className="text-[#1A1A1A]/80 font-[family-name:var(--font-crimson)] text-sm mt-1">
                 Made with 💕 for our special day

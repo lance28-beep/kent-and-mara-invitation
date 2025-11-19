@@ -21,10 +21,10 @@ export function Countdown() {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      // Target: March 14, 2026 at 2:00 PM GMT+8
+      // Target: January 11, 2026 at 4:00 PM GMT+8
       // Compute using UTC to avoid timezone parsing inconsistencies across browsers
-      // 2:00 PM GMT+8 == 06:00 AM UTC
-      const targetDate = Date.UTC(2026, 2, 14, 6, 0, 0) // March is month 2 (0-indexed)
+      // 4:00 PM GMT+8 == 08:00 AM UTC
+      const targetDate = Date.UTC(2026, 0, 11, 8, 0, 0) // January is month 0 (0-indexed)
       const now = new Date().getTime()
       const difference = targetDate - now
 
@@ -145,7 +145,7 @@ export function Countdown() {
               {/* Month - Script style like "and" in hero */}
               <div className="mb-5 sm:mb-6 md:mb-8">
                 <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-ephesis)] text-[#1A1A1A] leading-none drop-shadow-sm">
-                  March
+                  January
                 </p>
               </div>
               
@@ -153,7 +153,7 @@ export function Countdown() {
               <div className="flex items-center justify-center gap-4 sm:gap-5 md:gap-7 mb-8 sm:mb-10">
                 {/* Day - Large and bold focal point */}
                 <p className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-[family-name:var(--font-crimson)] font-normal text-[#1A1A1A] leading-none drop-shadow-md">
-                  14
+                  11
                 </p>
                 
                 {/* Vertical divider */}
@@ -177,7 +177,7 @@ export function Countdown() {
               
               {/* Time */}
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-[family-name:var(--font-crimson)] font-semibold text-[#1A1A1A] tracking-wide mb-4 sm:mb-5 drop-shadow-sm">
-                2 O'CLOCK
+                4 O'CLOCK
               </p>
               
               {/* Bottom decorative line */}

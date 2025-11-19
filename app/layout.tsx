@@ -20,25 +20,25 @@ const ephesis = Ephesis({
 })
 
 export const metadata: Metadata = {
-  title: "Marvin & Annie - Wedding Invitation",
+  title: "Kenneth & Angel - Wedding Invitation",
   description:
-    "You're invited to the wedding of Marvin & Annie! Join us on March 14, 2026 in Iloilo Convention Center. RSVP, read our love story, view our gallery, and leave a message for the couple.",
+    "You're invited to the wedding of Kenneth & Angel! Join us on January 11, 2026 in Camp Edgar Garden. RSVP, read our love story, view our gallery, and leave a message for the couple.",
   keywords:
-    "Marvin & Annie wedding, Filipino wedding, RSVP, wedding gallery, wedding message wall, wedding invitation, 2026 weddings, love story, guestbook, wedding registry, wedding details, wedding venues Iloilo Convention Center, #MarvinAndAnnieWedding",
+    "Kenneth & Angel wedding, Filipino wedding, RSVP, wedding gallery, wedding message wall, wedding invitation, 2026 weddings, love story, guestbook, wedding registry, wedding details, wedding venues Camp Edgar Garden, #KennethAndAngelWedding",
   authors: [
-    { name: "Marvin" },
-    { name: "Annie" },
+    { name: "Kenneth" },
+    { name: "Angel" },
   ],
-  creator: "Marvin & Annie",
-  publisher: "Marvin & Annie",
+  creator: "Kenneth & Angel",
+  publisher: "Kenneth & Angel",
   formatDetection: {
     email: false,
     address: false,
     telephone: true,
   },
-  metadataBase: new URL("https://Marvin-and-Annie-invitation.vercel.app/"),
+  metadataBase: new URL("https://Kenneth-and-Angel-invitation.vercel.app/"),
   alternates: {
-    canonical: "https://Marvin-and-Annie-invitation.vercel.app/",
+    canonical: "https://Kenneth-and-Angel-invitation.vercel.app/",
   },
   icons: {
     icon: [
@@ -60,29 +60,29 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon_io/site.webmanifest",
   openGraph: {
-    title: "Marvin & Annie Wedding | March 14, 2026",
+    title: "Kenneth & Angel Wedding | January 11, 2026",
     description:
-      "Celebrate the union of Marvin & Annie on March 14, 2026 in Iloilo Convention Center. Discover our love story, RSVP, view the gallery, and leave your wishes!",
-    url: "https://Marvin-and-Annie-invitation.vercel.app/",
-    siteName: "Marvin and Annie Wedding ",
+      "Celebrate the union of Kenneth & Angel on January 11, 2026 in Camp Edgar Garden. Discover our love story, RSVP, view the gallery, and leave your wishes!",
+    url: "https://Kenneth-and-Angel-invitation.vercel.app/",
+    siteName: "Kenneth and Angel Wedding ",
     locale: "en_PH",
     type: "website",
     images: [
       {
-        url: "https://Marvin-and-Annie-invitation.vercel.app/Details/image.png",
+        url: "https://Kenneth-and-Angel-invitation.vercel.app/Details/image.png",
         width: 1200,
         height: 630,
-        alt: "Marvin & Annie Wedding Invitation - March 14, 2026",
+        alt: "Kenneth & Angel Wedding Invitation - January 11, 2026",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marvin & Annie Wedding Invitation",
+    title: "Kenneth & Angel Wedding Invitation",
     description:
-      "You're invited to the wedding of Marvin & Annie! March 14, 2026. RSVP, view our gallery, and leave a message! #MarvinAndAnnieWedding",
-    images: ["https://Marvin-and-Annie-invitation.vercel.app/Details/image.png"],
-    creator: "@marvinandannie",
+      "You're invited to the wedding of Kenneth & Angel! January 11, 2026. RSVP, view our gallery, and leave a message! #KennethAndAngelWedding",
+    images: ["https://Kenneth-and-Angel-invitation.vercel.app/Details/image.png"],
+    creator: "@kennethandangel",
   },
   robots: {
     index: true,
@@ -102,40 +102,40 @@ export const metadata: Metadata = {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Event",
-      name: "Marvin & Annie Wedding",
-      startDate: "2026-02-14T14:00:00+08:00",
-      endDate: "2026-02-14T22:00:00+08:00",
+      name: "Kenneth & Angel Wedding",
+      startDate: "2026-01-11T14:00:00+08:00",
+      endDate: "2026-01-11T22:00:00+08:00",
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       location: [
         {
           "@type": "Place",
-          name: "Iloilo Convention Center",
+          name: "Camp Edgar Garden",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "M.J. Cuenco Avenue, Brgy. Mandurriao, Iloilo City",
-            addressLocality: "Iloilo City",
-            addressRegion: "Iloilo",
-            postalCode: "5000",
+            streetAddress: "Nature's Village Resort, Talisay City, Negros Occidental 6115, Philippines",
+            addressLocality: "Talisay City",
+            addressRegion: "Negros Occidental",
+            postalCode: "6115",
             addressCountry: "PH",
           },
         },
       ],
-      image: ["https://Marvin-and-Annie-invitation.vercel.app/Details/image.png"],
+      image: ["https://Kenneth-and-Angel-invitation.vercel.app/Details/image.png"],
       description:
-        "You're invited to the wedding of Marvin & Annie! Join us on March 14, 2026 in Iloilo Convention Center. RSVP, read our love story, view our gallery, and leave a message for the couple.",
+        "You're invited to the wedding of Kenneth & Angel! Join us on January 11, 2026 in Camp Edgar Garden. RSVP, read our love story, view our gallery, and leave a message for the couple.",
       organizer: {
         "@type": "Person",
-        name: "Marvin & Annie",
+        name: "Kenneth & Angel",
       },
       offers: {
         "@type": "Offer",
-        url: "https://Marvin-and-Annie-invitation.vercel.app/",
+        url: "https://Kenneth-and-Angel-invitation.vercel.app/",
         availability: "https://schema.org/InStock",
         price: "0",
         priceCurrency: "PHP",
       },
-        eventHashtag: "#MarvinAndAnnieWedding",
+        eventHashtag: "#KennethAndAngelWedding",
     }),
   },
 }

@@ -311,7 +311,7 @@ export function GuestList() {
                 "0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5)",
             }}
           >
-            We look forward to celebrating with you!
+            Please search for your name below to confirm your attendance and help us prepare for this special celebration
           </p>
           <p
             className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-white/90 font-medium max-w-xl mx-auto leading-relaxed tracking-wide px-4"
@@ -320,9 +320,9 @@ export function GuestList() {
                 "0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5)",
             }}
           >
-            Please confirm by January 14, 2026
+            Please confirm by January 1, 2026
           </p>
-          <div
+          {/* <div
             className="flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] text-white/90 font-light"
             style={{
               textShadow:
@@ -331,7 +331,7 @@ export function GuestList() {
           >
             <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
             <span>Contact us at: 09088993835 / 09453324669</span>
-          </div>
+          </div> */}
         </div>
       </div>
 
