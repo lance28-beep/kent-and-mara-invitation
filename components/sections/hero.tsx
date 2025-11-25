@@ -2,11 +2,14 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { siteConfig } from "@/content/site"
 import { Heart } from "lucide-react"
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
+  const ceremonyVenue = "Diocesan Shrine & Parish of Our Lady of the Abandoned"
+  const ceremonyAddress = "JP Rizal St., Sta. Elena, Marikina City"
+  const receptionVenue = "The Grand Cobo Events Place"
+  const receptionAddress = "3 Mt. Kennedy St., Mountainview Village, Brgy. San Roque, Marikina City"
 
   useEffect(() => {
     setIsVisible(true)
@@ -106,16 +109,30 @@ export function Hero() {
           </div>
 
           {/* Venue Details */}
-          <div className="space-y-2 pb-4 sm:pb-6 px-4">
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-[family-name:var(--font-crimson)] font-semibold text-[#9F8650] uppercase tracking-wider">
-              DIOCESAN SHRINE & PARISH
-            </p>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-[family-name:var(--font-crimson)] font-normal text-[#0A3629] leading-relaxed">
-              Of Our Lady of the Abandoned
-            </p>
-            <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-normal text-[#0A3629]/80">
-              Mountainview Village, San Roque, Marikina City
-            </p>
+          <div className="space-y-4 pb-4 sm:pb-6 px-4">
+            <div className="space-y-1.5">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-[family-name:var(--font-crimson)] font-semibold text-[#9F8650] uppercase tracking-wider">
+                {ceremonyVenue}
+              </p>
+              <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-normal text-[#0A3629]/80">
+                {ceremonyAddress}
+              </p>
+            </div>
+
+            <div className="flex items-center justify-center gap-2">
+              <span className="h-[1px] w-8 sm:w-12 bg-gradient-to-r from-transparent via-[#9F8650]/60 to-transparent" />
+              <span className="w-1 h-1 rounded-full bg-[#9F8650]/70" />
+              <span className="h-[1px] w-8 sm:w-12 bg-gradient-to-r from-transparent via-[#9F8650]/60 to-transparent" />
+            </div>
+
+            <div className="space-y-1.5">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-[family-name:var(--font-crimson)] font-semibold text-[#0A3629] uppercase tracking-wider">
+                {receptionVenue}
+              </p>
+              <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-normal text-[#0A3629]/80">
+                {receptionAddress}
+              </p>
+            </div>
           </div>
 
           {/* Elegant CTA Button with earth tone gradient */}
