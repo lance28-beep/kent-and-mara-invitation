@@ -41,9 +41,9 @@ export const metadata: Metadata = {
     address: false,
     telephone: true,
   },
-  metadataBase: new URL("https://jay-r-and-jennifer-wedding-invitati.vercel.app/"),
+  metadataBase: new URL("https://japoi-and-regine-invitation.vercel.app/"),
   alternates: {
-    canonical: "https://jay-r-and-jennifer-wedding-invitati.vercel.app/",
+    canonical: "https://japoi-and-regine-invitation.vercel.app/",
   },
   icons: {
     icon: [
@@ -68,13 +68,13 @@ export const metadata: Metadata = {
     title: "Japoi & Regine Wedding | March 15, 2026",
     description:
       "Celebrate the union of Japoi & Regine on March 15, 2026 at Twin Lakes Tagaytay, Glass House. Discover our love story, RSVP, view the gallery, and leave your wishes!",
-    url: "https://jay-r-and-jennifer-wedding-invitati.vercel.app/",
+    url: "https://japoi-and-regine-invitation.vercel.app/",
     siteName: "Japoi and Regine Wedding",
     locale: "en_PH",
     type: "website",
     images: [
       {
-        url: "https://jay-r-and-jennifer-wedding-invitati.vercel.app/Details/linkPreview.png",
+        url: "https://japoi-and-regine-invitation.vercel.app/Details/linkPreview.png",
         width: 1200,
         height: 630,
         alt: "Japoi & Regine Wedding Invitation - March 15, 2026",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     title: "Japoi & Regine Wedding Invitation",
     description:
       "You're invited to the wedding of Japoi & Regine! March 15, 2026. RSVP, view our gallery, and leave a message! #AnJAPaAngForeverNiREGINE",
-    images: ["https://jay-r-and-jennifer-wedding-invitati.vercel.app/Details/linkPreview.png"],
+    images: ["https://japoi-and-regine-invitation.vercel.app/Details/linkPreview.png"],
     creator: "@japoiandregine",
   },
   robots: {
@@ -138,7 +138,7 @@ export const metadata: Metadata = {
           },
         },
       ],
-      image: ["https://jay-r-and-jennifer-wedding-invitati.vercel.app/Details/linkPreview.png"],
+      image: ["https://japoi-and-regine-invitation.vercel.app/Details/linkPreview.png"],
       description:
         "You're invited to the wedding of Japoi & Regine! Join us on March 15, 2026 at Twin Lakes Tagaytay, Glass House, Tagaytay City. RSVP, read our love story, view our gallery, and leave a message for the couple.",
       organizer: {
@@ -147,7 +147,7 @@ export const metadata: Metadata = {
       },
       offers: {
         "@type": "Offer",
-        url: "https://jay-r-and-jennifer-wedding-invitati.vercel.app/",
+        url: "https://japoi-and-regine-invitation.vercel.app/",
         availability: "https://schema.org/InStock",
         price: "0",
         priceCurrency: "PHP",
