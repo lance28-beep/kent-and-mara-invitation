@@ -1,9 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Great_Vibes, Inter, Crimson_Text, Ephesis } from "next/font/google"
+import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-import { Navbar } from "@/components/navbar"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400", variable: "--font-serif" })
@@ -18,19 +18,24 @@ const ephesis = Ephesis({
   weight: "400",
   variable: "--font-ephesis" 
 })
+const chicanos = localFont({
+  src: "../chicanos-font/ChicanosPersonalUseRegular-qZDw5.ttf",
+  variable: "--font-chicanos",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
-  title: "Jay-R & Jennifer - Wedding Invitation",
+  title: "Japoi & Regine - Wedding Invitation",
   description:
-    "You're invited to the wedding of Jay-R & Jennifer! Join us on January 24, 2026 at Diocesan Shrine & Parish of Our Lady of the Abandoned and The Grand Cobo Events Place. RSVP, read our love story, view our gallery, and leave a message for the couple.",
+    "You're invited to the wedding of Japoi & Regine! Join us on March 15, 2026 at Twin Lakes Tagaytay, Glass House. RSVP, read our love story, view our gallery, and leave a message for the couple.",
   keywords:
-    "Jay-R & Jennifer wedding, Filipino wedding, RSVP, wedding gallery, wedding message wall, wedding invitation, 2026 weddings, love story, guestbook, wedding registry, wedding details, wedding venues Diocesan Shrine & Parish of Our Lady of the Abandoned, #AnJENaAngForeverNiJAYR",
+    "Japoi & Regine wedding, Filipino wedding, RSVP, wedding gallery, wedding message wall, wedding invitation, 2026 weddings, love story, guestbook, wedding registry, wedding details, wedding venues Twin Lakes Tagaytay, Glass House, #AnJAPaAngForeverNiREGINE",
   authors: [
-    { name: "Jay-R" },
-    { name: "Jennifer" },
+    { name: "Japoi" },
+    { name: "Regine" },
   ],
-  creator: "Jay-R & Jennifer",
-  publisher: "Jay-R & Jennifer",
+  creator: "Japoi & Regine",
+  publisher: "Japoi & Regine",
   formatDetection: {
     email: false,
     address: false,
@@ -60,29 +65,29 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon_io/site.webmanifest",
   openGraph: {
-    title: "Jay-R & Jennifer Wedding | January 24, 2026",
+    title: "Japoi & Regine Wedding | March 15, 2026",
     description:
-      "Celebrate the union of Jay-R & Jennifer on January 24, 2026 at Diocesan Shrine & Parish of Our Lady of the Abandoned and The Grand Cobo Events Place. Discover our love story, RSVP, view the gallery, and leave your wishes!",
+      "Celebrate the union of Japoi & Regine on March 15, 2026 at Twin Lakes Tagaytay, Glass House. Discover our love story, RSVP, view the gallery, and leave your wishes!",
     url: "https://jay-r-and-jennifer-wedding-invitati.vercel.app/",
-    siteName: "Jay-R and Jennifer Wedding",
+    siteName: "Japoi and Regine Wedding",
     locale: "en_PH",
     type: "website",
     images: [
       {
-        url: "https://jay-r-and-jennifer-wedding-invitati.vercel.app/Details/image.png",
+        url: "https://jay-r-and-jennifer-wedding-invitati.vercel.app/Details/linkPreview.png",
         width: 1200,
         height: 630,
-        alt: "Jay-R & Jennifer Wedding Invitation - January 24, 2026",
+        alt: "Japoi & Regine Wedding Invitation - March 15, 2026",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jay-R & Jennifer Wedding Invitation",
+    title: "Japoi & Regine Wedding Invitation",
     description:
-      "You're invited to the wedding of Jay-R & Jennifer! January 24, 2026. RSVP, view our gallery, and leave a message! #AnJENaAngForeverNiJAYR",
-    images: ["https://jay-r-and-jennifer-wedding-invitati.vercel.app/Details/image.png"],
-    creator: "@jay-r-and-jennifer",
+      "You're invited to the wedding of Japoi & Regine! March 15, 2026. RSVP, view our gallery, and leave a message! #AnJAPaAngForeverNiREGINE",
+    images: ["https://jay-r-and-jennifer-wedding-invitati.vercel.app/Details/linkPreview.png"],
+    creator: "@japoiandregine",
   },
   robots: {
     index: true,
@@ -110,35 +115,35 @@ export const metadata: Metadata = {
       location: [
         {
           "@type": "Place",
-          name: "Diocesan Shrine & Parish of Our Lady of the Abandoned, Valenzuela City",
+          name: "Twin Lakes Tagaytay, Glass House, Tagaytay City",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "#24 San Juan St., Brgy. Poblacion, Valenzuela City",
-            addressLocality: "Valenzuela City",
-            addressRegion: "Valenzuela City",
+            streetAddress: "#24 San Juan St., Brgy. Poblacion, Tagaytay City",
+            addressLocality: "Tagaytay City",
+            addressRegion: "Tagaytay City",
             postalCode: "1440",
             addressCountry: "PH",
           },
         },
         {
           "@type": "Place",
-          name: "The Grand Cobo Events Place, Dumaguete City",
+          name: "Twin Lakes Tagaytay, Glass House, Tagaytay City",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "#24 San Juan St., Brgy. Poblacion, Valenzuela City",
-            addressLocality: "Valenzuela City",
-            addressRegion: "Valenzuela City",
-            postalCode: "6200",
+            streetAddress: "#24 San Juan St., Brgy. Poblacion, Tagaytay City",
+            addressLocality: "Tagaytay City",
+            addressRegion: "Tagaytay City",
+            postalCode: "4120",
             addressCountry: "PH",
           },
         },
       ],
-      image: ["https://jay-r-and-jennifer-wedding-invitati.vercel.app/Details/image.png"],
+      image: ["https://jay-r-and-jennifer-wedding-invitati.vercel.app/Details/linkPreview.png"],
       description:
-        "You're invited to the wedding of Jay-R & Jennifer! Join us on January 24, 2026 at Diocesan Shrine & Parish of Our Lady of the Abandoned, Valenzuela City and The Grand Cobo Events Place, Dumaguete City. RSVP, read our love story, view our gallery, and leave a message for the couple.",
+        "You're invited to the wedding of Japoi & Regine! Join us on March 15, 2026 at Twin Lakes Tagaytay, Glass House, Tagaytay City. RSVP, read our love story, view our gallery, and leave a message for the couple.",
       organizer: {
         "@type": "Person",
-        name: "Jay-R & Jennifer",
+        name: "Japoi & Regine",
       },
       offers: {
         "@type": "Offer",
@@ -147,7 +152,7 @@ export const metadata: Metadata = {
         price: "0",
         priceCurrency: "PHP",
       },
-        eventHashtag: "#AnJENaAngForeverNiJAYR",
+        eventHashtag: "#AnJAPaAngForeverNiREGINE",
     }),
   },
 }
@@ -166,8 +171,7 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/mobile-background/DSCF2614-min.jpg" media="(max-width: 767px)" />
         <link rel="preload" as="image" href="/desktop-background/DSCF2444-min.jpg" media="(min-width: 768px)" />
       </head>
-      <body className={`${inter.variable} ${greatVibes.variable} ${crimsonText.variable} ${ephesis.variable} font-inter antialiased text-foreground`}>
-        <Navbar />
+      <body className={`${inter.variable} ${greatVibes.variable} ${crimsonText.variable} ${ephesis.variable} ${chicanos.variable} font-inter antialiased text-foreground`}>
         {children}
         <Analytics />
       </body>

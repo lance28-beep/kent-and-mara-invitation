@@ -2,14 +2,9 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { Heart } from "lucide-react"
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
-  const ceremonyVenue = "Diocesan Shrine & Parish of Our Lady of the Abandoned"
-  const ceremonyAddress = "JP Rizal St., Sta. Elena, Marikina City"
-  const receptionVenue = "The Grand Cobo Events Place"
-  const receptionAddress = "3 Mt. Kennedy St., Mountainview Village, Brgy. San Roque, Marikina City"
 
   useEffect(() => {
     setIsVisible(true)
@@ -18,138 +13,152 @@ export function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col items-center justify-center min-h-screen py-16 sm:py-20">
-        {/* Elegant Card Container */}
-        <div className={`w-full max-w-4xl elegant-card rounded-lg p-8 sm:p-12 md:p-16 lg:p-20 text-center space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 transition-all duration-1000 ease-out premium-shadow ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        {/* Main invitation card */}
+        <div
+          className={`w-full max-w-xl md:max-w-2xl relative rounded-[22px] sm:rounded-[26px] md:rounded-[30px] text-center px-6 sm:px-10 md:px-14 py-10 sm:py-12 md:py-14 transition-all duration-700 ease-out overflow-hidden ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{
+            background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+            boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
+          }}
+        >
+          {/* Premium black base with elegant gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505]" />
           
-          {/* Monogram - Center */}
-          <div className="flex justify-center mb-2 sm:mb-4">
-            <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56">
-              <Image
-                src="/monogram/image.png"
-                alt="Jay-R & Jen Monogram"
-                fill
-                className="object-contain"
-                style={{ 
-                  filter: 'brightness(0) saturate(100%) invert(8%) sepia(94%) saturate(1352%) hue-rotate(120deg) brightness(95%) contrast(85%)'
-                }}
-                priority
-              />
-            </div>
+          {/* Subtle radial gradient for depth */}
+          <div 
+            className="absolute inset-0 opacity-60"
+            style={{
+              background: 'radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%)',
+            }}
+          />
+          
+          {/* Elegant shimmer gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[rgba(255,255,255,0.01)] to-transparent opacity-50" />
+          
+          {/* Elegant border with gradient */}
+          <div 
+            className="absolute inset-0 rounded-[22px] sm:rounded-[26px] md:rounded-[30px]"
+            style={{
+              padding: '1px',
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.1) 100%)',
+              WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+              WebkitMaskComposite: 'xor',
+              maskComposite: 'exclude',
+            }}
+          />
+          
+          {/* Inner border for refinement */}
+          <div className="absolute inset-[1px] rounded-[21px] sm:rounded-[25px] md:rounded-[29px] border border-[rgba(255,255,255,0.08)]" />
+          
+          {/* Content wrapper */}
+          <div className="relative z-10">
+          {/* Monogram */}
+          <div className="mb-8 sm:mb-9 md:mb-10 flex justify-center">
+            <Image
+              src="/monogram/monogram.png"
+              alt="Japoi & Regine"
+              width={240}
+              height={240}
+              className="h-36 w-36 sm:h-40 sm:w-40 md:h-44 md:w-44 lg:h-48 lg:w-48 object-contain object-center brightness-0 invert"
+              priority
+            />
           </div>
 
-          {/* Decorative line with earth tones */}
-          <div className="flex items-center justify-center gap-3">
-            <div className="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-transparent via-[#9F8650] to-transparent" />
-          </div>
-
-          {/* Opening Text */}
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg font-[family-name:var(--font-crimson)] font-normal text-[#0A3629] tracking-wide px-4">
-            Together with our families, we,
+          {/* Small intro text */}
+          <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.32em] text-zinc-400 uppercase mb-6 sm:mb-7">
+            Together with their families
           </p>
 
-          {/* Groom Name */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-[family-name:var(--font-crimson)] font-normal text-[#0A3629] uppercase tracking-[0.12em] sm:tracking-[0.15em] leading-tight px-2 elegant-text-shadow">
-            JAY-R VALENZUELA
-          </h1>
-
-          {/* And - Script Style with warm gold accent */}
-          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[family-name:var(--font-ephesis)] text-[#9F8650] my-4 sm:my-6 md:my-8">
-            and
-          </p>
-
-          {/* Bride Name */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-[family-name:var(--font-crimson)] font-normal text-[#0A3629] uppercase tracking-[0.12em] sm:tracking-[0.15em] leading-tight px-2 elegant-text-shadow">
-            JENNIFER BARTOLOME
-          </h1>
-
-          {/* Decorative line with earth tones */}
-          <div className="flex items-center justify-center gap-3">
-            <div className="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-transparent via-[#9F8650] to-transparent" />
-          </div>
-
-          {/* Request Text */}
-          <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-normal text-[#0A3629] tracking-wide max-w-xl mx-auto px-6 sm:px-8 leading-relaxed">
-            request the honor of your presence as we are unified in marriage before our Lord God.
-          </p>
-
-          {/* Date Display with elegant earth tone accents */}
-          <div className="space-y-3 pt-4 sm:pt-6 px-4">
-            <div className="flex items-center justify-center gap-3 sm:gap-4">
-              <div className="h-[1px] w-12 sm:w-16 md:w-20 bg-gradient-to-r from-transparent via-[#9F8650] to-[#9F8650]" />
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-[family-name:var(--font-crimson)] font-semibold text-[#9F8650] tracking-wider">
-                January
+          {/* Names block */}
+          <div className="space-y-4 sm:space-y-5 md:space-y-6 mb-6 sm:mb-7 md:mb-8">
+            {/* Japoi */}
+            <div className="space-y-1">
+              <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-50 uppercase">
+                Japoi
               </p>
-              <div className="h-[1px] w-12 sm:w-16 md:w-20 bg-gradient-to-l from-transparent via-[#9F8650] to-[#9F8650]" />
+              <p className="text-2xl sm:text-3xl md:text-[2.5rem] font-[family-name:var(--font-chicanos)] text-zinc-300 leading-tight">
+                Abriam
+              </p>
             </div>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 md:gap-4 text-[#0A3629]">
-              <span className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] uppercase tracking-wider text-[#9F8650]">SATURDAY</span>
-              <span className="text-6xl sm:text-7xl md:text-8xl font-[family-name:var(--font-crimson)] font-light my-2 sm:my-0 elegant-text-shadow">24</span>
-              <span className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] uppercase tracking-wider text-[#9F8650]">9:00 AM</span>
+
+            {/* AND */}
+            <p className="text-[10px] sm:text-xs tracking-[0.3em] font-[family-name:var(--font-crimson)] text-zinc-500 uppercase">
+              and
+            </p>
+
+            {/* Regine */}
+            <div className="space-y-1">
+              <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-50 uppercase">
+                Regine
+              </p>
+              <p className="text-2xl sm:text-3xl md:text-[2.5rem] font-[family-name:var(--font-chicanos)] text-zinc-300 leading-tight">
+                Laguitao
+              </p>
             </div>
-            
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-crimson)] font-light text-[#0A3629]">
+          </div>
+
+          {/* Invite line */}
+          <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.32em] text-zinc-400 uppercase mb-6 sm:mb-7">
+            warmly invite you to celebrate their marriage
+          </p>
+
+          {/* Fine divider before date section */}
+          <div className="mb-6 sm:mb-7 md:mb-8 flex justify-center">
+            <div className="h-px w-24 sm:w-32 md:w-40 bg-gradient-to-r from-transparent via-zinc-600 to-transparent" />
+          </div>
+
+          {/* Date + time block */}
+          <div className="mb-7 sm:mb-9 md:mb-10">
+            {/* Month */}
+            <p className="text-[11px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.38em] text-zinc-400 uppercase mb-4 sm:mb-5">
+              March
+            </p>
+
+            {/* Day row: weekday / day / time */}
+            <div className="flex items-center justify-center gap-6 sm:gap-10 md:gap-14 mb-3 sm:mb-4">
+              <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
+                Sunday
+              </p>
+
+              <p className="text-4xl sm:text-5xl md:text-[3.25rem] font-[family-name:var(--font-crimson)] text-zinc-50 leading-none">
+                15
+              </p>
+
+              <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
+                At 4 PM
+              </p>
+            </div>
+
+            {/* Year */}
+            <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-400 uppercase">
               2026
             </p>
           </div>
 
-          {/* Ceremony with warm gold accent */}
-          <div className="pt-4 sm:pt-6">
-            <div className="flex items-center justify-center gap-3 mb-3">
-              <div className="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-transparent via-[#9F8650] to-transparent" />
-            </div>
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-ephesis)] text-[#9F8650] px-4">
-              Ceremony
+          {/* Fine divider before location */}
+          <div className="mt-6 sm:mt-7 md:mt-8 mb-6 sm:mb-7 flex justify-center">
+            <div className="h-px w-24 sm:w-32 md:w-40 bg-gradient-to-r from-transparent via-zinc-600 to-transparent" />
+          </div>
+
+          {/* Location block */}
+          <div className="space-y-2 sm:space-y-3 md:space-y-3.5 mb-6 sm:mb-8">
+            <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
+              Ceremony &amp; Reception
             </p>
-            <div className="flex items-center justify-center gap-3 mt-3">
-              <div className="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-transparent via-[#9F8650] to-transparent" />
-            </div>
+            <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-100 uppercase">
+              Twin Lakes Tagaytay, Glass House
+            </p>
+            <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-zinc-400 uppercase">
+              Tagaytay, Philippines
+            </p>
           </div>
 
-          {/* Venue Details */}
-          <div className="space-y-4 pb-4 sm:pb-6 px-4">
-            <div className="space-y-1.5">
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-[family-name:var(--font-crimson)] font-semibold text-[#9F8650] uppercase tracking-wider">
-                {ceremonyVenue}
-              </p>
-              <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-normal text-[#0A3629]/80">
-                {ceremonyAddress}
-              </p>
-            </div>
-
-            <div className="flex items-center justify-center gap-2">
-              <span className="h-[1px] w-8 sm:w-12 bg-gradient-to-r from-transparent via-[#9F8650]/60 to-transparent" />
-              <span className="w-1 h-1 rounded-full bg-[#9F8650]/70" />
-              <span className="h-[1px] w-8 sm:w-12 bg-gradient-to-r from-transparent via-[#9F8650]/60 to-transparent" />
-            </div>
-
-            <div className="space-y-1.5">
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-[family-name:var(--font-crimson)] font-semibold text-[#0A3629] uppercase tracking-wider">
-                {receptionVenue}
-              </p>
-              <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-normal text-[#0A3629]/80">
-                {receptionAddress}
-              </p>
-            </div>
-          </div>
-
-          {/* Elegant CTA Button with earth tone gradient */}
-          <div className="pt-6 sm:pt-8">
-            <a
-              href="#guest-list"
-              className="inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-10 md:px-12 lg:px-14 py-3 sm:py-3.5 md:py-4 lg:py-4.5 font-[family-name:var(--font-crimson)] font-semibold text-sm sm:text-base md:text-lg text-white bg-gradient-to-r from-[#0A3629] to-[#126555] hover:from-[#126555] hover:to-[#0A3629] transition-all duration-300 tracking-wider uppercase border-2 border-[#126555] hover:border-[#0A3629] hover:scale-105 hover:shadow-[0_10px_30px_rgba(10,54,41,0.4)] hover:brightness-110 active:scale-100 premium-shadow rounded-sm relative overflow-hidden group"
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
-              <Heart size={16} className="w-4 h-4 sm:w-5 sm:h-5 relative z-10 group-hover:scale-110 transition-transform duration-300" />
-              <span className="relative z-10">RSVP</span>
-            </a>
-          </div>
-
-          {/* Bottom decorative line */}
-          <div className="flex items-center justify-center gap-3 pt-6">
-            <div className="h-[1px] w-24 sm:w-32 bg-gradient-to-r from-transparent via-[#9F8650] to-transparent" />
+          {/* Script "Reception to follow" */}
+          <p className="text-lg sm:text-xl md:text-[1.4rem] font-[family-name:var(--font-ephesis)] text-zinc-200 italic">
+            Reception to follow
+          </p>
           </div>
         </div>
       </div>

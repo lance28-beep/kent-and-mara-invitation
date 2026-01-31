@@ -3,8 +3,6 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Heart, Sparkles } from "lucide-react";
-import { siteConfig } from "@/content/site";
 import StaggeredMenu from "./StaggeredMenu";
 
 const navLinks = [
@@ -12,6 +10,7 @@ const navLinks = [
   { href: "#countdown", label: "Countdown" },
   { href: "#messages", label: "Messages" },
   { href: "#details", label: "Details" },
+  { href: "#timeline", label: "Timeline" },
   { href: "#entourage", label: "Entourage" },
   { href: "#sponsors", label: "Sponsors" },
   { href: "#guest-list", label: "RSVP" },
@@ -86,36 +85,23 @@ export function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-500 ease-out ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
         isScrolled
-          ? "bg-[#F9F8F4]/95 backdrop-blur-xl shadow-sm border-b border-[#126555]/30 premium-shadow"
-          : "bg-[#F9F8F4]/85 backdrop-blur-lg border-b border-[#126555]/20"
+          ? "bg-black/90 backdrop-blur-xl shadow-lg border-b border-white/10"
+          : "bg-black/70 backdrop-blur-lg border-b border-white/5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative">
-        <div className="flex justify-between items-center h-16 sm:h-16 md:h-14">
-          <Link href="#home" className="flex-shrink-0 group relative z-10">
-            <div className="flex items-center gap-2 sm:gap-3">
-              {/* Monogram Image */}
-              <div className="relative w-9 h-9 sm:w-10 sm:h-10 flex-shrink-0 group-hover:scale-105 transition-all duration-300">
-                <Image
-                  src="/monogram/image.png"
-                  alt="Steven & Renee Monogram"
-                  fill
-                  className="object-contain"
-                  style={{ 
-                    filter: 'brightness(0) saturate(100%) invert(8%) sepia(94%) saturate(1352%) hue-rotate(120deg) brightness(95%) contrast(85%)'
-                  }}
-                  priority
-                />
-              </div>
-
-              {/* Names with accent color on hover */}
-              <div className="text-xs sm:text-base md:text-lg font-[family-name:var(--font-crimson)] font-semibold group-hover:text-[#9F8650] transition-all duration-300 tracking-[0.15em] sm:tracking-[0.2em] text-[#0A3629] uppercase">
-                {siteConfig.couple.groomNickname} &{" "}
-                {siteConfig.couple.brideNickname}
-              </div>
-            </div>
+        <div className="flex justify-between items-center h-14 sm:h-14 md:h-14">
+          <Link href="#home" className="flex-shrink-0 group relative z-10 flex items-center">
+            <Image
+              src="/monogram/monogram.png"
+              alt="Japoi & Regine"
+              width={48}
+              height={48}
+              className="h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 object-contain object-center brightness-0 invert group-hover:opacity-90 transition-opacity duration-300"
+              priority
+            />
           </Link>
 
           <div className="hidden md:flex gap-1 items-center">
@@ -127,13 +113,13 @@ export function Navbar() {
                   href={link.href}
                   className={`px-3 lg:px-4 py-1.5 text-xs lg:text-sm font-[family-name:var(--font-crimson)] font-normal tracking-wide transition-all duration-300 relative group ${
                     isActive
-                      ? "text-[#9F8650]"
-                      : "text-[#0A3629]/80 hover:text-[#9F8650]"
+                      ? "text-zinc-100"
+                      : "text-zinc-400 hover:text-zinc-200"
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute bottom-0 left-0 h-[1.5px] bg-gradient-to-r from-[#9F8650] to-[#688277] transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-[1.5px] bg-zinc-400 transition-all duration-300 ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />
@@ -149,11 +135,11 @@ export function Navbar() {
               socialItems={[]}
               displaySocials={false}
               displayItemNumbering={true}
-              menuButtonColor="#0A3629"
-              openMenuButtonColor="#9F8650"
+              menuButtonColor="#e4e4e7"
+              openMenuButtonColor="#fafafa"
               changeMenuColorOnOpen={true}
-              colors={["#F9F8F4", "#688277", "#126555", "#F9F8F4", "#9F8650"]}
-              accentColor="#F9F8F4"
+              colors={["#000000", "#0a0a0a", "#171717", "#050505"]}
+              accentColor="#fafafa"
               isFixed={true}
               onMenuOpen={() => {}}
               onMenuClose={() => {}}

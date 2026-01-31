@@ -293,44 +293,16 @@ export function GuestList() {
     >
       {/* Section Header */}
       <div className="relative z-10 text-center mb-8 sm:mb-12 md:mb-16 px-4 sm:px-6">
-        <h2
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal text-white mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]"
-          style={{
-            textShadow:
-              "0 0 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5)",
-          }}
-        >
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]">
           RSVP
         </h2>
 
         <div className="space-y-3 sm:space-y-4">
-          <p
-            className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-white font-light max-w-xl mx-auto leading-relaxed tracking-wide px-4"
-            style={{
-              textShadow:
-                "0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5)",
-            }}
-          >
+          <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-400 font-light max-w-xl mx-auto leading-relaxed tracking-wide px-4">
             Please search for your name below to confirm your attendance and help us prepare for this special celebration
           </p>
-          <p
-            className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] text-white/90 font-medium max-w-xl mx-auto leading-relaxed tracking-wide px-4"
-            style={{
-              textShadow:
-                "0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5)",
-            }}
-          >
-            RSVP deadline: December 20, 2025
-          </p>
-          <p
-            className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] text-white/90 font-medium max-w-xl mx-auto leading-relaxed tracking-wide px-4"
-            style={{
-              textShadow:
-                "0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5)",
-            }}
-          >
-            Jen Bartolome 09175008790 | 
-            Jay-R Valenzuela 09163632002
+          <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] text-zinc-300 font-medium max-w-xl mx-auto leading-relaxed tracking-wide px-4">
+            RSVP deadline: March 1 2026
           </p>
         </div>
       </div>
@@ -339,24 +311,48 @@ export function GuestList() {
       <div className="relative z-10 max-w-3xl mx-auto px-3 sm:px-4 md:px-6">
         {/* Main card with elegant styling */}
         <div className="relative group">
-          <div className="absolute -inset-1 bg-gradient-to-br from-[#1A1A1A]/20 to-[#1A1A1A]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
-
           <div
-            className="relative bg-white backdrop-blur-sm rounded-xl sm:rounded-2xl border-2 border-[#1A1A1A]/40 shadow-xl hover:shadow-2xl transition-all duration-300 hover:border-[#1A1A1A]/60 overflow-visible"
-            style={{ overflow: "visible" }}
+            className="relative rounded-xl sm:rounded-2xl overflow-visible transition-all duration-300"
+            style={{
+              background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+              boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
+              overflow: 'visible',
+            }}
           >
+            {/* Gradient overlays */}
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505] z-0 rounded-xl sm:rounded-2xl" />
+            <div 
+              className="absolute inset-0 opacity-60 z-0 rounded-xl sm:rounded-2xl"
+              style={{
+                background: 'radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%)',
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[rgba(255,255,255,0.01)] to-transparent opacity-50 z-0 rounded-xl sm:rounded-2xl" />
+            
+            {/* Elegant border */}
+            <div 
+              className="absolute inset-0 rounded-xl sm:rounded-2xl z-0"
+              style={{
+                padding: '1px',
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.1) 100%)',
+                WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+                WebkitMaskComposite: 'xor',
+                maskComposite: 'exclude',
+              }}
+            />
+            <div className="absolute inset-[1px] rounded-xl sm:rounded-2xl border border-[rgba(255,255,255,0.08)] group-hover:border-[rgba(255,255,255,0.15)] transition-colors z-0" />
             {/* Card content */}
-            <div className="relative p-4 sm:p-6 md:p-8 lg:p-10">
+            <div className="relative z-10 p-4 sm:p-6 md:p-8 lg:p-10">
               <div className="relative z-10 space-y-4 sm:space-y-5">
                 <div className="flex items-center gap-2.5 sm:gap-3">
-                  <div className="bg-gradient-to-r from-[#0A3629] to-[#126555] p-1.5 sm:p-2 rounded-xl shadow-lg">
-                    <Search className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                  <div className="bg-zinc-800 p-1.5 sm:p-2 rounded-xl shadow-lg border border-white/10">
+                    <Search className="h-4 w-4 sm:h-5 sm:w-5 text-zinc-200" />
                   </div>
                   <div>
-                    <label className="block text-sm sm:text-base md:text-lg font-semibold text-[#1A1A1A] font-[family-name:var(--font-crimson)] mb-0.5 sm:mb-1">
+                    <label className="block text-sm sm:text-base md:text-lg font-semibold text-zinc-200 font-[family-name:var(--font-crimson)] mb-0.5 sm:mb-1">
                       Find Your Name
                     </label>
-                    <p className="text-[10px] sm:text-xs text-[#1A1A1A]/70 font-[family-name:var(--font-crimson)]">
+                    <p className="text-[10px] sm:text-xs text-zinc-400 font-[family-name:var(--font-crimson)]">
                       Type as you search to see instant results
                     </p>
                   </div>
@@ -367,19 +363,19 @@ export function GuestList() {
                   style={{ zIndex: 50 }}
                 >
                   <div className="relative">
-                    <Search className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-[#1A1A1A]/40 pointer-events-none transition-colors duration-200" />
+                    <Search className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-zinc-500 pointer-events-none transition-colors duration-200" />
                     <input
                       type="text"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="Type your name..."
-                      className="w-full pl-9 sm:pl-12 pr-3 sm:pr-5 py-2.5 sm:py-3.5 md:py-4 border-2 border-[#1A1A1A]/30 focus:border-[#1A1A1A] rounded-lg sm:rounded-xl text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] placeholder:text-[#1A1A1A]/40 transition-all duration-300 hover:border-[#1A1A1A]/50 focus:ring-4 focus:ring-[#1A1A1A]/10 bg-white shadow-inner focus:shadow-lg"
+                      className="w-full pl-9 sm:pl-12 pr-3 sm:pr-5 py-2.5 sm:py-3.5 md:py-4 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 hover:border-white/30 focus:ring-4 focus:ring-white/10 bg-zinc-900/50 shadow-inner focus:shadow-lg text-zinc-100"
                     />
                   </div>
                   {/* Autocomplete dropdown */}
                   {isSearching && filteredGuests.length > 0 && (
                     <div
-                      className="absolute z-50 w-full mt-2 sm:mt-3 bg-white/95 backdrop-blur-lg border border-[#1A1A1A]/30 rounded-xl shadow-2xl overflow-hidden"
+                      className="absolute z-50 w-full mt-2 sm:mt-3 bg-zinc-900/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-2xl overflow-hidden"
                       style={{
                         position: "absolute",
                         top: "100%",
@@ -391,24 +387,24 @@ export function GuestList() {
                           <button
                             key={index}
                             onClick={() => handleSearchSelect(guest)}
-                            className="w-full px-4 sm:px-5 py-3.5 sm:py-4 text-left hover:bg-[#1A1A1A]/10 active:bg-[#1A1A1A]/20 transition-all duration-200 flex items-center gap-3 sm:gap-4 border-b border-[#1A1A1A]/10 last:border-b-0 group"
+                            className="w-full px-4 sm:px-5 py-3.5 sm:py-4 text-left hover:bg-white/10 active:bg-white/20 transition-all duration-200 flex items-center gap-3 sm:gap-4 border-b border-white/10 last:border-b-0 group"
                           >
                             <div className="relative flex-shrink-0">
-                              <div className="bg-gradient-to-r from-[#0A3629] to-[#126555] p-1.5 sm:p-2 rounded-full shadow-md group-hover:shadow-lg transition-all duration-300">
-                                <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
+                              <div className="bg-zinc-800 p-1.5 sm:p-2 rounded-full shadow-md group-hover:shadow-lg transition-all duration-300 border border-white/10">
+                                <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-zinc-200" />
                               </div>
                             </div>
                             <div className="flex-1 min-w-0">
-                              <div className="font-semibold text-sm sm:text-base text-[#1A1A1A] font-[family-name:var(--font-crimson)] group-hover:text-[#3C3C3C] transition-colors duration-200 truncate">
+                              <div className="font-semibold text-sm sm:text-base text-zinc-200 font-[family-name:var(--font-crimson)] group-hover:text-zinc-100 transition-colors duration-200 truncate">
                                 {guest.Name}
                               </div>
                               {guest.Email && guest.Email !== "Pending" && (
-                                <div className="text-[10px] sm:text-xs text-[#1A1A1A]/60 font-[family-name:var(--font-crimson)] truncate mt-0.5">
+                                <div className="text-[10px] sm:text-xs text-zinc-400 font-[family-name:var(--font-crimson)] truncate mt-0.5">
                                   {guest.Email}
                                 </div>
                               )}
                             </div>
-                            <div className="text-[#1A1A1A]/40 group-hover:text-[#1A1A1A] group-hover:translate-x-1 transition-all duration-200 flex-shrink-0">
+                            <div className="text-zinc-500 group-hover:text-zinc-300 group-hover:translate-x-1 transition-all duration-200 flex-shrink-0">
                               <svg
                                 className="w-4 h-4 sm:w-5 sm:h-5"
                                 fill="none"
@@ -430,7 +426,7 @@ export function GuestList() {
                   )}
                   {searchQuery && filteredGuests.length === 0 && (
                     <div
-                      className="absolute z-50 w-full mt-2 sm:mt-3 bg-white/95 backdrop-blur-lg border border-[#1A1A1A]/30 rounded-xl shadow-2xl overflow-hidden"
+                      className="absolute z-50 w-full mt-2 sm:mt-3 bg-zinc-900/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-2xl overflow-hidden"
                       style={{
                         position: "absolute",
                         top: "100%",
@@ -439,14 +435,14 @@ export function GuestList() {
                     >
                       <div className="p-4 sm:p-5">
                         <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
-                          <div className="bg-gradient-to-r from-[#0A3629] to-[#126555] p-1.5 sm:p-2 rounded-xl flex-shrink-0 shadow-md">
-                            <UserPlus className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+                          <div className="bg-zinc-800 p-1.5 sm:p-2 rounded-xl flex-shrink-0 shadow-md border border-white/10">
+                            <UserPlus className="h-4 w-4 sm:h-5 sm:w-5 text-zinc-200" />
                           </div>
                           <div className="flex-1">
-                            <h4 className="font-semibold text-sm sm:text-base text-[#1A1A1A] font-[family-name:var(--font-crimson)] mb-1">
+                            <h4 className="font-semibold text-sm sm:text-base text-zinc-200 font-[family-name:var(--font-crimson)] mb-1">
                               Not finding your name?
                             </h4>
-                            <p className="text-xs sm:text-sm text-[#1A1A1A]/70 font-[family-name:var(--font-crimson)] leading-relaxed">
+                            <p className="text-xs sm:text-sm text-zinc-400 font-[family-name:var(--font-crimson)] leading-relaxed">
                               We'd love to have you with us! Send a request to
                               join the celebration.
                             </p>
@@ -460,7 +456,7 @@ export function GuestList() {
                             });
                             setShowRequestModal(true);
                           }}
-                          className="w-full bg-gradient-to-r from-[#0A3629] to-[#126555] hover:from-[#126555] hover:to-[#0A3629] text-white py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-[family-name:var(--font-crimson)] font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+                          className="w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-100 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-[family-name:var(--font-crimson)] font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] border border-white/20"
                         >
                           <UserPlus className="h-3 w-3 sm:h-4 sm:w-4 mr-2 inline" />
                           Request to Join
@@ -477,10 +473,26 @@ export function GuestList() {
 
       {/* RSVP Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-1.5 sm:p-3 md:p-4 bg-black/50 backdrop-blur-sm animate-in fade-in">
-          <div className="relative w-full max-w-md sm:max-w-2xl mx-1.5 sm:mx-3 bg-white rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl border border-[#1A1A1A]/30 overflow-hidden animate-in zoom-in-95 duration-300 max-h-[98vh] flex flex-col">
-            {/* Modal Header with Gradient */}
-            <div className="relative bg-gradient-to-r from-[#0A3629] to-[#126555] p-3 sm:p-4 md:p-6 lg:p-8 flex-shrink-0">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-1.5 sm:p-3 md:p-4 bg-black/70 backdrop-blur-sm animate-in fade-in">
+          <div 
+            className="relative w-full max-w-md sm:max-w-2xl mx-1.5 sm:mx-3 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300 max-h-[98vh] flex flex-col"
+            style={{
+              background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+              boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
+            }}
+          >
+            {/* Gradient overlays */}
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505] z-0" />
+            <div 
+              className="absolute inset-0 opacity-60 z-0"
+              style={{
+                background: 'radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%)',
+              }}
+            />
+            <div className="absolute inset-0 border border-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl z-0" />
+            
+            {/* Modal Header */}
+            <div className="relative bg-zinc-900/80 p-3 sm:p-4 md:p-6 lg:p-8 flex-shrink-0 border-b border-white/10">
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
               <div className="relative flex items-start justify-between gap-2">
                 <div className="flex-1 min-w-0">
@@ -529,46 +541,46 @@ export function GuestList() {
             </div>
 
             {/* Modal Content */}
-            <div className="p-3 sm:p-4 md:p-6 lg:p-8 overflow-y-auto flex-1 min-h-0">
+            <div className="relative z-10 p-3 sm:p-4 md:p-6 lg:p-8 overflow-y-auto flex-1 min-h-0">
               {hasResponded ? (
                 // Thank you message for guests who already responded
                 <div className="text-center py-3 sm:py-6 md:py-8">
-                  <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full mb-3 sm:mb-4 md:mb-6">
-                    <CheckCircle className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-green-600" />
+                  <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-green-900/50 rounded-full mb-3 sm:mb-4 md:mb-6 border border-green-500/30">
+                    <CheckCircle className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-green-400" />
                   </div>
-                  <h4 className="text-base sm:text-xl md:text-2xl font-[family-name:var(--font-crimson)] font-semibold text-[#1A1A1A] mb-2 sm:mb-3">
+                  <h4 className="text-base sm:text-xl md:text-2xl font-[family-name:var(--font-crimson)] font-semibold text-zinc-200 mb-2 sm:mb-3">
                     Thank You for Responding!
                   </h4>
-                  <p className="text-[#1A1A1A]/80 font-[family-name:var(--font-crimson)] text-xs sm:text-sm md:text-base mb-3 sm:mb-4 md:mb-6 px-2">
+                  <p className="text-zinc-400 font-[family-name:var(--font-crimson)] text-xs sm:text-sm md:text-base mb-3 sm:mb-4 md:mb-6 px-2">
                     We've received your RSVP and look forward to celebrating
                     with you!
                   </p>
-                  <div className="bg-[#E8DCC8]/20 rounded-xl p-3 sm:p-4 md:p-6 border border-[#1A1A1A]/20 space-y-2.5 sm:space-y-3 md:space-y-4">
+                  <div className="bg-zinc-900/50 rounded-xl p-3 sm:p-4 md:p-6 border border-white/10 space-y-2.5 sm:space-y-3 md:space-y-4">
                     <div className="flex items-center justify-center gap-2 sm:gap-3 mb-1.5 sm:mb-2 md:mb-3">
                       {selectedGuest?.RSVP === "Yes" && (
                         <>
-                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-green-600" />
-                          <span className="text-sm sm:text-base md:text-lg font-semibold font-[family-name:var(--font-crimson)] text-green-600">
+                          <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-green-400" />
+                          <span className="text-sm sm:text-base md:text-lg font-semibold font-[family-name:var(--font-crimson)] text-green-400">
                             You're Attending!
                           </span>
                         </>
                       )}
                       {selectedGuest?.RSVP === "No" && (
                         <>
-                          <XCircle className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-red-600" />
-                          <span className="text-sm sm:text-base md:text-lg font-semibold font-[family-name:var(--font-crimson)] text-red-600">
+                          <XCircle className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-red-400" />
+                          <span className="text-sm sm:text-base md:text-lg font-semibold font-[family-name:var(--font-crimson)] text-red-400">
                             Unable to Attend
                           </span>
                         </>
                       )}
                     </div>
                     {selectedGuest?.RSVP === "Yes" && selectedGuest?.Guest && (
-                      <div className="bg-[#E8DCC8]/20 rounded-lg p-2.5 sm:p-3 md:p-4 border border-[#1A1A1A]/20">
+                      <div className="bg-zinc-800/50 rounded-lg p-2.5 sm:p-3 md:p-4 border border-white/10">
                         <div className="text-center">
-                          <p className="text-[10px] sm:text-xs md:text-sm text-[#1A1A1A]/70 font-[family-name:var(--font-crimson)] mb-0.5 sm:mb-1 font-medium">
+                          <p className="text-[10px] sm:text-xs md:text-sm text-zinc-400 font-[family-name:var(--font-crimson)] mb-0.5 sm:mb-1 font-medium">
                             Number of Guests
                           </p>
-                          <p className="text-xl sm:text-2xl md:text-3xl font-bold font-[family-name:var(--font-crimson)] text-[#1A1A1A]">
+                          <p className="text-xl sm:text-2xl md:text-3xl font-bold font-[family-name:var(--font-crimson)] text-zinc-200">
                             {selectedGuest.Guest || "1"}
                           </p>
                         </div>
@@ -577,8 +589,8 @@ export function GuestList() {
                     {selectedGuest &&
                       selectedGuest.Message &&
                       selectedGuest.Message.trim() !== "" && (
-                        <div className="pt-2 sm:pt-3 border-t border-[#1A1A1A]/20">
-                          <p className="text-[10px] sm:text-xs md:text-sm text-[#1A1A1A]/80 font-[family-name:var(--font-crimson)] italic px-1">
+                        <div className="pt-2 sm:pt-3 border-t border-white/10">
+                          <p className="text-[10px] sm:text-xs md:text-sm text-zinc-300 font-[family-name:var(--font-crimson)] italic px-1">
                             "{selectedGuest.Message}"
                           </p>
                         </div>
@@ -586,7 +598,7 @@ export function GuestList() {
                   </div>
                   <Button
                     onClick={handleCloseModal}
-                    className="mt-3 sm:mt-4 md:mt-6 bg-gradient-to-r from-[#0A3629] to-[#126555] hover:from-[#126555] hover:to-[#0A3629] text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold transition-all duration-300"
+                    className="mt-3 sm:mt-4 md:mt-6 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold transition-all duration-300 border border-white/20"
                   >
                     Close
                   </Button>
@@ -602,8 +614,8 @@ export function GuestList() {
                 >
                   {/* Can you attend? */}
                   <div>
-                    <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-[#1A1A1A] mb-1.5 sm:mb-2 md:mb-4 font-[family-name:var(--font-crimson)]">
-                      <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#1A1A1A] flex-shrink-0" />
+                    <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-zinc-200 mb-1.5 sm:mb-2 md:mb-4 font-[family-name:var(--font-crimson)]">
+                      <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-zinc-300 flex-shrink-0" />
                       <span className="leading-tight">Can you attend? *</span>
                     </label>
                     <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4">
@@ -614,23 +626,23 @@ export function GuestList() {
                         }
                         className={`relative p-2 sm:p-3 md:p-4 lg:p-6 rounded-xl sm:rounded-2xl border-2 sm:border-4 transition-all duration-300 ${
                           formData.RSVP === "Yes"
-                            ? "border-green-500 bg-green-50 shadow-lg scale-105"
-                            : "border-[#1A1A1A]/30 bg-white hover:border-[#1A1A1A]/50 hover:shadow-md"
+                            ? "border-green-500 bg-green-900/30 shadow-lg scale-105"
+                            : "border-white/20 bg-zinc-900/50 hover:border-white/30 hover:shadow-md"
                         }`}
                       >
                         <div className="flex items-center justify-center gap-1.5 sm:gap-2 md:gap-3">
                           <CheckCircle
                             className={`h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 flex-shrink-0 ${
                               formData.RSVP === "Yes"
-                                ? "text-green-600"
-                                : "text-[#1A1A1A]/40"
+                                ? "text-green-400"
+                                : "text-zinc-500"
                             }`}
                           />
                           <span
                             className={`text-xs sm:text-sm md:text-base lg:text-xl font-bold font-[family-name:var(--font-crimson)] ${
                               formData.RSVP === "Yes"
-                                ? "text-green-600"
-                                : "text-[#1A1A1A]"
+                                ? "text-green-400"
+                                : "text-zinc-200"
                             }`}
                           >
                             Yes!
@@ -644,23 +656,23 @@ export function GuestList() {
                         }
                         className={`relative p-2 sm:p-3 md:p-4 lg:p-6 rounded-xl sm:rounded-2xl border-2 sm:border-4 transition-all duration-300 ${
                           formData.RSVP === "No"
-                            ? "border-red-500 bg-red-50 shadow-lg scale-105"
-                            : "border-[#1A1A1A]/30 bg-white hover:border-[#1A1A1A]/50 hover:shadow-md"
+                            ? "border-red-500 bg-red-900/30 shadow-lg scale-105"
+                            : "border-white/20 bg-zinc-900/50 hover:border-white/30 hover:shadow-md"
                         }`}
                       >
                         <div className="flex items-center justify-center gap-1.5 sm:gap-2 md:gap-3">
                           <XCircle
                             className={`h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 flex-shrink-0 ${
                               formData.RSVP === "No"
-                                ? "text-red-600"
-                                : "text-[#1A1A1A]/40"
+                                ? "text-red-400"
+                                : "text-zinc-500"
                             }`}
                           />
                           <span
                             className={`text-xs sm:text-sm md:text-base lg:text-xl font-bold font-[family-name:var(--font-crimson)] ${
                               formData.RSVP === "No"
-                                ? "text-red-600"
-                                : "text-[#1A1A1A]"
+                                ? "text-red-400"
+                                : "text-zinc-200"
                             }`}
                           >
                             Sorry, No
@@ -673,8 +685,8 @@ export function GuestList() {
                   {/* Number of Guests - Only show when RSVP is "Yes" */}
                   {formData.RSVP === "Yes" && (
                     <div>
-                      <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-[#1A1A1A] mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)]">
-                        <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#1A1A1A] flex-shrink-0" />
+                      <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-zinc-200 mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)]">
+                        <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-zinc-300 flex-shrink-0" />
                         <span className="leading-tight">
                           Number of Guests *
                         </span>
@@ -687,19 +699,19 @@ export function GuestList() {
                         min="1"
                         required
                         placeholder="How many guests?"
-                        className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-[#1A1A1A]/30 focus:border-[#1A1A1A] rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-[#1A1A1A]/40 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-[#1A1A1A]/10 bg-white"
+                        className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
                       />
                     </div>
                   )}
 
                   {/* Message to the couple */}
                   <div>
-                    <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-[#1A1A1A] mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)]">
-                      <MessageSquare className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#1A1A1A] flex-shrink-0" />
+                    <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-zinc-200 mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)]">
+                      <MessageSquare className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-zinc-300 flex-shrink-0" />
                       <span className="leading-tight">
                         Your Message to the Couple
                       </span>
-                      <span className="text-[10px] sm:text-xs md:text-sm font-normal text-[#1A1A1A]/60">
+                      <span className="text-[10px] sm:text-xs md:text-sm font-normal text-zinc-400">
                         (Optional)
                       </span>
                     </label>
@@ -709,16 +721,16 @@ export function GuestList() {
                       onChange={handleFormChange}
                       placeholder="Share your excitement..."
                       rows={3}
-                      className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-[#1A1A1A]/30 focus:border-[#1A1A1A] rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-[#1A1A1A]/40 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-[#1A1A1A]/10 resize-none bg-white"
+                      className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 resize-none bg-zinc-900/50 text-zinc-100"
                     />
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-[#1A1A1A] mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)] flex-wrap">
-                      <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#1A1A1A] flex-shrink-0" />
+                    <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-zinc-200 mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)] flex-wrap">
+                      <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-zinc-300 flex-shrink-0" />
                       <span className="leading-tight">Your Email Address</span>
-                      <span className="text-[10px] sm:text-xs md:text-sm font-normal text-[#1A1A1A]/60">
+                      <span className="text-[10px] sm:text-xs md:text-sm font-normal text-zinc-400">
                         (Optional)
                       </span>
                     </label>
@@ -728,7 +740,7 @@ export function GuestList() {
                       value={formData.Email}
                       onChange={handleFormChange}
                       placeholder="your.email@example.com"
-                      className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-[#1A1A1A]/30 focus:border-[#1A1A1A] rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-[#1A1A1A]/40 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-[#1A1A1A]/10 bg-white"
+                      className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
                     />
                   </div>
 
@@ -737,7 +749,7 @@ export function GuestList() {
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className="w-full bg-gradient-to-r from-[#0A3629] to-[#126555] hover:from-[#126555] hover:to-[#0A3629] text-white py-2.5 sm:py-3 md:py-3.5 lg:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base lg:text-lg font-[family-name:var(--font-crimson)] font-semibold shadow-xl transition-all duration-300 hover:shadow-2xl disabled:opacity-70 min-h-[40px] sm:min-h-[44px] md:min-h-[48px]"
+                      className="w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-100 py-2.5 sm:py-3 md:py-3.5 lg:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base lg:text-lg font-[family-name:var(--font-crimson)] font-semibold shadow-xl transition-all duration-300 hover:shadow-2xl disabled:opacity-70 min-h-[40px] sm:min-h-[44px] md:min-h-[48px] border border-white/20"
                     >
                       {isLoading ? (
                         <div className="flex items-center justify-center gap-2 sm:gap-3">
@@ -820,10 +832,10 @@ export function GuestList() {
             {/* Error message */}
             {error && !success && (
               <div className="px-2.5 sm:px-4 md:px-6 lg:px-8 pb-2.5 sm:pb-4 md:pb-6">
-                <div className="bg-red-50 border-2 border-red-200 rounded-xl p-2.5 sm:p-3 md:p-4">
+                <div className="bg-red-900/30 border-2 border-red-500/30 rounded-xl p-2.5 sm:p-3 md:p-4">
                   <div className="flex items-center gap-2">
-                    <AlertCircle className="h-4 w-4 sm:h-5 sm:w-5 text-red-600 flex-shrink-0" />
-                    <span className="text-red-600 font-semibold font-[family-name:var(--font-crimson)] text-xs sm:text-sm">
+                    <AlertCircle className="h-4 w-4 sm:h-5 sm:w-5 text-red-400 flex-shrink-0" />
+                    <span className="text-red-400 font-semibold font-[family-name:var(--font-crimson)] text-xs sm:text-sm">
                       {error}
                     </span>
                   </div>
@@ -836,26 +848,41 @@ export function GuestList() {
 
       {/* Request to Join Modal */}
       {showRequestModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-1.5 sm:p-3 md:p-4 bg-black/50 backdrop-blur-sm animate-in fade-in">
-          <div className="relative w-full max-w-md sm:max-w-2xl mx-1.5 sm:mx-3 bg-white rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl border border-[#1A1A1A]/30 overflow-hidden animate-in zoom-in-95 duration-300 max-h-[98vh] flex flex-col">
-            {/* Modal Header with Gradient */}
-            <div className="relative bg-gradient-to-r from-[#0A3629] to-[#126555] p-3 sm:p-4 md:p-6 lg:p-8 flex-shrink-0">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-1.5 sm:p-3 md:p-4 bg-black/70 backdrop-blur-sm animate-in fade-in">
+          <div 
+            className="relative w-full max-w-md sm:max-w-2xl mx-1.5 sm:mx-3 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300 max-h-[98vh] flex flex-col"
+            style={{
+              background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+              boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
+            }}
+          >
+            {/* Gradient overlays */}
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505] z-0" />
+            <div 
+              className="absolute inset-0 opacity-60 z-0"
+              style={{
+                background: 'radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%)',
+              }}
+            />
+            <div className="absolute inset-0 border border-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl z-0" />
+            
+            {/* Modal Header */}
+            <div className="relative bg-zinc-900/80 p-3 sm:p-4 md:p-6 lg:p-8 flex-shrink-0 border-b border-white/10">
               <div className="relative flex items-start justify-between gap-2">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2 md:mb-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white/30 rounded-full flex items-center justify-center backdrop-blur-sm flex-shrink-0">
-                      <UserPlus className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-white" />
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm flex-shrink-0 border border-white/10">
+                      <UserPlus className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 text-zinc-200" />
                     </div>
-                    <h3 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-[family-name:var(--font-crimson)] font-semibold text-white truncate">
+                    <h3 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-[family-name:var(--font-crimson)] font-semibold text-zinc-200 truncate">
                       Request to Join
                     </h3>
                   </div>
-                  <p className="text-white/95 text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] leading-tight sm:leading-normal">
+                  <p className="text-zinc-300 text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] leading-tight sm:leading-normal">
                     {requestFormData.Name ? (
                       <>
                         Hi{" "}
-                        <span className="font-bold text-[#FFFFFF]">
+                        <span className="font-bold text-zinc-100">
                           {requestFormData.Name}
                         </span>{" "}
                         — want to celebrate with us? Send a request!
@@ -867,7 +894,7 @@ export function GuestList() {
                 </div>
                 <button
                   onClick={handleCloseRequestModal}
-                  className="text-white/80 hover:text-white transition-colors p-1 sm:p-1.5 md:p-2 hover:bg-white/20 rounded-full flex-shrink-0"
+                  className="text-zinc-400 hover:text-zinc-200 transition-colors p-1 sm:p-1.5 md:p-2 hover:bg-white/10 rounded-full flex-shrink-0"
                 >
                   <X className="h-4 w-4 sm:h-5 sm:w-5" />
                 </button>
@@ -875,7 +902,7 @@ export function GuestList() {
             </div>
 
             {/* Modal Content */}
-            <div className="p-3 sm:p-4 md:p-6 lg:p-8 overflow-y-auto flex-1 min-h-0">
+            <div className="relative z-10 p-3 sm:p-4 md:p-6 lg:p-8 overflow-y-auto flex-1 min-h-0">
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
@@ -885,8 +912,8 @@ export function GuestList() {
               >
                 {/* Name */}
                 <div>
-                  <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-[#1A1A1A] mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)]">
-                    <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#1A1A1A] flex-shrink-0" />
+                  <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-zinc-200 mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)]">
+                    <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-zinc-300 flex-shrink-0" />
                     <span className="leading-tight">Full Name *</span>
                   </label>
                   <input
@@ -901,16 +928,16 @@ export function GuestList() {
                     }
                     required
                     placeholder="Enter your full name"
-                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-[#1A1A1A]/30 focus:border-[#1A1A1A] rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-[#1A1A1A]/40 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-[#1A1A1A]/10 bg-white"
+                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
                   />
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-[#1A1A1A] mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)] flex-wrap">
-                    <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#1A1A1A] flex-shrink-0" />
+                  <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-zinc-200 mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)] flex-wrap">
+                    <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-zinc-300 flex-shrink-0" />
                     <span className="leading-tight">Email Address</span>
-                    <span className="text-[10px] sm:text-xs md:text-sm font-normal text-[#1A1A1A]/60">
+                    <span className="text-[10px] sm:text-xs md:text-sm font-normal text-zinc-400">
                       (Optional)
                     </span>
                   </label>
@@ -925,16 +952,16 @@ export function GuestList() {
                       })
                     }
                     placeholder="your.email@example.com"
-                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-[#1A1A1A]/30 focus:border-[#1A1A1A] rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-[#1A1A1A]/40 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-[#1A1A1A]/10 bg-white"
+                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
                   />
                 </div>
 
                 {/* Phone */}
                 <div>
-                  <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-[#1A1A1A] mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)] flex-wrap">
-                    <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#1A1A1A] flex-shrink-0" />
+                  <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-zinc-200 mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)] flex-wrap">
+                    <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-zinc-300 flex-shrink-0" />
                     <span className="leading-tight">Phone Number</span>
-                    <span className="text-[10px] sm:text-xs md:text-sm font-normal text-[#1A1A1A]/60">
+                    <span className="text-[10px] sm:text-xs md:text-sm font-normal text-zinc-400">
                       (Optional)
                     </span>
                   </label>
@@ -949,14 +976,14 @@ export function GuestList() {
                       })
                     }
                     placeholder="+1 (555) 123-4567"
-                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-[#1A1A1A]/30 focus:border-[#1A1A1A] rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-[#1A1A1A]/40 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-[#1A1A1A]/10 bg-white"
+                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
                   />
                 </div>
 
                 {/* Number of Guests */}
                 <div>
-                  <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-[#1A1A1A] mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)]">
-                    <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#1A1A1A] flex-shrink-0" />
+                  <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-zinc-200 mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)]">
+                    <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-zinc-300 flex-shrink-0" />
                     <span className="leading-tight">Number of Guests *</span>
                   </label>
                   <input
@@ -972,16 +999,16 @@ export function GuestList() {
                     min="1"
                     required
                     placeholder="How many guests?"
-                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-[#1A1A1A]/30 focus:border-[#1A1A1A] rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-[#1A1A1A]/40 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-[#1A1A1A]/10 bg-white"
+                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
                   />
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-[#1A1A1A] mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)] flex-wrap">
-                    <MessageSquare className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-[#1A1A1A] flex-shrink-0" />
+                  <label className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-lg font-semibold text-zinc-200 mb-1.5 sm:mb-2 md:mb-3 font-[family-name:var(--font-crimson)] flex-wrap">
+                    <MessageSquare className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-zinc-300 flex-shrink-0" />
                     <span className="leading-tight">Message</span>
-                    <span className="text-[10px] sm:text-xs md:text-sm font-normal text-[#1A1A1A]/60">
+                    <span className="text-[10px] sm:text-xs md:text-sm font-normal text-zinc-400">
                       (Optional)
                     </span>
                   </label>
@@ -996,7 +1023,7 @@ export function GuestList() {
                     }
                     placeholder="Share why you'd like to join..."
                     rows={3}
-                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-[#1A1A1A]/30 focus:border-[#1A1A1A] rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-[#1A1A1A]/40 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-[#1A1A1A]/10 resize-none bg-white"
+                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 resize-none bg-zinc-900/50 text-zinc-100"
                   />
                 </div>
 
@@ -1005,7 +1032,7 @@ export function GuestList() {
                   <Button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full bg-gradient-to-r from-[#0A3629] to-[#126555] hover:from-[#126555] hover:to-[#0A3629] text-white py-2.5 sm:py-3 md:py-3.5 lg:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold shadow-xl transition-all duration-300 hover:shadow-2xl disabled:opacity-70 min-h-[40px] sm:min-h-[44px] md:min-h-[48px]"
+                    className="w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-100 py-2.5 sm:py-3 md:py-3.5 lg:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold shadow-xl transition-all duration-300 hover:shadow-2xl disabled:opacity-70 min-h-[40px] sm:min-h-[44px] md:min-h-[48px] border border-white/20"
                   >
                     {isLoading ? (
                       <div className="flex items-center justify-center gap-2 sm:gap-3">
@@ -1029,7 +1056,7 @@ export function GuestList() {
 
             {/* Enhanced Success Overlay */}
             {requestSuccess && (
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0A3629]/98 via-[#126555]/98 to-[#0A3629]/98 backdrop-blur-md flex items-center justify-center z-50 animate-in fade-in duration-300 p-4">
+              <div className="absolute inset-0 bg-zinc-900/98 backdrop-blur-md flex items-center justify-center z-50 animate-in fade-in duration-300 p-4 border border-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl">
                 <div className="text-center p-4 sm:p-6 md:p-8 max-w-sm mx-auto">
                   {/* Enhanced Icon Circle */}
                   <div className="relative inline-flex items-center justify-center mb-3 sm:mb-4 md:mb-5 lg:mb-6">
@@ -1075,10 +1102,10 @@ export function GuestList() {
             {/* Error message */}
             {error && !requestSuccess && (
               <div className="px-2.5 sm:px-4 md:px-6 lg:px-8 pb-2.5 sm:pb-4 md:pb-6">
-                <div className="bg-red-50 border-2 border-red-200 rounded-xl p-2.5 sm:p-3 md:p-4">
+                <div className="bg-red-900/30 border-2 border-red-500/30 rounded-xl p-2.5 sm:p-3 md:p-4">
                   <div className="flex items-center gap-2">
-                    <AlertCircle className="h-4 w-4 sm:h-5 sm:w-5 text-red-600 flex-shrink-0" />
-                    <span className="text-red-600 font-semibold font-[family-name:var(--font-crimson)] text-xs sm:text-sm">
+                    <AlertCircle className="h-4 w-4 sm:h-5 sm:w-5 text-red-400 flex-shrink-0" />
+                    <span className="text-red-400 font-semibold font-[family-name:var(--font-crimson)] text-xs sm:text-sm">
                       {error}
                     </span>
                   </div>
