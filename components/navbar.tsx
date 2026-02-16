@@ -87,16 +87,16 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
         isScrolled
-          ? "bg-black/90 backdrop-blur-xl shadow-lg border-b border-white/10"
-          : "bg-black/70 backdrop-blur-lg border-b border-white/5"
+          ? "bg-[#0F299F]/90 backdrop-blur-xl shadow-lg border-b border-white/10"
+          : "bg-[#0F299F]/70 backdrop-blur-lg border-b border-white/5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center h-14 sm:h-14 md:h-14">
           <Link href="#home" className="flex-shrink-0 group relative z-10 flex items-center">
             <Image
-              src="/monogram/monogram.png"
-              alt="Japoi & Regine"
+              src="/monogram/newMonogram.png"
+              alt="Kent & Mara"
               width={48}
               height={48}
               className="h-9 w-9 sm:h-10 sm:w-10 md:h-11 md:w-11 object-contain object-center brightness-0 invert group-hover:opacity-90 transition-opacity duration-300"

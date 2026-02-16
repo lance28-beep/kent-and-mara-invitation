@@ -42,18 +42,18 @@ export default function MessageWallDisplay({ messages, loading }: MessageWallDis
             key={i} 
             className="relative rounded-lg overflow-hidden"
             style={{
-              background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+              background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
               boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05)',
             }}
           >
             <div className="absolute inset-0 border border-white/10 rounded-lg" />
             <div className="relative z-10 py-4 px-4 sm:py-5 sm:px-5 md:py-6 md:px-7">
-              <Skeleton className="h-16 sm:h-20 md:h-24 w-full mb-3 sm:mb-4 bg-zinc-800" />
+              <Skeleton className="h-16 sm:h-20 md:h-24 w-full mb-3 sm:mb-4 bg-[#0F299F]/20" />
               <div className="flex items-center gap-2.5 sm:gap-3 pt-3 sm:pt-4 border-t border-white/10">
-                <Skeleton className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-zinc-800" />
+                <Skeleton className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#0F299F]/20" />
                 <div className="flex-1 space-y-1.5 sm:space-y-2">
-                  <Skeleton className="h-3 sm:h-3.5 w-20 sm:w-24 bg-zinc-800" />
-                  <Skeleton className="h-2.5 sm:h-3 w-16 sm:w-20 bg-zinc-800" />
+                  <Skeleton className="h-3 sm:h-3.5 w-20 sm:w-24 bg-[#0F299F]/20" />
+                  <Skeleton className="h-2.5 sm:h-3 w-16 sm:w-20 bg-[#0F299F]/20" />
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function MessageWallDisplay({ messages, loading }: MessageWallDis
       <div className="text-center py-8 sm:py-12 px-4">
         <div className="relative inline-block mb-4 sm:mb-6">
           <div className="absolute inset-0 bg-white/10 rounded-full blur-xl scale-150"></div>
-          <div className="relative w-10 h-10 sm:w-12 sm:h-12 bg-zinc-800 rounded-full flex items-center justify-center mx-auto shadow-lg border border-white/10">
+          <div className="relative w-10 h-10 sm:w-12 sm:h-12 bg-[#0F299F]/50 rounded-full flex items-center justify-center mx-auto shadow-lg border border-white/10">
             <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 text-zinc-200" />
           </div>
         </div>
@@ -100,12 +100,12 @@ export default function MessageWallDisplay({ messages, loading }: MessageWallDis
           style={{
             transitionDelay: `${index * 100}ms`,
             animation: isAnimating ? 'none' : 'fadeInUp 0.6s ease-out forwards',
-            background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+            background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
             boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05)',
           }}
         >
           {/* Gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F]" />
           <div 
             className="absolute inset-0 opacity-60"
             style={{
@@ -130,7 +130,7 @@ export default function MessageWallDisplay({ messages, loading }: MessageWallDis
               <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-white/10">
               <div className="flex items-center gap-2.5 sm:gap-3">
                 <div className="flex-shrink-0">
-                  <div className="w-8 h-8 sm:w-9 sm:h-9 bg-zinc-800 rounded-full flex items-center justify-center shadow-sm group-hover:shadow transition-shadow border border-white/10">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 bg-[#0D1C7A] rounded-full flex items-center justify-center shadow-sm group-hover:shadow transition-shadow border border-white/10">
                     <span className="text-zinc-200 font-[family-name:var(--font-crimson)] text-xs sm:text-sm font-semibold">
                       {msg.name
                         .split(" ")
@@ -151,7 +151,7 @@ export default function MessageWallDisplay({ messages, loading }: MessageWallDis
                   </span>
                 </div>
               </div>
-              <Heart className="flex-shrink-0 h-4 w-4 sm:h-5 sm:w-5 text-zinc-500 fill-zinc-800 group-hover:text-zinc-300 group-hover:fill-zinc-700 transition-all duration-300" />
+              <Heart className="flex-shrink-0 h-4 w-4 sm:h-5 sm:w-5 text-zinc-500 fill-[#0D1C7A] group-hover:text-zinc-300 group-hover:fill-[#0F299F] transition-all duration-300" />
             </div>
           </div>
         </div>

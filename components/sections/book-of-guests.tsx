@@ -121,7 +121,7 @@ export function BookOfGuests() {
   };
 
   return (
-    <Section id="guests" className="relative py-16 sm:py-20 md:py-24 lg:py-28">
+    <Section id="guests" className="relative z-0 py-16 sm:py-20 md:py-24 lg:py-28">
       {/* Section Header */}
       <div className="relative z-10 text-center mb-8 sm:mb-12 md:mb-16 px-4 sm:px-6">
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]">
@@ -141,12 +141,12 @@ export function BookOfGuests() {
             <div 
               className="relative rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 overflow-hidden"
               style={{
-                background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+                background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
                 boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
               }}
             >
               {/* Gradient overlays */}
-              <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505] z-0" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0" />
               <div 
                 className="absolute inset-0 opacity-60 z-0"
                 style={{
@@ -158,7 +158,7 @@ export function BookOfGuests() {
               {/* Content */}
               <div className="relative z-10">
                 <div className="flex items-center justify-center gap-2.5 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-5">
-                  <div className="bg-zinc-800 p-1.5 sm:p-2 md:p-2.5 rounded-full shadow-lg border border-white/10">
+                  <div className="bg-[#0F299F]/50 p-1.5 sm:p-2 md:p-2.5 rounded-full shadow-lg border border-white/10">
                     <Heart className="text-zinc-200 h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5" />
                   </div>
                   <div className="flex flex-col items-center">
@@ -187,12 +187,12 @@ export function BookOfGuests() {
             <div 
               className="relative rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 transition-all duration-300 overflow-hidden"
               style={{
-                background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+                background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
                 boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
               }}
             >
               {/* Gradient overlays */}
-              <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505] z-0" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0" />
               <div 
                 className="absolute inset-0 opacity-60 z-0"
                 style={{
@@ -223,7 +223,7 @@ export function BookOfGuests() {
                 ) : guests.length === 0 ? (
                   <div className="flex items-center justify-center py-16 sm:py-20 md:py-24">
                     <div className="text-center">
-                      <div className="bg-zinc-800 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 border border-white/10">
+                      <div className="bg-[#0F299F]/50 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 border border-white/10">
                         <Heart className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-zinc-200" />
                       </div>
                       <h3 className="text-lg sm:text-xl md:text-2xl font-[family-name:var(--font-crimson)] font-semibold text-zinc-200 mb-2">
@@ -244,7 +244,7 @@ export function BookOfGuests() {
                       {getVisibleGuests().map((guest, index) => (
                         <div
                           key={`${guest.Name}-${currentIndex}-${index}`}
-                          className="group relative bg-zinc-900/50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-lg hover:shadow-black/20 animate-roll-up"
+                          className="group relative bg-[#0F299F]/20 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-lg hover:shadow-black/20 animate-roll-up"
                           style={{
                             animationDelay: `${index * 120}ms`,
                             backfaceVisibility: 'hidden',
@@ -253,7 +253,7 @@ export function BookOfGuests() {
                           <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4">
                             {/* Avatar */}
                             <div className="relative h-9 w-9 sm:h-11 sm:w-11 md:h-12 md:w-12 flex-shrink-0">
-                              <div className="h-full w-full rounded-full bg-zinc-800 text-zinc-200 flex items-center justify-center font-[family-name:var(--font-crimson)] font-semibold shadow-md ring-2 ring-white/10 text-xs sm:text-sm md:text-base border border-white/10">
+                              <div className="h-full w-full rounded-full bg-[#0D1C7A] text-zinc-200 flex items-center justify-center font-[family-name:var(--font-crimson)] font-semibold shadow-md ring-2 ring-white/10 text-xs sm:text-sm md:text-base border border-white/10">
                                 {getInitials(guest.Name)}
                               </div>
                             </div>
@@ -277,7 +277,7 @@ export function BookOfGuests() {
                                 {/* Guest count badge */}
                                 <div className="absolute right-2.5 top-2.5 sm:static sm:right-auto sm:top-auto flex items-center gap-1 sm:gap-1.5">
                                   <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-zinc-400 flex-shrink-0" />
-                                  <span className="inline-flex items-center justify-center px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 bg-zinc-800/50 text-zinc-200 rounded-full text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] font-semibold border border-white/10">
+                                  <span className="inline-flex items-center justify-center px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 bg-[#0D1C7A]/80 text-zinc-200 rounded-full text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] font-semibold border border-white/10">
                                     {guest.Guest
                                       ? parseInt(String(guest.Guest)) || 1
                                       : 1}{" "}

@@ -13,17 +13,17 @@ const faqItems: FAQItem[] = [
   {
     question: "When and where is the wedding?",
     answer:
-      "Ceremony & Reception will be held on Sunday, March 15, 2026, at 4:00 PM at Twin Lakes Tagaytay, Glass House, Tagaytay, Philippines.",
+      "Ceremony will be held on Thursday, February 26, 2026, at 9:00 AM at Municipal Trial Court, Prosperidad, Agusan del Sur. The reception will follow at RCBI Hotel, National Highway, San Isidro, San Francisco, Agusan del Sur.",
   },
   {
     question: "What is the dress code?",
     answer:
-      "Guest Attire:\n• Gentlemen: Black slacks or formal black wear—black suit, pants and tie\n• Ladies: Elegant black (silky or glittery black are welcome)\n\nPrincipal Sponsors follow the same guidelines:\n• Gentlemen: Black slacks or formal black wear—black suit, pants and tie\n• Ladies: Elegant black (silky or glittery black are welcome)\n\nPlease adhere to the dress code to maintain the elegance of our celebration.",
+      "Guest Attire:\n• Gentlemen: Formal attire in Navy Blue, Royal Blue, Gold, Sky Blue, or White — suits and tie are most preferred. Or a long‑sleeved shirt in these shades.\n• Ladies: Elegant attire in Navy Blue, Royal Blue, Gold, Sky Blue, or White — whether glittery, silky, or simply refined.\n\nPrincipal Sponsors follow the same guidelines:\n• Gentlemen: Formal attire in the wedding motif colors\n• Ladies: Elegant attire in the wedding motif colors\n\nPlease adhere to the dress code to maintain the elegance of our celebration.",
   },
   {
     question: "When is the RSVP deadline?",
     answer:
-      "Please confirm your attendance by March 1, 2026. We have reserved seats for you, and we look forward to celebrating with you! Your response helps us finalize our guest list and seating arrangements.\n\n[RSVP_LINK]Click here to RSVP[/RSVP_LINK]",
+      "Please confirm your attendance by February 25, 2026. We have reserved seats for you, and we look forward to celebrating with you! Your response helps us finalize our guest list and seating arrangements.\n\n[RSVP_LINK]Click here to RSVP[/RSVP_LINK]",
   },
   {
     question: "Can I bring a plus one?",
@@ -53,12 +53,12 @@ const faqItems: FAQItem[] = [
   {
     question: "How do I get to the venue?",
     answer:
-      "You can use the 'Get Directions' button in the Event Details section to open Google Maps for easy navigation to Twin Lakes Tagaytay, Glass House, Tagaytay, Philippines.",
+      "You can use the 'Get Directions' button in the Event Details section to open Google Maps for easy navigation to Municipal Trial Court (Ceremony) and RCBI Hotel (Reception).",
   },
   {
     question: "Is there parking available?",
     answer:
-      "Yes! Twin Lakes Tagaytay, Glass House has parking facilities. We recommend arriving 15-20 minutes early to secure a spot and get settled comfortably. Ceremony & Reception begins at 4:00 PM.",
+      "Yes! Both Municipal Trial Court and RCBI Hotel have parking facilities. We recommend arriving 15-20 minutes early to secure a spot and get settled comfortably. Ceremony begins at 9:00 AM.",
   },
   {
     question: "What should I do if I need to cancel or update my RSVP?",
@@ -102,13 +102,13 @@ export function FAQ() {
             className="relative rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 transition-all duration-300 overflow-hidden"
             style={{
               background:
-                "linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)",
+                "linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)",
               boxShadow:
                 "0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)",
             }}
           >
             {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505] z-0" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0" />
             <div
               className="absolute inset-0 opacity-60 z-0"
               style={{
@@ -126,7 +126,7 @@ export function FAQ() {
                 return (
                   <div
                     key={index}
-                    className="rounded-lg sm:rounded-xl border border-white/10 bg-zinc-900/50 hover:bg-zinc-800/50 hover:border-white/20 transition-all duration-300 overflow-hidden"
+                    className="rounded-lg sm:rounded-xl border border-white/10 bg-[#0F299F]/20 hover:bg-[#0F299F]/30 hover:border-white/20 transition-all duration-300 overflow-hidden"
                   >
                     <button
                       onClick={() => toggleItem(index)}
@@ -154,13 +154,13 @@ export function FAQ() {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <div className="px-3 sm:px-4 md:px-5 py-2.5 sm:py-3 md:py-4 bg-zinc-800/30 border-t border-white/10">
+                        <div className="px-3 sm:px-4 md:px-5 py-2.5 sm:py-3 md:py-4 bg-[#0F299F]/10 border-t border-white/10">
                           {item.answer.includes("[RSVP_LINK]") ? (
-                            <p className="text-zinc-400 leading-relaxed text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] whitespace-pre-line">
+                            <p className="text-zinc-300 leading-relaxed text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] whitespace-pre-line">
                               {item.answer.split("[RSVP_LINK]")[0]}
                               <a
                                 href="#guest-list"
-                                className="text-zinc-200 underline font-semibold hover:text-zinc-100 transition-colors inline-flex items-center gap-1"
+                                className="text-zinc-100 underline font-semibold hover:text-white transition-colors inline-flex items-center gap-1"
                                 onClick={(e) => {
                                   e.preventDefault();
                                   document
@@ -177,7 +177,7 @@ export function FAQ() {
                               {item.answer.split("[/RSVP_LINK]")[1]}
                             </p>
                           ) : (
-                            <p className="text-zinc-400 leading-relaxed text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] whitespace-pre-line">
+                            <p className="text-zinc-300 leading-relaxed text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] whitespace-pre-line">
                               {item.answer}
                             </p>
                           )}

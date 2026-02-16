@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 const BACKGROUND_VIDEO_SRC =
-  "/background_music/4K Luxury Black Abstract Animated Background _ Elegant Textured Loop Video  _ Free _ No Copyright.mp4"
+  "/background_music/blue sparkle celebration glitter particles lights background video effects - Royalty Free Animations (1080p, h264).mp4"
 
 export function Hero({ onOpen, visible }: HeroProps) {
   const [contentVisible, setContentVisible] = useState(false)
@@ -68,7 +68,7 @@ export function Hero({ onOpen, visible }: HeroProps) {
         >
           <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 flex items-center justify-center">
             <Image
-              src="/monogram/monogram.png"
+              src="/monogram/newMonogram.png"
               alt="Monogram"
               width={192}
               height={192}
@@ -113,7 +113,7 @@ export function Hero({ onOpen, visible }: HeroProps) {
           <button
             type="button"
             onClick={onOpen}
-            className={`px-10 py-4 text-sm font-[family-name:var(--font-crimson)] tracking-[0.2em] uppercase rounded-sm border border-zinc-500 bg-zinc-800 text-zinc-100 transition-all duration-500 delay-500 hover:bg-zinc-700 hover:border-zinc-400 active:scale-[0.98] ${
+            className={`px-10 py-4 text-sm font-[family-name:var(--font-crimson)] tracking-[0.2em] uppercase rounded-sm border border-zinc-500 bg-[#0D1C7A] text-zinc-100 transition-all duration-500 delay-500 hover:bg-[#0F299F] hover:border-zinc-400 active:scale-[0.98] ${
               contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >

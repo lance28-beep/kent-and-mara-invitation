@@ -21,10 +21,10 @@ export function Countdown() {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      // Target: March 15, 2026 at 4:00 PM GMT+8
+      // Target: February 26, 2026 at 9:00 AM GMT+8
       // Compute using UTC to avoid timezone parsing inconsistencies across browsers
-      // 4:00 PM GMT+8 == 08:00 AM UTC
-      const targetDate = Date.UTC(2026, 2, 15, 8, 0, 0) // March is month 2 (0-indexed)
+      // 9:00 AM GMT+8 == 1:00 AM UTC
+      const targetDate = Date.UTC(2026, 1, 26, 1, 0, 0) // February is month 1 (0-indexed)
       const now = new Date().getTime()
       const difference = targetDate - now
 
@@ -62,12 +62,12 @@ export function Countdown() {
         <div 
           className="relative rounded-lg sm:rounded-xl px-2.5 py-3 sm:px-4 sm:py-4 md:px-5 md:py-5 lg:px-6 lg:py-6 transition-all duration-300 min-w-[60px] sm:min-w-[70px] md:min-w-[85px] lg:min-w-[95px] overflow-hidden"
           style={{
-            background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+            background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
             boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.4), 0 8px 32px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05)',
           }}
         >
           {/* Gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F]" />
           <div 
             className="absolute inset-0 opacity-60"
             style={{
@@ -166,7 +166,7 @@ export function Countdown() {
                 {/* Month - Script style, smaller for mobile */}
                 <div className="mb-3 sm:mb-4 md:mb-5">
                   <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-ephesis)] text-zinc-100 leading-none">
-                    March
+                    February
                   </p>
                 </div>
                 
@@ -174,7 +174,7 @@ export function Countdown() {
                 <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-5 mb-5 sm:mb-6">
                   {/* Day - Large and bold but scaled for mobile */}
                   <p className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-[family-name:var(--font-crimson)] font-normal text-zinc-50 leading-none">
-                    15
+                    26
                   </p>
                   
                   {/* Vertical divider - shorter */}
@@ -198,7 +198,7 @@ export function Countdown() {
                 
                 {/* Time - Better readability */}
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl font-[family-name:var(--font-crimson)] font-semibold text-zinc-200 tracking-wide mb-3 sm:mb-4">
-                  4:00 PM
+                  9:00 AM
                 </p>
                 
                 {/* Bottom decorative line */}

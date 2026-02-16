@@ -7,9 +7,9 @@ interface LoadingScreenProps {
   onComplete: () => void
 }
 
-// Wedding date: March 15, 2026 → 03 15 26
-const GHOST_NUMBERS = ["03", "15", "26"]
-const COUPLE_NAMES = { groom: "Japoi", bride: "Regine" }
+// Wedding date: February 26, 2026 → 02 26 26
+const GHOST_NUMBERS = ["02", "26", "26"]
+const COUPLE_NAMES = { groom: "Kent", bride: "Mara" }
 
 export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const [fadeOut, setFadeOut] = useState(false)
@@ -62,8 +62,8 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
       aria-valuemax={100}
       aria-label="Loading invitation"
     >
-      {/* Deep black matte background */}
-      <div className="absolute inset-0 bg-[#0a0a0a]" />
+      {/* Deep blue gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0D1C7A] to-[#0F299F]" />
 
       {/* Ghosted background numbers — right side, stacked */}
       <div
@@ -96,7 +96,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           }`}
         >
           <Image
-            src="/monogram/monogram.png"
+            src="/monogram/newMonogram.png"
             alt="Monogram"
             width={240}
             height={240}

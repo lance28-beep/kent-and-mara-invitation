@@ -289,7 +289,7 @@ export function GuestList() {
   return (
     <Section
       id="guest-list"
-      className="relative z-[60] isolate py-8 sm:py-12 md:py-16 lg:py-20 bg-transparent overflow-visible"
+      className={`relative ${showModal || showRequestModal ? "z-[100]" : "z-30"} isolate py-8 sm:py-12 md:py-16 lg:py-20 bg-transparent overflow-visible`}
     >
       {/* Section Header */}
       <div className="relative z-10 text-center mb-8 sm:mb-12 md:mb-16 px-4 sm:px-6">
@@ -302,7 +302,7 @@ export function GuestList() {
             Please search for your name below to confirm your attendance and help us prepare for this special celebration
           </p>
           <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] text-zinc-300 font-medium max-w-xl mx-auto leading-relaxed tracking-wide px-4">
-            RSVP deadline: March 1 2026
+            RSVP deadline: February 25, 2026
           </p>
         </div>
       </div>
@@ -314,13 +314,13 @@ export function GuestList() {
           <div
             className="relative rounded-xl sm:rounded-2xl overflow-visible transition-all duration-300"
             style={{
-              background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+              background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
               boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
               overflow: 'visible',
             }}
           >
             {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505] z-0 rounded-xl sm:rounded-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0 rounded-xl sm:rounded-2xl" />
             <div 
               className="absolute inset-0 opacity-60 z-0 rounded-xl sm:rounded-2xl"
               style={{
@@ -345,7 +345,7 @@ export function GuestList() {
             <div className="relative z-10 p-4 sm:p-6 md:p-8 lg:p-10">
               <div className="relative z-10 space-y-4 sm:space-y-5">
                 <div className="flex items-center gap-2.5 sm:gap-3">
-                  <div className="bg-zinc-800 p-1.5 sm:p-2 rounded-xl shadow-lg border border-white/10">
+                  <div className="bg-[#0F299F]/50 p-1.5 sm:p-2 rounded-xl shadow-lg border border-white/10">
                     <Search className="h-4 w-4 sm:h-5 sm:w-5 text-zinc-200" />
                   </div>
                   <div>
@@ -369,13 +369,13 @@ export function GuestList() {
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="Type your name..."
-                      className="w-full pl-9 sm:pl-12 pr-3 sm:pr-5 py-2.5 sm:py-3.5 md:py-4 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 hover:border-white/30 focus:ring-4 focus:ring-white/10 bg-zinc-900/50 shadow-inner focus:shadow-lg text-zinc-100"
+                      className="w-full pl-9 sm:pl-12 pr-3 sm:pr-5 py-2.5 sm:py-3.5 md:py-4 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] placeholder:text-zinc-400 transition-all duration-300 hover:border-white/30 focus:ring-4 focus:ring-white/10 bg-[#0F299F]/20 shadow-inner focus:shadow-lg text-zinc-100"
                     />
                   </div>
                   {/* Autocomplete dropdown */}
                   {isSearching && filteredGuests.length > 0 && (
                     <div
-                      className="absolute z-50 w-full mt-2 sm:mt-3 bg-zinc-900/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-2xl overflow-hidden"
+                      className="absolute z-50 w-full mt-2 sm:mt-3 bg-[#0D1C7A]/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-2xl overflow-hidden"
                       style={{
                         position: "absolute",
                         top: "100%",
@@ -390,7 +390,7 @@ export function GuestList() {
                             className="w-full px-4 sm:px-5 py-3.5 sm:py-4 text-left hover:bg-white/10 active:bg-white/20 transition-all duration-200 flex items-center gap-3 sm:gap-4 border-b border-white/10 last:border-b-0 group"
                           >
                             <div className="relative flex-shrink-0">
-                              <div className="bg-zinc-800 p-1.5 sm:p-2 rounded-full shadow-md group-hover:shadow-lg transition-all duration-300 border border-white/10">
+                              <div className="bg-[#0F299F]/50 p-1.5 sm:p-2 rounded-full shadow-md group-hover:shadow-lg transition-all duration-300 border border-white/10">
                                 <User className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-zinc-200" />
                               </div>
                             </div>
@@ -426,7 +426,7 @@ export function GuestList() {
                   )}
                   {searchQuery && filteredGuests.length === 0 && (
                     <div
-                      className="absolute z-50 w-full mt-2 sm:mt-3 bg-zinc-900/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-2xl overflow-hidden"
+                      className="absolute z-50 w-full mt-2 sm:mt-3 bg-[#0D1C7A]/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-2xl overflow-hidden"
                       style={{
                         position: "absolute",
                         top: "100%",
@@ -435,7 +435,7 @@ export function GuestList() {
                     >
                       <div className="p-4 sm:p-5">
                         <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
-                          <div className="bg-zinc-800 p-1.5 sm:p-2 rounded-xl flex-shrink-0 shadow-md border border-white/10">
+                          <div className="bg-[#0F299F]/50 p-1.5 sm:p-2 rounded-xl flex-shrink-0 shadow-md border border-white/10">
                             <UserPlus className="h-4 w-4 sm:h-5 sm:w-5 text-zinc-200" />
                           </div>
                           <div className="flex-1">
@@ -456,7 +456,7 @@ export function GuestList() {
                             });
                             setShowRequestModal(true);
                           }}
-                          className="w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-100 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-[family-name:var(--font-crimson)] font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] border border-white/20"
+                          className="w-full bg-[#0F299F] hover:bg-[#0D1C7A] text-zinc-100 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-[family-name:var(--font-crimson)] font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] border border-white/20"
                         >
                           <UserPlus className="h-3 w-3 sm:h-4 sm:w-4 mr-2 inline" />
                           Request to Join
@@ -473,16 +473,16 @@ export function GuestList() {
 
       {/* RSVP Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-1.5 sm:p-3 md:p-4 bg-black/70 backdrop-blur-sm animate-in fade-in">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-1.5 sm:p-3 md:p-4 bg-black/70 backdrop-blur-sm animate-in fade-in">
           <div 
             className="relative w-full max-w-md sm:max-w-2xl mx-1.5 sm:mx-3 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300 max-h-[98vh] flex flex-col"
             style={{
-              background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+              background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
               boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
             }}
           >
             {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505] z-0" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0" />
             <div 
               className="absolute inset-0 opacity-60 z-0"
               style={{
@@ -492,7 +492,7 @@ export function GuestList() {
             <div className="absolute inset-0 border border-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl z-0" />
             
             {/* Modal Header */}
-            <div className="relative bg-zinc-900/80 p-3 sm:p-4 md:p-6 lg:p-8 flex-shrink-0 border-b border-white/10">
+            <div className="relative bg-[#0F299F]/30 p-3 sm:p-4 md:p-6 lg:p-8 flex-shrink-0 border-b border-white/10">
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
               <div className="relative flex items-start justify-between gap-2">
                 <div className="flex-1 min-w-0">
@@ -555,7 +555,7 @@ export function GuestList() {
                     We've received your RSVP and look forward to celebrating
                     with you!
                   </p>
-                  <div className="bg-zinc-900/50 rounded-xl p-3 sm:p-4 md:p-6 border border-white/10 space-y-2.5 sm:space-y-3 md:space-y-4">
+                  <div className="bg-[#0F299F]/30 rounded-xl p-3 sm:p-4 md:p-6 border border-white/10 space-y-2.5 sm:space-y-3 md:space-y-4">
                     <div className="flex items-center justify-center gap-2 sm:gap-3 mb-1.5 sm:mb-2 md:mb-3">
                       {selectedGuest?.RSVP === "Yes" && (
                         <>
@@ -575,7 +575,7 @@ export function GuestList() {
                       )}
                     </div>
                     {selectedGuest?.RSVP === "Yes" && selectedGuest?.Guest && (
-                      <div className="bg-zinc-800/50 rounded-lg p-2.5 sm:p-3 md:p-4 border border-white/10">
+                      <div className="bg-[#0F299F]/30 rounded-lg p-2.5 sm:p-3 md:p-4 border border-white/10">
                         <div className="text-center">
                           <p className="text-[10px] sm:text-xs md:text-sm text-zinc-400 font-[family-name:var(--font-crimson)] mb-0.5 sm:mb-1 font-medium">
                             Number of Guests
@@ -598,7 +598,7 @@ export function GuestList() {
                   </div>
                   <Button
                     onClick={handleCloseModal}
-                    className="mt-3 sm:mt-4 md:mt-6 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold transition-all duration-300 border border-white/20"
+                    className="mt-3 sm:mt-4 md:mt-6 !bg-[#0D1C7A] !hover:bg-[#0F299F] text-zinc-100 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold transition-all duration-300 border border-white/20"
                   >
                     Close
                   </Button>
@@ -627,7 +627,7 @@ export function GuestList() {
                         className={`relative p-2 sm:p-3 md:p-4 lg:p-6 rounded-xl sm:rounded-2xl border-2 sm:border-4 transition-all duration-300 ${
                           formData.RSVP === "Yes"
                             ? "border-green-500 bg-green-900/30 shadow-lg scale-105"
-                            : "border-white/20 bg-zinc-900/50 hover:border-white/30 hover:shadow-md"
+                            : "border-white/20 bg-[#0F299F]/20 hover:border-white/30 hover:shadow-md"
                         }`}
                       >
                         <div className="flex items-center justify-center gap-1.5 sm:gap-2 md:gap-3">
@@ -657,7 +657,7 @@ export function GuestList() {
                         className={`relative p-2 sm:p-3 md:p-4 lg:p-6 rounded-xl sm:rounded-2xl border-2 sm:border-4 transition-all duration-300 ${
                           formData.RSVP === "No"
                             ? "border-red-500 bg-red-900/30 shadow-lg scale-105"
-                            : "border-white/20 bg-zinc-900/50 hover:border-white/30 hover:shadow-md"
+                            : "border-white/20 bg-[#0F299F]/20 hover:border-white/30 hover:shadow-md"
                         }`}
                       >
                         <div className="flex items-center justify-center gap-1.5 sm:gap-2 md:gap-3">
@@ -699,7 +699,7 @@ export function GuestList() {
                         min="1"
                         required
                         placeholder="How many guests?"
-                        className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
+                        className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-[#0F299F]/20 text-zinc-100"
                       />
                     </div>
                   )}
@@ -721,7 +721,7 @@ export function GuestList() {
                       onChange={handleFormChange}
                       placeholder="Share your excitement..."
                       rows={3}
-                      className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 resize-none bg-zinc-900/50 text-zinc-100"
+                      className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 resize-none bg-[#0F299F]/20 text-zinc-100"
                     />
                   </div>
 
@@ -740,7 +740,7 @@ export function GuestList() {
                       value={formData.Email}
                       onChange={handleFormChange}
                       placeholder="your.email@example.com"
-                      className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
+                      className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-[#0F299F]/20 text-zinc-100"
                     />
                   </div>
 
@@ -749,7 +749,7 @@ export function GuestList() {
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className="w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-100 py-2.5 sm:py-3 md:py-3.5 lg:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base lg:text-lg font-[family-name:var(--font-crimson)] font-semibold shadow-xl transition-all duration-300 hover:shadow-2xl disabled:opacity-70 min-h-[40px] sm:min-h-[44px] md:min-h-[48px] border border-white/20"
+                      className="w-full !bg-[#0D1C7A] !hover:bg-[#0F299F] text-zinc-100 py-2.5 sm:py-3 md:py-3.5 lg:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base lg:text-lg font-[family-name:var(--font-crimson)] font-semibold shadow-xl transition-all duration-300 hover:shadow-2xl disabled:opacity-70 min-h-[40px] sm:min-h-[44px] md:min-h-[48px] border border-white/20"
                     >
                       {isLoading ? (
                         <div className="flex items-center justify-center gap-2 sm:gap-3">
@@ -774,7 +774,7 @@ export function GuestList() {
 
             {/* Enhanced Success Overlay */}
             {success && (
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0A3629]/98 via-[#126555]/98 to-[#0A3629]/98 backdrop-blur-md flex items-center justify-center z-50 animate-in fade-in duration-300 p-4">
+              <div className="absolute inset-0 bg-[#0D1C7A]/98 backdrop-blur-md flex items-center justify-center z-50 animate-in fade-in duration-300 p-4 border border-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl">
                 <div className="text-center p-4 sm:p-6 md:p-8 max-w-sm mx-auto">
                   {/* Enhanced Icon Circle */}
                   <div className="relative inline-flex items-center justify-center mb-3 sm:mb-4 md:mb-5 lg:mb-6">
@@ -848,16 +848,16 @@ export function GuestList() {
 
       {/* Request to Join Modal */}
       {showRequestModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-1.5 sm:p-3 md:p-4 bg-black/70 backdrop-blur-sm animate-in fade-in">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-1.5 sm:p-3 md:p-4 bg-black/70 backdrop-blur-sm animate-in fade-in">
           <div 
             className="relative w-full max-w-md sm:max-w-2xl mx-1.5 sm:mx-3 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300 max-h-[98vh] flex flex-col"
             style={{
-              background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+              background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
               boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
             }}
           >
             {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505] z-0" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0" />
             <div 
               className="absolute inset-0 opacity-60 z-0"
               style={{
@@ -867,7 +867,7 @@ export function GuestList() {
             <div className="absolute inset-0 border border-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl z-0" />
             
             {/* Modal Header */}
-            <div className="relative bg-zinc-900/80 p-3 sm:p-4 md:p-6 lg:p-8 flex-shrink-0 border-b border-white/10">
+            <div className="relative bg-[#0F299F]/30 p-3 sm:p-4 md:p-6 lg:p-8 flex-shrink-0 border-b border-white/10">
               <div className="relative flex items-start justify-between gap-2">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2 md:mb-3">
@@ -928,7 +928,7 @@ export function GuestList() {
                     }
                     required
                     placeholder="Enter your full name"
-                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
+                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-[#0F299F]/20 text-zinc-100"
                   />
                 </div>
 
@@ -952,7 +952,7 @@ export function GuestList() {
                       })
                     }
                     placeholder="your.email@example.com"
-                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
+                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-[#0F299F]/20 text-zinc-100"
                   />
                 </div>
 
@@ -976,7 +976,7 @@ export function GuestList() {
                       })
                     }
                     placeholder="+1 (555) 123-4567"
-                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
+                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-[#0F299F]/20 text-zinc-100"
                   />
                 </div>
 
@@ -999,7 +999,7 @@ export function GuestList() {
                     min="1"
                     required
                     placeholder="How many guests?"
-                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-zinc-900/50 text-zinc-100"
+                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 bg-[#0F299F]/20 text-zinc-100"
                   />
                 </div>
 
@@ -1023,7 +1023,7 @@ export function GuestList() {
                     }
                     placeholder="Share why you'd like to join..."
                     rows={3}
-                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 resize-none bg-zinc-900/50 text-zinc-100"
+                    className="w-full px-2.5 sm:px-3 md:px-4 py-2 sm:py-2.5 md:py-3 border-2 border-white/20 focus:border-white/40 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] placeholder:text-zinc-500 transition-all duration-300 focus:ring-2 sm:focus:ring-4 focus:ring-white/10 resize-none bg-[#0F299F]/20 text-zinc-100"
                   />
                 </div>
 
@@ -1032,7 +1032,7 @@ export function GuestList() {
                   <Button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-100 py-2.5 sm:py-3 md:py-3.5 lg:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold shadow-xl transition-all duration-300 hover:shadow-2xl disabled:opacity-70 min-h-[40px] sm:min-h-[44px] md:min-h-[48px] border border-white/20"
+                    className="w-full !bg-[#0D1C7A] !hover:bg-[#0F299F] text-zinc-100 py-2.5 sm:py-3 md:py-3.5 lg:py-4 rounded-lg sm:rounded-xl text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold shadow-xl transition-all duration-300 hover:shadow-2xl disabled:opacity-70 min-h-[40px] sm:min-h-[44px] md:min-h-[48px] border border-white/20"
                   >
                     {isLoading ? (
                       <div className="flex items-center justify-center gap-2 sm:gap-3">
@@ -1056,7 +1056,7 @@ export function GuestList() {
 
             {/* Enhanced Success Overlay */}
             {requestSuccess && (
-              <div className="absolute inset-0 bg-zinc-900/98 backdrop-blur-md flex items-center justify-center z-50 animate-in fade-in duration-300 p-4 border border-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl">
+              <div className="absolute inset-0 bg-[#0D1C7A]/98 backdrop-blur-md flex items-center justify-center z-50 animate-in fade-in duration-300 p-4 border border-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl">
                 <div className="text-center p-4 sm:p-6 md:p-8 max-w-sm mx-auto">
                   {/* Enhanced Icon Circle */}
                   <div className="relative inline-flex items-center justify-center mb-3 sm:mb-4 md:mb-5 lg:mb-6">
@@ -1118,7 +1118,7 @@ export function GuestList() {
 
       {/* Floating Status Messages (outside modals) */}
       {success && !showModal && !showRequestModal && !requestSuccess && (
-        <div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 max-w-md w-full mx-4">
+        <div className="fixed top-20 left-1/2 transform -translate-x-1/2 z-[100] max-w-md w-full mx-4">
           <div className="bg-green-50 border-2 border-green-200 rounded-xl p-3 sm:p-4 shadow-lg animate-in slide-in-from-top">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600" />

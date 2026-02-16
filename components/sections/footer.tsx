@@ -24,7 +24,7 @@ export function Footer() {
       className="relative z-20 mt-16 overflow-hidden"
       style={{
         background:
-          "linear-gradient(180deg, #000000 0%, #0a0a0a 40%, #050505 100%)",
+          "linear-gradient(180deg, #0D1C7A 0%, #0E228C 40%, #0F299F 100%)",
         boxShadow: "inset 0 1px 0 rgba(255,255,255,0.05)",
       }}
     >
@@ -38,8 +38,8 @@ export function Footer() {
             {/* Monogram – same as hero */}
             <div className="mb-8 sm:mb-9 md:mb-10 flex justify-center">
               <Image
-                src="/monogram/monogram.png"
-                alt="Jay-R & Jennifer"
+                src="/monogram/newMonogram.png"
+                alt="Kent & Mara"
                 width={240}
                 height={240}
                 className="h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72 object-contain object-center brightness-0 invert"
@@ -54,17 +54,17 @@ export function Footer() {
             {/* Date + time block – hero structure */}
             <div className="mb-7 sm:mb-9 md:mb-10">
               <p className="text-[11px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.38em] text-zinc-400 uppercase mb-4 sm:mb-5">
-                March
+                February
               </p>
               <div className="flex items-center justify-center gap-6 sm:gap-10 md:gap-14 mb-3 sm:mb-4">
                 <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
-                  Sunday
+                  Thursday
                 </p>
                 <p className="text-4xl sm:text-5xl md:text-[3.25rem] font-[family-name:var(--font-crimson)] text-zinc-50 leading-none">
-                  15
+                  26
                 </p>
                 <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
-                  At 4 PM
+                  At 9 AM
                 </p>
               </div>
               <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-400 uppercase">
@@ -83,10 +83,10 @@ export function Footer() {
                 Ceremony &amp; Reception
               </p>
               <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-100 uppercase">
-                Twin Lakes Tagaytay, Glass House
+                RCBI Hotel, National Highway, San Isidro
               </p>
               <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-zinc-400 uppercase">
-                Tagaytay, Philippines
+                San Francisco, Agusan del Sur
               </p>
             </div>
           </div>
@@ -135,7 +135,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
               <p className="text-zinc-300 font-[family-name:var(--font-crimson)] text-sm sm:text-base font-semibold">
-                © {year} Japoi & Regine. All rights reserved.
+                © {year} Kent & Mara. All rights reserved.
               </p>
               <p className="text-zinc-400 font-[family-name:var(--font-crimson)] text-sm sm:text-base mt-1 font-medium">
                 Made with 💕 for our special day

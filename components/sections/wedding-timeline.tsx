@@ -2,6 +2,7 @@
 
 import { Heart } from "lucide-react"
 import Image from "next/image"
+import StarBorder from "@/components/ui/StarBorder"
 
 interface TimelineEvent {
   time: string
@@ -11,11 +12,11 @@ interface TimelineEvent {
 }
 
 const timelineEvents: TimelineEvent[] = [
-  { time: "4:00 PM", event: "Guest Arrival & Welcome", image: "/TimelineImage/arrivalimage.png" },
-  { time: "4:30 PM", event: "Ceremony Begins", image: "/TimelineImage/WeddingCeremony.png" },
-  { time: "5:30 PM", event: "Cocktail Hour & Fellowship", image: "/TimelineImage/Cocktail2.png" },
-  { time: "6:30 PM", event: "Dinner & Celebration", image: "/TimelineImage/DinnerTime.png" },
-  { time: "8:00 PM", event: "Closing Blessings & Fond Farewell", image: "/TimelineImage/ext.png"  },
+  { time: "8:30 AM", event: "Guest Arrival & Welcome", image: "/TimelineImage/arrivalimage.png" },
+  { time: "9:00 AM", event: "Ceremony Begins", image: "/TimelineImage/WeddingCeremony.png" },
+  { time: "11:00 AM", event: "Cocktail Hour & Fellowship", image: "/TimelineImage/Cocktail2.png" },
+  { time: "12:00 PM", event: "Lunch & Celebration", image: "/TimelineImage/DinnerTime.png" },
+  { time: "2:00 PM", event: "Closing Blessings & Fond Farewell", image: "/TimelineImage/ext.png"  },
 ]
 
 export function WeddingTimeline() {
@@ -37,17 +38,22 @@ export function WeddingTimeline() {
 
       {/* Central Card Container - same dark card as Entourage */}
       <div className="relative z-10 max-w-5xl mx-auto px-3 sm:px-4 md:px-6">
-        <div className="relative group">
+        <StarBorder
+          as="div"
+          className="relative group w-full"
+          color="#FFD700"
+          speed="5s"
+        >
           <div
             className="relative rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300"
             style={{
-              background: "linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)",
+              background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
               boxShadow:
                 "0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)",
             }}
           >
             {/* Gradient overlays */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505] z-0" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0" />
             <div
               className="absolute inset-0 opacity-60 z-0"
               style={{
@@ -140,7 +146,7 @@ export function WeddingTimeline() {
               </div>
             </div>
           </div>
-        </div>
+        </StarBorder>
       </div>
     </section>
   )

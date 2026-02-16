@@ -28,15 +28,15 @@ export interface StaggeredMenuProps {
 
 export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   position = "right",
-  colors = ["#D4C4A8", "#E8DCC8"],
+  colors = ["#0D1C7A", "#0E228C", "#0F299F", "#1e3a8a"],
   items = [],
   socialItems = [],
   displaySocials = true,
   className,
   menuButtonColor = "#fff",
-  openMenuButtonColor = "#9F8650",
+  openMenuButtonColor = "#0F299F",
   changeMenuColorOnOpen = true,
-  accentColor = "#9F8650",
+  accentColor = "#0F299F",
   isFixed = false,
   onMenuOpen,
   onMenuClose,
@@ -386,7 +386,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             const raw =
               colors && colors.length
                 ? colors.slice(0, 4)
-                : ["#1e1e22", "#35353c"];
+                : ["#0D1C7A", "#0F299F"];
             let arr = [...raw];
             if (arr.length >= 3) {
               const mid = Math.floor(arr.length / 2);
@@ -440,7 +440,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         <aside
           id="staggered-menu-panel"
           ref={panelRef}
-          className="staggered-menu-panel absolute top-0 right-0 h-full flex flex-col p-[6em_2em_2em_2em] overflow-y-auto z-10 bg-zinc-950 border-l border-white/10"
+          className="staggered-menu-panel absolute top-0 right-0 h-full flex flex-col p-[6em_2em_2em_2em] overflow-y-auto z-10 bg-[#0D1C7A] border-l border-white/10"
           style={{ WebkitBackdropFilter: "blur(12px)" }}
           aria-hidden={!open}
         >
@@ -532,7 +532,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope .sm-panel-itemWrap { position: relative; overflow: hidden; line-height: 1; }
 .sm-scope .sm-icon-line { position: absolute; left: 50%; top: 50%; width: 100%; height: 2px; background: currentColor; border-radius: 2px; transform: translate(-50%, -50%); will-change: transform; }
 .sm-scope .sm-line { display: none !important; }
-.sm-scope .staggered-menu-panel { position: absolute; top: 0; right: 0; width: clamp(260px, 38vw, 420px); height: 100%; background: #0a0a0a; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; flex-direction: column; padding: 6.5em 2.25em 2.25em 2.25em; overflow-y: auto; z-index: 10; border-left: 1px solid rgba(255,255,255,0.1); }
+.sm-scope .staggered-menu-panel { position: absolute; top: 0; right: 0; width: clamp(260px, 38vw, 420px); height: 100%; background: linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; flex-direction: column; padding: 6.5em 2.25em 2.25em 2.25em; overflow-y: auto; z-index: 10; border-left: 1px solid rgba(255,255,255,0.1); }
 .sm-scope [data-position='left'] .staggered-menu-panel { right: auto; left: 0; }
 .sm-scope .sm-prelayers { position: absolute; top: 0; right: 0; bottom: 0; width: clamp(260px, 38vw, 420px); pointer-events: none; z-index: 5; }
 .sm-scope [data-position='left'] .sm-prelayers { right: auto; left: 0; }

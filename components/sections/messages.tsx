@@ -45,7 +45,7 @@ function MessageForm({ onSuccess, onMessageSent }: MessageFormProps) {
 
     try {
       await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSdFM1ZvInqxouGi1f-lrhqCi3s4X9G_-WoMUs7WnIM_ayk6rQ/formResponse",
+        "https://docs.google.com/forms/d/e/1FAIpQLSeoqzjq02XY-gX65qaQr8LxC_kRCXr6LKbl-BlSDQ2euYsCBg/formResponse",
         {
           method: "POST",
           mode: "no-cors",
@@ -88,12 +88,12 @@ function MessageForm({ onSuccess, onMessageSent }: MessageFormProps) {
           isSubmitted ? 'animate-bounce' : ''
         }`}
         style={{
-          background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+          background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
           boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
         }}
       >
         {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F]" />
         <div 
           className="absolute inset-0 opacity-60"
           style={{
@@ -134,7 +134,7 @@ function MessageForm({ onSuccess, onMessageSent }: MessageFormProps) {
           <div className="text-center mb-4 sm:mb-6">
             <div className="relative inline-block mb-2 sm:mb-3">
               <div className="absolute inset-0 bg-white/10 rounded-full blur-lg scale-150"></div>
-              <div className="relative w-9 h-9 sm:w-12 sm:h-12 bg-zinc-800 rounded-full flex items-center justify-center mx-auto shadow-lg border-2 border-white/10">
+              <div className="relative w-9 h-9 sm:w-12 sm:h-12 bg-[#0F299F]/50 rounded-full flex items-center justify-center mx-auto shadow-lg border-2 border-white/10">
                 <MessageCircle className="h-4 w-4 sm:h-6 sm:w-6 text-zinc-200" />
               </div>
             </div>
@@ -167,7 +167,7 @@ function MessageForm({ onSuccess, onMessageSent }: MessageFormProps) {
                   onFocus={() => setFocusedField('name')}
                   onBlur={() => setFocusedField(null)}
                   placeholder="Enter your name"
-                  className={`w-full border border-white/20 rounded py-2 sm:py-2.5 px-3 sm:px-4 text-sm sm:text-base font-[family-name:var(--font-crimson)] text-zinc-100 placeholder:text-zinc-500 transition-all duration-200 bg-zinc-900/50 focus:outline-none ${
+                  className={`w-full border border-white/20 rounded py-2 sm:py-2.5 px-3 sm:px-4 text-sm sm:text-base font-[family-name:var(--font-crimson)] text-zinc-100 placeholder:text-zinc-500 transition-all duration-200 bg-[#0F299F]/20 focus:outline-none ${
                     focusedField === 'name' 
                       ? 'border-white/40 shadow-sm' 
                       : 'hover:border-white/30'
@@ -203,7 +203,7 @@ function MessageForm({ onSuccess, onMessageSent }: MessageFormProps) {
                   onFocus={() => setFocusedField('message')}
                   onBlur={() => setFocusedField(null)}
                   placeholder="Share your love, memories, or well wishes..."
-                  className={`w-full border border-white/20 rounded min-h-[100px] sm:min-h-[120px] text-sm sm:text-base font-[family-name:var(--font-crimson)] text-zinc-100 placeholder:text-zinc-500 transition-all duration-200 resize-none bg-zinc-900/50 py-2 sm:py-2.5 px-3 sm:px-4 focus:outline-none ${
+                  className={`w-full border border-white/20 rounded min-h-[100px] sm:min-h-[120px] text-sm sm:text-base font-[family-name:var(--font-crimson)] text-zinc-100 placeholder:text-zinc-500 transition-all duration-200 resize-none bg-[#0F299F]/20 py-2 sm:py-2.5 px-3 sm:px-4 focus:outline-none ${
                     focusedField === 'message' 
                       ? 'border-white/40 shadow-sm' 
                       : 'hover:border-white/30'
@@ -216,7 +216,7 @@ function MessageForm({ onSuccess, onMessageSent }: MessageFormProps) {
             <Button
               type="submit"
               disabled={isSubmitting || !nameValue.trim() || !messageValue.trim()}
-              className="w-full bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-600 text-zinc-100 py-2.5 sm:py-3 px-6 sm:px-8 text-xs sm:text-sm font-[family-name:var(--font-crimson)] font-semibold shadow-md transition-all duration-300 hover:scale-105 active:scale-100 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none border border-white/20 tracking-wider uppercase"
+              className="w-full !bg-[#0D1C7A] !hover:bg-[#0F299F] active:bg-[#0D1C7A] text-zinc-100 py-2.5 sm:py-3 px-6 sm:px-8 text-xs sm:text-sm font-[family-name:var(--font-crimson)] font-semibold shadow-md transition-all duration-300 hover:scale-105 active:scale-100 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none border border-white/20 tracking-wider uppercase"
             >
               
               {isSubmitting ? (
@@ -248,7 +248,7 @@ export function Messages() {
   const fetchMessages = useCallback(() => {
     setLoading(true)
     fetch(
-      "https://script.google.com/macros/s/AKfycbwHmRErrH5tmm_9Of1riYxugBpnfyw5WWzmcqfWeKC2gan6U1dQiqvAS31LBQoylTnp/exec"
+      "https://script.google.com/macros/s/AKfycbwNu1VgEVUxgIhkhjNEunjt5Ug-3jaZ6-o0Hk7aCkCvf6ol7qjZNAXKLdW6J8Wn0eRP/exec"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -313,7 +313,7 @@ export function Messages() {
           <div className="text-center mb-6 sm:mb-10 md:mb-14">
             <div className="relative inline-block mb-3 sm:mb-5">
               <div className="absolute inset-0 bg-white/10 rounded-full blur-xl scale-150"></div>
-              <div className="relative w-10 h-10 sm:w-14 sm:h-14 bg-zinc-800 rounded-full flex items-center justify-center mx-auto shadow-lg border border-white/10">
+              <div className="relative w-10 h-10 sm:w-14 sm:h-14 bg-[#0F299F]/50 rounded-full flex items-center justify-center mx-auto shadow-lg border border-white/10">
                 <Heart className="h-5 w-5 sm:h-7 sm:w-7 text-zinc-200" />
               </div>
             </div>

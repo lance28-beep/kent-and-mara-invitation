@@ -1,23 +1,23 @@
 export const siteConfig = {
   couple: {
-    bride: "Jay-R Valenzuela",
-    brideNickname: "Jay-R",
-    groom: "Jennifer Bartolome",
-    groomNickname: "Jen",
+    bride: "Mara L. Garay",
+    brideNickname: "Mara",
+    groom: "Kent Clark L. Alimes",
+    groomNickname: "Kent",
   },
   wedding: {
-    date: "January 24, 2026",
+    date: "February 26, 2026",
     time: "9:00 AM",
-    venue: "Diocesan Shrine & Parish of Our Lady of the Abandoned",
+    venue: "Municipal Trial Court - Prosperidad, Agusan del Sur",
     tagline: "are getting married!",
-    theme: "Elegant Wedding ✨",
-    motif: "Earth Tones & Natural Elegance",
+    theme: "Navy Blue, Royal Blue, Gold, Sky Blue, White",
+    motif: "Navy Blue, Royal Blue, Gold, Sky Blue, White",
   },
   details: {
     rsvp: {
-      deadline: "January 10, 2026",
+      deadline: "February 10, 2026",
       contacts: "+639XXXXXXXXX | +639XXXXXXXXX",
-      names: "Jay-R & Jen"
+      names: "Kent & Mara"
     },
     policies: {
       attendance: "As we celebrate this moment with our closest loved ones, we kindly ask that attendance be limited to those named on the invitation",
@@ -27,44 +27,44 @@ export const siteConfig = {
     }
   },
   ceremony: {
-    location: "Diocesan Shrine & Parish of Our Lady of the Abandoned",
-    venue: "Diocesan Shrine & Parish of Our Lady of the Abandoned",
-    address: "#3 Mt. Kennedy St., Mountainview Village, San Roque, Marikina City",
-    date: "January 24, 2026",
-    day: "Saturday",
+    location: "Municipal Trial Court",
+    venue: "Municipal Trial Court - Prosperidad, Agusan del Sur",
+    address: "Prosperidad, Agusan del Sur",
+    date: "February 26, 2026",
+    day: "Thursday",
     time: "9:00 AM",
     entourageTime: "8:30 AM",
     guestsTime: "9:00 AM",
   },
   reception: {
-    location: "The Grand Cobo Events Place",
-    venue: "The Grand Cobo Events Place",
-    address: "#3 Mt. Kennedy St., Mountainview Village, San Roque, Marikina City",
-    date: "January 24, 2026",
+    location: "RCBI Hotel",
+    venue: "RCBI Hotel",
+    address: "National Highway, San Isidro, San Francisco, Agusan del Sur",
+    date: "February 26, 2026",
     time: "12:00 NN",
   },
   dressCode: {
-    theme: "Elegant Wedding ✨",
-    colors: ["#0A3629", "#126555", "#688277", "#9F8650", "#F9F8F4"],
-    description: "Earth tones, long gowns for ladies. Barong & black slacks or formal wear for gentlemen. No prints, please.",
+    theme: "Navy Blue, Royal Blue, Gold, Sky Blue, White",
+    colors: ["#000080", "#4169E1", "#FFD700", "#87CEEB", "#FFFFFF"],
+    description: "Formal or Semi-Formal. Please incorporate our wedding colors.",
     sponsors: {
-      ladies: "Champagne or Gold long gowns",
-      gentlemen: "Barong Tagalog & Black Slacks"
+      ladies: "Long gowns in Navy or Royal Blue",
+      gentlemen: "Formal wear"
     },
     guests: {
-      ladies: "Earth tones long gowns (no prints)",
-      gentlemen: "Barong & black slacks or formal wear"
+      ladies: "Formal or Semi-formal",
+      gentlemen: "Formal wear"
     },
-    note: "Dress code: Earth tones, long gowns for ladies. Barong & black slacks or formal wear for gentlemen. No prints, please."
+    note: "Please strictly follow the dress code."
   },
-  narrative: `Two hearts, one love story. Jay-R and Jennifer are ready to begin their forever together. \n
-
-Join us as we celebrate their love and commitment to each other on this special day. \n
-
-Together with their families, they invite you to witness the beginning of their beautiful journey as husband and wife. ❤️`,
+  narrative: `Two hearts, one love story. Kent and Mara are ready to begin their forever together. \n
+    \n
+    Join us as we celebrate their love and commitment to each other on this special day. \n
+    \n
+    Together with their families, they invite you to witness the beginning of their beautiful journey as husband and wife. ❤️`,
   colors: {
-    primary: "#0A3629",
-    secondary: "#126555",
+    primary: "#000080",
+    secondary: "#FFD700",
   },
 }
 

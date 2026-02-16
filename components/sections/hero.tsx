@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import StarBorder from "@/components/ui/StarBorder"
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -14,17 +15,23 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col items-center justify-center min-h-screen py-16 sm:py-20">
         {/* Main invitation card */}
-        <div
-          className={`w-full max-w-xl md:max-w-2xl relative rounded-[22px] sm:rounded-[26px] md:rounded-[30px] text-center px-6 sm:px-10 md:px-14 py-10 sm:py-12 md:py-14 transition-all duration-700 ease-out overflow-hidden ${
+        <StarBorder
+          as="div"
+          className={`w-full max-w-xl md:max-w-2xl relative rounded-[22px] sm:rounded-[26px] md:rounded-[30px] transition-all duration-700 ease-out overflow-hidden ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
+          color="cyan"
+          speed="5s"
+        >
+        <div
+          className="h-full w-full rounded-[22px] sm:rounded-[26px] md:rounded-[30px] text-center px-6 sm:px-10 md:px-14 py-10 sm:py-12 md:py-14"
           style={{
-            background: 'linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #050505 100%)',
+            background: 'linear-gradient(135deg, #0D1C7A 0%, #0E228C 50%, #0F299F 100%)',
             boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.6), 0 30px 90px rgba(0,0,0,0.95), inset 0 1px 0 rgba(255,255,255,0.05)',
           }}
         >
-          {/* Premium black base with elegant gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#050505]" />
+          {/* Premium blue base with elegant gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F]" />
           
           {/* Subtle radial gradient for depth */}
           <div 
@@ -54,44 +61,44 @@ export function Hero() {
           
           {/* Content wrapper */}
           <div className="relative z-10">
-          {/* Monogram */}
-          <div className="mb-8 sm:mb-9 md:mb-10 flex justify-center">
-            <Image
-              src="/monogram/monogram.png"
-              alt="Japoi & Regine"
-              width={240}
-              height={240}
-              className="h-36 w-36 sm:h-40 sm:w-40 md:h-44 md:w-44 lg:h-48 lg:w-48 object-contain object-center brightness-0 invert"
-              priority
-            />
-          </div>
-
-          {/* Small intro text */}
-          <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.32em] text-zinc-400 uppercase mb-6 sm:mb-7">
-            Together with their families
-          </p>
-
-          {/* Names block */}
-          <div className="space-y-4 sm:space-y-5 md:space-y-6 mb-6 sm:mb-7 md:mb-8">
-            {/* Japoi */}
-            <div className="space-y-1">
-              <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-50 uppercase">
-                Japoi
-              </p>
+            {/* Monogram */}
+            <div className="mb-8 sm:mb-9 md:mb-10 flex justify-center">
+              <Image
+                src="/monogram/newMonogram.png"
+                alt="Kent & Mara"
+                width={240}
+                height={240}
+                className="h-36 w-36 sm:h-40 sm:w-40 md:h-44 md:w-44 lg:h-48 lg:w-48 object-contain object-center brightness-0 invert"
+                priority
+              />
             </div>
 
-            {/* AND */}
-            <p className="text-[10px] sm:text-xs tracking-[0.3em] font-[family-name:var(--font-crimson)] text-zinc-500 uppercase">
-              and
+            {/* Small intro text */}
+            <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.32em] text-zinc-400 uppercase mb-6 sm:mb-7">
+              Together with their families
             </p>
 
-            {/* Regine */}
-            <div className="space-y-1">
-              <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-50 uppercase">
-                Regine
+            {/* Names block */}
+            <div className="space-y-4 sm:space-y-5 md:space-y-6 mb-6 sm:mb-7 md:mb-8">
+              {/* Groom */}
+              <div className="space-y-1">
+                <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-50 uppercase">
+                  Kent
+                </p>
+              </div>
+
+              {/* AND */}
+              <p className="text-[10px] sm:text-xs tracking-[0.3em] font-[family-name:var(--font-crimson)] text-zinc-500 uppercase">
+                and
               </p>
+
+              {/* Bride */}
+              <div className="space-y-1">
+                <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-50 uppercase">
+                  Mara
+                </p>
+              </div>
             </div>
-          </div>
 
           {/* Invite line */}
           <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.32em] text-zinc-400 uppercase mb-6 sm:mb-7">
@@ -123,7 +130,8 @@ export function Hero() {
             </p>
           </div>
           </div>
-        </div>
+          </div>
+        </StarBorder>
       </div>
     </section>
   )
