@@ -133,15 +133,15 @@ export function WeddingTimeline() {
               {/* Thank you message - quote style */}
               <div className="relative rounded-lg sm:rounded-xl border border-[rgba(255,255,255,0.08)] bg-black/40 p-5 sm:p-6 md:p-8 lg:p-10 xl:p-12">
 
-                <blockquote className="relative max-w-md mx-auto text-center">
-                  <span className="absolute -left-1 -top-2 sm:-top-3 text-4xl sm:text-5xl md:text-6xl font-[family-name:var(--font-ephesis)] text-zinc-500/60 leading-none select-none" aria-hidden>&ldquo;</span>
-                  <div className="space-y-0.5 sm:space-y-1 font-[family-name:var(--font-crimson)] font-light text-zinc-100 text-sm sm:text-base md:text-lg leading-snug tracking-wide">
-                    <p className="italic">With grateful hearts we give praise,</p>
-                    <p className="italic">for God&apos;s love that lights our days.</p>
-                    <p className="italic">Your presence is a blessing true,</p>
-                    <p className="italic">a gift from Him, and from you, too.</p>
+                <blockquote className="relative max-w-lg mx-auto text-center">
+                  <div className="space-y-4 sm:space-y-6 font-[family-name:var(--font-crimson)] font-light text-zinc-100 text-sm sm:text-base md:text-lg leading-relaxed tracking-wide">
+                    <p className="italic">With grateful hearts before Him, we begin our forever.</p>
+                    <div className="pt-2 sm:pt-4 border-t border-zinc-500/20 max-w-[200px] mx-auto" />
+                    <p className="not-italic font-normal">
+                      &ldquo;Love bears all things, believes all things, hopes all things, endures all things.&rdquo;
+                    </p>
+                    <p className="text-xs sm:text-sm text-zinc-400 uppercase tracking-widest mt-1">— 1 Corinthians 13:7</p>
                   </div>
-                  <span className="absolute -right-1 -bottom-2 sm:-bottom-3 text-4xl sm:text-5xl md:text-6xl font-[family-name:var(--font-ephesis)] text-zinc-500/60 leading-none select-none" aria-hidden>&rdquo;</span>
                 </blockquote>
               </div>
             </div>

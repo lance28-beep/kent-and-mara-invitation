@@ -3,14 +3,11 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import {
-  Instagram,
-  Facebook,
-  Twitter,
-  Share2,
   Copy,
   Check,
   Download,
   Camera,
+  Share2
 } from "lucide-react";
 import { Section } from "@/components/section";
 import { QRCodeCanvas } from "qrcode.react";
@@ -27,7 +24,7 @@ export function SnapShare() {
       : "https://example.com";
   const driveLink =
     "https://drive.google.com/drive/folders/1joPMXNV2V5WvLNuAHPksPNVEshoo3ILe?usp=sharing";
-  const hashtags = ["#KentAndMaraForever"];  
+  const hashtags = ["#MeMARAbleChapterWithKENT","#MARAKENTSayNo"];  
   const shareText = `Join us in celebrating Kent & Mara's special day! Check out their wedding website: ${websiteUrl} ${hashtags.join(" ")} 💕`;
 
   useEffect(() => {
@@ -152,14 +149,14 @@ export function SnapShare() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8"
+          className="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8"
           variants={staggerChildren}
           initial="initial"
           animate="animate"
         >
           {/* Left Column: Hashtags + Drive Upload */}
           <motion.div
-            className="space-y-4 sm:space-y-6 md:space-y-8"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8"
             variants={fadeInUp}
           >
             {/* Hashtags Card */}
@@ -287,108 +284,6 @@ export function SnapShare() {
             </div>
           </motion.div>
 
-          {/* QR Code & Social Media */}
-          <motion.div className="space-y-4 sm:space-y-6 md:space-y-8" variants={fadeInUp}>
-            {/* QR Code Card */}
-            <div className="relative group">
-              <div
-                className="relative rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 overflow-hidden border border-white/10 text-center transition-all duration-300"
-                style={cardStyle}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0" />
-                <div
-                  className="absolute inset-0 opacity-60 z-0"
-                  style={{
-                    background:
-                      "radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%)",
-                  }}
-                />
-                <h4 className="relative z-10 text-base sm:text-lg md:text-xl font-[family-name:var(--font-crimson)] font-semibold text-zinc-200 mb-4 sm:mb-5 md:mb-6">
-                  Share Our Website
-                </h4>
-                  <div className="relative z-10 inline-flex flex-col items-center bg-[#0F299F]/20 p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl border border-white/10 mb-3 sm:mb-4">
-                  <div className="mb-3 sm:mb-4 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white border border-white/20">
-                    <QRCodeCanvas
-                      id="snapshare-qr"
-                      value={websiteUrl}
-                      size={isMobile ? 112 : 160}
-                      includeMargin
-                      className="bg-white"
-                    />
-                  </div>
-                  <button
-                    onClick={downloadQRCode}
-                    className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 bg-[#0D1C7A] hover:bg-[#0F299F] text-white rounded-lg transition-all duration-200 text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] font-semibold"
-                  >
-                    <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
-                    <span>Download QR Code</span>
-                  </button>
-                </div>
-                <p className="relative z-10 text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] text-zinc-500">
-                  Scan with any camera app to visit our website
-                </p>
-              </div>
-            </div>
-
-            {/* Social Media Card */}
-            <div className="relative group">
-              <div
-                className="relative rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 overflow-hidden border border-white/10 transition-all duration-300"
-                style={cardStyle}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#0D1C7A] via-[#0E228C] to-[#0F299F] z-0" />
-                <div
-                  className="absolute inset-0 opacity-60 z-0"
-                  style={{
-                    background:
-                      "radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%)",
-                  }}
-                />
-                <h5 className="relative z-10 text-base sm:text-lg md:text-xl font-[family-name:var(--font-crimson)] font-semibold text-zinc-200 mb-4 sm:mb-5 md:mb-6 text-center">
-                  Share on Social Media
-                </h5>
-
-                <div className="relative z-10 grid grid-cols-2 gap-2.5 sm:gap-3 md:gap-4">
-                  <button
-                    onClick={() => shareOnSocial("instagram")}
-                    className="group flex items-center justify-center gap-1.5 sm:gap-2 bg-gradient-to-br from-pink-500 via-purple-500 to-pink-600 text-white px-2.5 sm:px-3 md:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg hover:scale-105 transition-all duration-200 shadow-md hover:shadow-xl border border-white/10"
-                  >
-                    <Instagram className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform text-white" />
-                    <span className="font-[family-name:var(--font-crimson)] font-semibold text-[10px] sm:text-xs md:text-sm">
-                      Instagram
-                    </span>
-                  </button>
-                  <button
-                    onClick={() => shareOnSocial("facebook")}
-                    className="group flex items-center justify-center gap-1.5 sm:gap-2 bg-gradient-to-br from-blue-500 to-blue-700 text-white px-2.5 sm:px-3 md:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg hover:scale-105 transition-all duration-200 shadow-md hover:shadow-xl border border-white/10"
-                  >
-                    <Facebook className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform text-white" />
-                    <span className="font-[family-name:var(--font-crimson)] font-semibold text-[10px] sm:text-xs md:text-sm">
-                      Facebook
-                    </span>
-                  </button>
-                  <button
-                    onClick={() => shareOnSocial("tiktok")}
-                    className="group flex items-center justify-center gap-1.5 sm:gap-2 bg-gradient-to-br from-zinc-800 via-zinc-700 to-zinc-800 text-white px-2.5 sm:px-3 md:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg hover:scale-105 transition-all duration-200 shadow-md hover:shadow-xl border border-white/10"
-                  >
-                    <Share2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform text-white" />
-                    <span className="font-[family-name:var(--font-crimson)] font-semibold text-[10px] sm:text-xs md:text-sm">
-                      TikTok
-                    </span>
-                  </button>
-                  <button
-                    onClick={() => shareOnSocial("twitter")}
-                    className="group flex items-center justify-center gap-1.5 sm:gap-2 bg-gradient-to-br from-sky-400 to-blue-500 text-white px-2.5 sm:px-3 md:px-4 py-2.5 sm:py-3 md:py-4 rounded-lg hover:scale-105 transition-all duration-200 shadow-md hover:shadow-xl border border-white/10"
-                  >
-                    <Twitter className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform text-white" />
-                    <span className="font-[family-name:var(--font-crimson)] font-semibold text-[10px] sm:text-xs md:text-sm">
-                      Twitter
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* Closing Message */}

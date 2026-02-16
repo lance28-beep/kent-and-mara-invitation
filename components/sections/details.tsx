@@ -9,11 +9,9 @@ import StarBorder from "@/components/ui/StarBorder"
 
 const CEREMONY_IMAGES = [
   "/Details/ceremony1.png",
-  "/Details/ceremony2.jpg"
 ] as const
 const RECEPTION_IMAGES = [
   "/Details/reception1.jpg",
-  "/Details/reception2.jpg"
 ] as const
 const VENUE_IMAGE_INTERVAL_MS = 4000
 
@@ -55,16 +53,16 @@ export function Details() {
   }
 
   // Venue information (aligned with hero and FAQ)
-  const ceremonyVenueName = "Municipal Trial Court"
+  const ceremonyVenueName = "Municipal Trial Court 2nd Floor"
   const ceremonyVenueDetail = "Prosperidad, Agusan del Sur"
   const ceremonyVenue = `${ceremonyVenueName}, ${ceremonyVenueDetail}`
   const ceremonyMapsLink = `https://maps.google.com/?q=${encodeURIComponent(ceremonyVenue)}`
 
-  const receptionVenueName = "RCBI Hotel"
+  const receptionVenueName = "RCBI Hotel 5th Floor"
   const receptionVenueDetail = "National Highway, San Isidro"
   const receptionAddress = "San Francisco, Agusan del Sur"
   const receptionVenue = `${receptionVenueName}, ${receptionVenueDetail}, ${receptionAddress}`
-  const receptionMapsLink = `https://maps.google.com/?q=${encodeURIComponent(receptionVenue)}`
+  const receptionMapsLink = "https://www.google.com/maps/place/Rcbi+Hotel,+San+Francisco,+Agusan+del+Sur/@8.4855457,125.9711051,16z/data=!4m6!3m5!1s0x32fdfccdde0b68b1:0xa584f08778072c0e!8m2!3d8.4855457!4d125.9711051!16s%2Fg%2F11sg8r1zgl?g_ep=Eg1tbF8yMDI2MDIxMV8wIJvbDyoASAJQAg%3D%3D&fbclid=IwY2xjawQAfZlleHRuA2FlbQIxMABicmlkETJYUlR6UkM3aklnd1BtSnB6c3J0YwZhcHBfaWQPNTE0NzcxNTY5MjI4MDYxAAEenYhRlPqiNQXgtKZ6D8KqqXMVmy-vxGTxuEuIU3xJhbp6xk-JKQKx1DrC78A_aem_3XmPgsGbGejA3yQs3FaIzA"
 
   const openInMaps = (link: string) => {
     window.open(link, '_blank', 'noopener,noreferrer')
@@ -153,6 +151,7 @@ export function Details() {
                 </p>
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-[family-name:var(--font-crimson)] font-normal text-white mb-0.5 sm:mb-1 drop-shadow-lg uppercase tracking-[0.1em] leading-tight">
                   Municipal Trial Court
+                  <span className="block text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] font-light text-zinc-300 mt-0.5">2nd Floor</span>
                 </h3>
                 <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] text-white/95 drop-shadow-md tracking-wide">
                   Prosperidad, Agusan del Sur
@@ -284,6 +283,7 @@ export function Details() {
                 </p>
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-[family-name:var(--font-crimson)] font-normal text-white mb-0.5 sm:mb-1 drop-shadow-lg uppercase tracking-[0.1em] leading-tight">
                   RCBI Hotel
+                  <span className="block text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] font-light text-zinc-300 mt-0.5">5th Floor</span>
                 </h3>
                 <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] text-white/95 drop-shadow-md tracking-wide">
                   San Francisco, Agusan del Sur
@@ -444,7 +444,7 @@ export function Details() {
                       For Gentlemen
                     </p>
                     <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] text-zinc-300 leading-relaxed">
-                      We invite you to dress in formal attire inspired by our motif — Navy Blue, Royal Blue, Gold, Sky Blue, or White. Suits and ties are most preferred. If you want a simpler look, a long‑sleeved shirt in these shades is also a comfortable option.
+                      We invite you to dress in formal attire inspired by our motif — Navy Blue, Royal Blue, Gold, or White. Suits and ties are most preferred. If you want a simpler look, a long‑sleeved shirt in these shades is also a comfortable option.
                     </p>
                   </div>
                   <div className="bg-[#0F299F]/30 rounded-xl p-4 sm:p-5 md:p-6 border border-white/10 h-full">
@@ -452,7 +452,7 @@ export function Details() {
                       For Ladies
                     </p>
                     <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] text-zinc-300 leading-relaxed">
-                      Grace the celebration in elegant attire inspired by our motif — Navy Blue, Royal Blue, Gold, Sky Blue, or White. Whether glittery, silky, or simply refined, choose the style that makes you feel radiant and comfortable as you celebrate with us.
+                      Grace the celebration in elegant attire inspired by our motif — Navy Blue, Royal Blue, Gold, or White. Whether glittery, silky, or simply refined, choose the style that makes you feel radiant and comfortable as you celebrate with us.
                     </p>
                   </div>
                 </div>
@@ -470,10 +470,6 @@ export function Details() {
                       Color Palette
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-                      <div className="flex flex-col items-center gap-2">
-                         <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-white/20 shadow-lg" style={{ backgroundColor: '#C4DFFD' }} />
-                         <span className="text-[10px] text-zinc-400 font-mono">#C4DFFD</span>
-                      </div>
                       <div className="flex flex-col items-center gap-2">
                          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-white/20 shadow-lg" style={{ backgroundColor: '#BD974C' }} />
                          <span className="text-[10px] text-zinc-400 font-mono">#BD974C</span>
@@ -531,7 +527,7 @@ export function Details() {
                   <div className="flex items-start gap-3 sm:gap-4">
                     <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-300 mt-0.5 flex-shrink-0" aria-hidden />
                     <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-200 leading-relaxed">
-                    We kindly request that the celebration remain intimate, so we can share this special day with our closest loved ones.
+                    With love, we kindly ask that this invitation not be shared and be honored only by those who received it.
                     </p>
                   </div>
                 </div>
@@ -539,18 +535,10 @@ export function Details() {
                 {/* Gifts - icon + message */}
                 <div className="bg-zinc-900/50 rounded-xl p-5 sm:p-6 md:p-7 border border-white/10">
                   <div className="flex items-start gap-3 sm:gap-4">
-                    <Gift className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-300 mt-0.5 flex-shrink-0" aria-hidden />
-                    <div className="space-y-2 sm:space-y-3">
+                    <Shirt className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-300 mt-0.5 flex-shrink-0" aria-hidden />
                       <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-200 leading-relaxed">
-                        Your presence is the greatest gift of all.
+                        Please no slippers or overly casual outfits.
                       </p>
-                      <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-200 leading-relaxed">
-                        If you wish to bless us further, monetary gifts are welcome but never expected.
-                      </p>
-                      <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-200 leading-relaxed">
-                        What matters most is celebrating this joyful day together.
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>

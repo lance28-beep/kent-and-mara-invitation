@@ -14,7 +14,7 @@ const navLinks = [
   { href: "#sponsors", label: "Sponsors" },
   { href: "#guest-list", label: "RSVP" },
   { href: "#registry", label: "Registry" },
-  { href: "#faq", label: "FAQ" },
+  { href: "#faq", label: "FAQs" },
   { href: "#messages", label: "Messages" },
 ];
 
