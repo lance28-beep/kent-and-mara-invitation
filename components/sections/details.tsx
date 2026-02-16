@@ -471,6 +471,10 @@ export function Details() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
                       <div className="flex flex-col items-center gap-2">
+                         <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-white/20 shadow-lg" style={{ backgroundColor: '#FFFFFF' }} />
+                         <span className="text-[10px] text-zinc-400 font-mono">#FFFFFF</span>
+                      </div>
+                      <div className="flex flex-col items-center gap-2">
                          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-white/20 shadow-lg" style={{ backgroundColor: '#BD974C' }} />
                          <span className="text-[10px] text-zinc-400 font-mono">#BD974C</span>
                       </div>

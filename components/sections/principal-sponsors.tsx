@@ -85,7 +85,7 @@ export function PrincipalSponsors() {
           <div className="h-[1px] w-12 sm:w-16 md:w-24 bg-gradient-to-r from-transparent via-zinc-500 to-transparent" />
         </div>
         <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-400 font-light max-w-2xl mx-auto leading-relaxed tracking-wide px-2 sm:px-4">
-          With hearts full of gratitude, we honor our Godparents of Marriage, who will stand beside us as guiding figures, offering wisdom, prayers, and love as we begin this journey together.
+          With deep appreciation,, we honor our Godparents of Marriage, who will stand beside us as guiding figures, offering wisdom, prayers, and love as we begin this journey together.
         </p>
       </div>
 
