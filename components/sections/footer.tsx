@@ -78,16 +78,30 @@ export function Footer() {
             </div>
 
             {/* Location block – hero content */}
-            <div className="space-y-2 sm:space-y-3 md:space-y-3.5">
-              <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
-                Ceremony &amp; Reception
-              </p>
-              <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-100 uppercase">
-                RCBI Hotel, National Highway, San Isidro
-              </p>
-              <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-zinc-400 uppercase">
-                San Francisco, Agusan del Sur
-              </p>
+            <div className="space-y-6 sm:space-y-8 md:space-y-10">
+              <div className="space-y-2 sm:space-y-3">
+                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
+                  Ceremony
+                </p>
+                <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-100 uppercase">
+                  Municipal Trial Court
+                </p>
+                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-zinc-400 uppercase">
+                  Prosperidad, Agusan del Sur
+                </p>
+              </div>
+
+              <div className="space-y-2 sm:space-y-3">
+                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
+                  Reception
+                </p>
+                <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-100 uppercase">
+                  RCBI Hotel, National Highway, San Isidro
+                </p>
+                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-zinc-400 uppercase">
+                  San Francisco, Agusan del Sur
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>
