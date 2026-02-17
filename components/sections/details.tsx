@@ -75,7 +75,7 @@ export function Details() {
         <div className="flex items-center justify-center gap-3 mb-4 sm:mb-6">
           <div className="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-transparent via-zinc-500 to-transparent" />
         </div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]">
           Event Details
         </h2>
         <div className="flex items-center justify-center gap-3 mb-4 sm:mb-6">
@@ -165,7 +165,7 @@ export function Details() {
                 <div className="flex items-start gap-2 sm:gap-3 md:gap-4">
                   <MapPin className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-zinc-300 mt-0.5 flex-shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold text-zinc-300 mb-1.5 sm:mb-2 uppercase tracking-wide">
+                    <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-1.5 sm:mb-2 uppercase tracking-wide">
                       Location
                     </p>
                     <p className="text-xs sm:text-sm md:text-base lg:text-lg font-[family-name:var(--font-crimson)] text-zinc-200 leading-relaxed">
@@ -201,8 +201,8 @@ export function Details() {
                   className="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 px-4 sm:px-5 py-2 sm:py-2.5 md:py-3 bg-[#0D1C7A] hover:bg-[#0F299F] text-zinc-100 rounded-lg font-[family-name:var(--font-crimson)] font-semibold text-xs sm:text-sm md:text-base transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-white/20"
                   aria-label="Get directions to ceremony venue"
                 >
-                  <Navigation className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0" />
-                  <span>Get Directions</span>
+                  <Navigation className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0 text-[#FFD700]" />
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04]">Get Directions</span>
                 </button>
                 <button
                   onClick={() => copyToClipboard(ceremonyVenue, 'ceremony')}
@@ -210,11 +210,11 @@ export function Details() {
                   aria-label="Copy ceremony venue address"
                 >
                   {copiedItems.has('ceremony') ? (
-                    <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0 text-zinc-300" />
+                    <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0 text-[#FFD700]" />
                   ) : (
-                    <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0" />
+                    <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0 text-[#FFD700]" />
                   )}
-                  <span>{copiedItems.has('ceremony') ? 'Copied!' : 'Copy Address'}</span>
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04]">{copiedItems.has('ceremony') ? 'Copied!' : 'Copy Address'}</span>
                 </button>
               </div>
             </div>
@@ -297,7 +297,7 @@ export function Details() {
                 <div className="flex items-start gap-2 sm:gap-3 md:gap-4">
                   <MapPin className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-zinc-300 mt-0.5 flex-shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold text-zinc-300 mb-1.5 sm:mb-2 uppercase tracking-wide">
+                    <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-1.5 sm:mb-2 uppercase tracking-wide">
                       Location
                     </p>
                     <p className="text-xs sm:text-sm md:text-base lg:text-lg font-[family-name:var(--font-crimson)] text-zinc-200 leading-relaxed">
@@ -336,8 +336,8 @@ export function Details() {
                   className="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 px-4 sm:px-5 py-2 sm:py-2.5 md:py-3 bg-[#0D1C7A] hover:bg-[#0F299F] text-zinc-100 rounded-lg font-[family-name:var(--font-crimson)] font-semibold text-xs sm:text-sm md:text-base transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-white/20"
                   aria-label="Get directions to reception venue"
                 >
-                  <Navigation className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0" />
-                  <span>Get Directions</span>
+                  <Navigation className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0 text-[#FFD700]" />
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04]">Get Directions</span>
                 </button>
                  <button
                   onClick={() => copyToClipboard(receptionVenue, 'reception')}
@@ -345,11 +345,11 @@ export function Details() {
                   aria-label="Copy reception venue address"
                 >
                   {copiedItems.has('reception') ? (
-                    <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0 text-zinc-300" />
+                    <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0 text-[#FFD700]" />
                   ) : (
-                    <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0" />
+                    <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0 text-[#FFD700]" />
                   )}
-                  <span>{copiedItems.has('reception') ? 'Copied!' : 'Copy Address'}</span>
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04]">{copiedItems.has('reception') ? 'Copied!' : 'Copy Address'}</span>
                 </button>
               </div>
             </div>
@@ -366,7 +366,7 @@ export function Details() {
             <Shirt className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-300" />
             <div className="h-px w-10 sm:w-14 md:w-20 bg-zinc-500/50" />
           </div>
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 mb-3 sm:mb-4 uppercase tracking-[0.12em]">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-3 sm:mb-4 uppercase tracking-[0.12em]">
             Attire Guidelines
           </h3>
       
@@ -518,7 +518,7 @@ export function Details() {
             <div className="absolute inset-0 border border-white/10 rounded-xl sm:rounded-2xl" />
             
             <div className="relative z-10">
-              <h4 className="text-lg sm:text-xl md:text-2xl font-[family-name:var(--font-crimson)] font-semibold text-zinc-200 mb-6 sm:mb-7 md:mb-8 uppercase tracking-[0.12em] text-center">
+              <h4 className="text-lg sm:text-xl md:text-2xl font-[family-name:var(--font-crimson)] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-6 sm:mb-7 md:mb-8 uppercase tracking-[0.12em] text-center">
               Gentle Reminder
               </h4>
               

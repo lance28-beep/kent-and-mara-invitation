@@ -1,8 +1,6 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
-import Image from "next/image"
-
 interface LoadingScreenProps {
   onComplete: () => void
 }
@@ -95,13 +93,18 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             monogramVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
           }`}
         >
-          <Image
-            src="/monogram/newMonogram.png"
-            alt="Monogram"
-            width={240}
-            height={240}
-            className="h-28 w-28 sm:h-32 sm:w-32 md:h-36 md:w-36 object-contain object-center brightness-0 invert"
-            priority
+          <div
+            className="h-28 w-28 sm:h-32 sm:w-32 md:h-36 md:w-36 bg-gradient-to-br from-[#FFD700] to-[#EFBF04]"
+            style={{
+              maskImage: 'url("/monogram/newMonogram.png")',
+              WebkitMaskImage: 'url("/monogram/newMonogram.png")',
+              maskSize: "contain",
+              WebkitMaskSize: "contain",
+              maskRepeat: "no-repeat",
+              WebkitMaskRepeat: "no-repeat",
+              maskPosition: "center",
+              WebkitMaskPosition: "center",
+            }}
           />
         </div>
 
@@ -113,13 +116,13 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
               : "opacity-0 translate-y-6"
           }`}
         >
-          <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[0.2em] text-zinc-100 uppercase font-[family-name:var(--font-crimson)]">
+          <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase font-[family-name:var(--font-crimson)]">
             {COUPLE_NAMES.groom}
           </span>
           <span className="text-2xl sm:text-3xl md:text-4xl mx-2 font-[family-name:var(--font-ephesis)] font-normal text-zinc-200">
             &amp;
           </span>
-          <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[0.2em] text-zinc-100 uppercase font-[family-name:var(--font-crimson)]">
+          <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase font-[family-name:var(--font-crimson)]">
             {COUPLE_NAMES.bride}
           </span>
         </h1>

@@ -135,10 +135,10 @@ function MessageForm({ onSuccess, onMessageSent }: MessageFormProps) {
             <div className="relative inline-block mb-2 sm:mb-3">
               <div className="absolute inset-0 bg-white/10 rounded-full blur-lg scale-150"></div>
               <div className="relative w-9 h-9 sm:w-12 sm:h-12 bg-[#0F299F]/50 rounded-full flex items-center justify-center mx-auto shadow-lg border-2 border-white/10">
-                <MessageCircle className="h-4 w-4 sm:h-6 sm:w-6 text-zinc-200" />
+                <MessageCircle className="h-4 w-4 sm:h-6 sm:w-6 text-[#FFD700]" />
               </div>
             </div>
-            <h3 className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] font-normal text-zinc-200 mb-1.5 sm:mb-2 uppercase tracking-[0.12em]">
+            <h3 className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-1.5 sm:mb-2 uppercase tracking-[0.12em]">
               Share Your Love
             </h3>
             <p className="text-xs sm:text-sm text-zinc-400 font-[family-name:var(--font-crimson)] font-light tracking-wide leading-relaxed px-1">
@@ -229,7 +229,7 @@ function MessageForm({ onSuccess, onMessageSent }: MessageFormProps) {
                 </span>
               ) : (
                 <span className="flex items-center justify-center gap-2">
-                  <Heart className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-zinc-100" fill="currentColor" />
+                  <Heart className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#FFD700]" fill="currentColor" />
                   Send Message
                 </span>
               )}
@@ -282,7 +282,7 @@ export function Messages() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
          <div className="text-center mb-8 sm:mb-12 md:mb-16">
-           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 mb-4 sm:mb-6 md:mb-8 text-balance uppercase tracking-[0.12em] sm:tracking-[0.15em]">
+           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-4 sm:mb-6 md:mb-8 text-balance uppercase tracking-[0.12em] sm:tracking-[0.15em]">
              Love Messages
            </h2>
           
@@ -291,7 +291,7 @@ export function Messages() {
               <div className="absolute inset-0 bg-white/10 rounded-full blur-xl scale-150 animate-pulse"></div>
             </div>
             
-            <h3 className="text-base sm:text-lg md:text-xl font-[family-name:var(--font-ephesis)] text-zinc-200 mb-2 sm:mb-3 md:mb-4">
+            <h3 className="text-base sm:text-lg md:text-xl font-[family-name:var(--font-ephesis)] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-2 sm:mb-3 md:mb-4">
               Share Your Heartfelt Wishes
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-zinc-400 font-[family-name:var(--font-crimson)] font-light leading-relaxed max-w-2xl mx-auto px-2 sm:px-4 tracking-wide">
@@ -314,7 +314,7 @@ export function Messages() {
             <div className="relative inline-block mb-3 sm:mb-5">
               <div className="absolute inset-0 bg-white/10 rounded-full blur-xl scale-150"></div>
               <div className="relative w-10 h-10 sm:w-14 sm:h-14 bg-[#0F299F]/50 rounded-full flex items-center justify-center mx-auto shadow-lg border border-white/10">
-                <Heart className="h-5 w-5 sm:h-7 sm:w-7 text-zinc-200" />
+                <Heart className="h-5 w-5 sm:h-7 sm:w-7 text-[#FFD700]" />
               </div>
             </div>
             <h3 className="text-base sm:text-lg md:text-xl font-[family-name:var(--font-crimson)] text-zinc-200 mb-2 sm:mb-3">

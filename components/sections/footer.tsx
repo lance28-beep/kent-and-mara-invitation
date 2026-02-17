@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import Image from "next/image";
 import { MapPin, Calendar } from "lucide-react";
 
 export function Footer() {
@@ -37,12 +36,18 @@ export function Footer() {
           <div className="max-w-xl md:max-w-2xl w-full text-center">
             {/* Monogram – same as hero */}
             <div className="mb-8 sm:mb-9 md:mb-10 flex justify-center">
-              <Image
-                src="/monogram/newMonogram.png"
-                alt="Kent & Mara"
-                width={240}
-                height={240}
-                className="h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72 object-contain object-center brightness-0 invert"
+              <div
+                className="h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72 bg-gradient-to-br from-[#FFD700] to-[#EFBF04]"
+                style={{
+                  maskImage: 'url("/monogram/newMonogram.png")',
+                  WebkitMaskImage: 'url("/monogram/newMonogram.png")',
+                  maskSize: "contain",
+                  WebkitMaskSize: "contain",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskPosition: "center",
+                  WebkitMaskPosition: "center",
+                }}
               />
             </div>
 
@@ -60,7 +65,7 @@ export function Footer() {
                 <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
                   Thursday
                 </p>
-                <p className="text-4xl sm:text-5xl md:text-[3.25rem] font-[family-name:var(--font-crimson)] text-zinc-50 leading-none">
+                <p className="text-4xl sm:text-5xl md:text-[3.25rem] font-[family-name:var(--font-crimson)] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] leading-none">
                   26
                 </p>
                 <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
@@ -83,7 +88,7 @@ export function Footer() {
                 <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
                   Ceremony
                 </p>
-                <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-100 uppercase">
+                <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase">
                   Municipal Trial Court
                 </p>
                 <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-zinc-400 uppercase">
@@ -95,7 +100,7 @@ export function Footer() {
                 <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
                   Reception
                 </p>
-                <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-100 uppercase">
+                <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase">
                   RCBI Hotel, National Highway, San Isidro
                 </p>
                 <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.16em] text-zinc-400 uppercase">

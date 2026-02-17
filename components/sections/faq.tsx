@@ -84,7 +84,7 @@ export function FAQ() {
         <div className="flex items-center justify-center gap-3 mb-4 sm:mb-6">
           <div className="h-[1px] w-16 sm:w-24 bg-gradient-to-r from-transparent via-zinc-500 to-transparent" />
         </div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]">
           Frequently Asked Questions
         </h2>
         <div className="flex items-center justify-center gap-3 mb-4 sm:mb-6">

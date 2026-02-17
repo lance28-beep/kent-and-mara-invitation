@@ -78,14 +78,14 @@ export function PrincipalSponsors() {
         <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
           <div className="h-[1px] w-12 sm:w-16 md:w-24 bg-gradient-to-r from-transparent via-zinc-500 to-transparent" />
         </div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 mb-3 sm:mb-4 md:mb-6 uppercase tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em]">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-3 sm:mb-4 md:mb-6 uppercase tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em]">
           Godparents of Marriage
         </h2>
         <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
           <div className="h-[1px] w-12 sm:w-16 md:w-24 bg-gradient-to-r from-transparent via-zinc-500 to-transparent" />
         </div>
         <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-400 font-light max-w-2xl mx-auto leading-relaxed tracking-wide px-2 sm:px-4">
-          With deep appreciation,, we honor our Godparents of Marriage, who will stand beside us as guiding figures, offering wisdom, prayers, and love as we begin this journey together.
+          With deep appreciation, We honor our Godparents of Marriage, who will stand beside us as guiding figures, offering wisdom, prayers, and love as we begin this journey together.
         </p>
       </div>
 

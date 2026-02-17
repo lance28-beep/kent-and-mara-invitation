@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Image from "next/image"
 import StarBorder from "@/components/ui/StarBorder"
 
 export function Hero() {
@@ -63,13 +62,18 @@ export function Hero() {
           <div className="relative z-10">
             {/* Monogram */}
             <div className="mb-8 sm:mb-9 md:mb-10 flex justify-center">
-              <Image
-                src="/monogram/newMonogram.png"
-                alt="Kent & Mara"
-                width={240}
-                height={240}
-                className="h-36 w-36 sm:h-40 sm:w-40 md:h-44 md:w-44 lg:h-48 lg:w-48 object-contain object-center brightness-0 invert"
-                priority
+              <div
+                className="h-36 w-36 sm:h-40 sm:w-40 md:h-44 md:w-44 lg:h-48 lg:w-48 bg-gradient-to-br from-[#FFD700] to-[#EFBF04]"
+                style={{
+                  maskImage: 'url("/monogram/newMonogram.png")',
+                  WebkitMaskImage: 'url("/monogram/newMonogram.png")',
+                  maskSize: "contain",
+                  WebkitMaskSize: "contain",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskPosition: "center",
+                  WebkitMaskPosition: "center",
+                }}
               />
             </div>
 
@@ -82,7 +86,7 @@ export function Hero() {
             <div className="space-y-4 sm:space-y-5 md:space-y-6 mb-6 sm:mb-7 md:mb-8">
               {/* Groom */}
               <div className="space-y-1">
-                <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-50 uppercase">
+                <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase">
                   Kent
                 </p>
               </div>
@@ -94,7 +98,7 @@ export function Hero() {
 
               {/* Bride */}
               <div className="space-y-1">
-                <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] text-zinc-50 uppercase">
+                <p className="text-3xl sm:text-4xl md:text-[3rem] leading-none font-[family-name:var(--font-crimson)] tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase">
                   Mara
                 </p>
               </div>

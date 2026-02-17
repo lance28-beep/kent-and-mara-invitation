@@ -124,7 +124,7 @@ export function BookOfGuests() {
     <Section id="guests" className="relative z-0 py-16 sm:py-20 md:py-24 lg:py-28">
       {/* Section Header */}
       <div className="relative z-10 text-center mb-8 sm:mb-12 md:mb-16 px-4 sm:px-6">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]">
           Book of Guests
         </h2>
 
@@ -162,7 +162,7 @@ export function BookOfGuests() {
                     <Heart className="text-zinc-200 h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5" />
                   </div>
                   <div className="flex flex-col items-center">
-                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-[family-name:var(--font-crimson)] font-semibold text-zinc-200">
+                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-[family-name:var(--font-crimson)] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04]">
                       {totalGuests} {totalGuests === 1 ? "Guest" : "Guests"}{" "}
                       Celebrating With Us
                     </h3>

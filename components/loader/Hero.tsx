@@ -1,8 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Image from "next/image"
-
 interface HeroProps {
   onOpen: () => void
   visible: boolean
@@ -67,13 +65,18 @@ export function Hero({ onOpen, visible }: HeroProps) {
           }`}
         >
           <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 flex items-center justify-center">
-            <Image
-              src="/monogram/newMonogram.png"
-              alt="Monogram"
-              width={192}
-              height={192}
-              className="h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 object-contain brightness-0 invert drop-shadow-lg"
-              priority
+            <div
+              className="h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 bg-gradient-to-br from-[#FFD700] to-[#EFBF04] drop-shadow-lg"
+              style={{
+                maskImage: 'url("/monogram/newMonogram.png")',
+                WebkitMaskImage: 'url("/monogram/newMonogram.png")',
+                maskSize: "contain",
+                WebkitMaskSize: "contain",
+                maskRepeat: "no-repeat",
+                WebkitMaskRepeat: "no-repeat",
+                maskPosition: "center",
+                WebkitMaskPosition: "center",
+              }}
             />
           </div>
         </div>
@@ -96,13 +99,12 @@ export function Hero({ onOpen, visible }: HeroProps) {
           </h2>
 
           <h1
-            className={`text-5xl md:text-7xl font-bold tracking-wider uppercase transition-all duration-1000 ease-out delay-300 ${
+            className={`text-5xl md:text-7xl font-bold tracking-wider uppercase transition-all duration-1000 ease-out delay-300 bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] ${
               contentVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{
               fontFamily: '"Cinzel", serif',
               fontWeight: 700,
-              color: "#ffffff",
               textShadow: "0 2px 8px rgba(0, 0, 0, 0.4)",
               letterSpacing: "0.05em",
             }}

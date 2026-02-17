@@ -87,7 +87,7 @@ export function Countdown() {
               fontSize={28}
               padding={4}
               gap={2}
-              textColor="#f4f4f5"
+              textColor="#FFD700"
               fontWeight={700}
               borderRadius={6}
               horizontalPadding={3}
@@ -116,7 +116,7 @@ export function Countdown() {
         <div className="flex items-center justify-center gap-2 mb-4">
           <div className="h-[1px] w-12 sm:w-16 md:w-24 bg-gradient-to-r from-transparent via-zinc-500 to-transparent" />
         </div>
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 mb-4 sm:mb-6 uppercase tracking-[0.1em] sm:tracking-[0.12em]">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-4 sm:mb-6 uppercase tracking-[0.1em] sm:tracking-[0.12em]">
           Countdown to Our Special Day
         </h2>
         <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
@@ -149,7 +149,7 @@ export function Countdown() {
                 </div>
                 
                 {/* Save The Date text - Better readability */}
-                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] font-bold text-zinc-200 uppercase tracking-[0.25em] sm:tracking-[0.3em] mb-3 sm:mb-4">
+                <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase tracking-[0.25em] sm:tracking-[0.3em] mb-3 sm:mb-4">
                   Save The Date
                 </p>
                 
@@ -165,7 +165,7 @@ export function Countdown() {
               <div className="text-center mb-6 sm:mb-8 md:mb-10">
                 {/* Month - Script style, smaller for mobile */}
                 <div className="mb-3 sm:mb-4 md:mb-5">
-                  <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-ephesis)] text-zinc-100 leading-none">
+                  <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-ephesis)] bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] leading-none">
                     February
                   </p>
                 </div>
@@ -173,7 +173,7 @@ export function Countdown() {
                 {/* Day and Year - Horizontal layout with divider, more compact */}
                 <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-5 mb-5 sm:mb-6">
                   {/* Day - Large and bold but scaled for mobile */}
-                  <p className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-[family-name:var(--font-crimson)] font-normal text-zinc-50 leading-none">
+                  <p className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] leading-none">
                     26
                   </p>
                   
@@ -181,7 +181,7 @@ export function Countdown() {
                   <div className="h-10 sm:h-12 md:h-16 lg:h-20 w-[2px] bg-gradient-to-b from-zinc-600 via-zinc-500 to-zinc-600" />
                   
                   {/* Year - Elegant and refined, smaller for mobile */}
-                  <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 leading-none">
+                  <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] leading-none">
                     2026
                   </p>
                 </div>
@@ -197,7 +197,7 @@ export function Countdown() {
                 </div>
                 
                 {/* Time - Better readability */}
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-[family-name:var(--font-crimson)] font-semibold text-zinc-200 tracking-wide mb-3 sm:mb-4">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-[family-name:var(--font-crimson)] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] tracking-wide mb-3 sm:mb-4">
                   9:00 AM
                 </p>
                 

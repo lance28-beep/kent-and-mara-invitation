@@ -27,7 +27,7 @@ export function WeddingTimeline() {
     >
       {/* Section Header - same as Entourage */}
       <div className="relative z-10 text-center mb-6 sm:mb-10 md:mb-12 px-3 sm:px-4 md:px-6">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 mb-3 sm:mb-4 md:mb-6 uppercase tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em]">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-3 sm:mb-4 md:mb-6 uppercase tracking-[0.1em] sm:tracking-[0.12em] md:tracking-[0.15em]">
           Wedding Program Flow
         </h2>
 
@@ -103,7 +103,7 @@ export function WeddingTimeline() {
 
                         <div className="flex-1 pt-1 sm:pt-2 md:pt-3 lg:pt-4">
                           <div className="mb-2 sm:mb-3 md:mb-4">
-                            <span className="inline-block text-[10px] sm:text-xs md:text-sm lg:text-base font-[family-name:var(--font-crimson)] font-semibold text-zinc-400 uppercase tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.3em] bg-zinc-500/20 px-2 sm:px-3 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-full border border-zinc-500/30">
+                            <span className="inline-block text-[10px] sm:text-xs md:text-sm lg:text-base font-[family-name:var(--font-crimson)] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] uppercase tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.3em] bg-zinc-500/20 px-2 sm:px-3 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-full border border-zinc-500/30">
                               {item.time}
                             </span>
                           </div>

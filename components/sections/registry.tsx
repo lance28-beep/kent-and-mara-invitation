@@ -13,7 +13,7 @@ export function Registry() {
     >
       {/* Section Header */}
       <div className="relative z-10 text-center mb-8 sm:mb-12 md:mb-16 px-4 sm:px-6">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal text-zinc-100 mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-[family-name:var(--font-crimson)] font-normal bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-4 sm:mb-6 uppercase tracking-[0.12em] sm:tracking-[0.15em]">
           Gift Registry
         </h2>
         <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-400 font-light max-w-xl mx-auto leading-relaxed tracking-wide px-4">
@@ -59,8 +59,8 @@ export function Registry() {
                     <div className="w-1.5 h-1.5 bg-zinc-500 rounded-full" />
                     <div className="h-px w-12 sm:w-16 md:w-20 bg-white/20" />
                   </div>
-                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-[family-name:var(--font-crimson)] font-light text-zinc-200 leading-relaxed tracking-wide">
-                    Your presence at our wedding is the most precious gift.
+                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-[family-name:var(--font-crimson)] font-light bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] leading-relaxed tracking-wide">
+                    Your presence at our wedding is the most treasured blessing.
                   </p>
                 </div>
 
@@ -80,7 +80,7 @@ export function Registry() {
                 <div className="mt-6 sm:mt-8 md:mt-10">
                   <div className="flex flex-col items-center space-y-4 sm:space-y-6">
                     <div className="text-center">
-                      <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] font-semibold text-zinc-200 mb-1.5 sm:mb-2 uppercase tracking-wider">
+                      <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#EFBF04] mb-1.5 sm:mb-2 uppercase tracking-wider">
                         Scan to send gift
                       </p>
                       <p className="text-xs sm:text-sm text-zinc-400 font-[family-name:var(--font-crimson)]">
