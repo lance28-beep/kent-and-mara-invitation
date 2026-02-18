@@ -67,7 +67,7 @@ export function Registry() {
                 {/* Second message */}
                 <div>
                   <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] font-light text-zinc-400 leading-relaxed tracking-wide">
-                    Should you wish to honor us with a gift, a cash contribution toward our future together would be sincerely appreciated.
+                  Should you wish to honor us with a gift, a monetary blessing toward our future together would be sincerely appreciated.
                   </p>
                   <div className="flex items-center justify-center gap-3 sm:gap-4 mt-5 sm:mt-6">
                     <div className="h-px w-12 sm:w-16 md:w-20 bg-white/20" />
