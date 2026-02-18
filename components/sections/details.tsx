@@ -313,7 +313,7 @@ export function Details() {
                       {receptionAddress}
                     </p>
                     <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] text-zinc-300 leading-relaxed mt-1">
-                      Reception Time: 3:00 PM
+                      Reception Time: 3:30 PM
                     </p>
                   </div>
                   {/* QR Code */}

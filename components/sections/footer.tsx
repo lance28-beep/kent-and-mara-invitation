@@ -69,7 +69,7 @@ export function Footer() {
                   26
                 </p>
                 <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-500 uppercase">
-                  At 9 AM
+                  At 2:00 PM
                 </p>
               </div>
               <p className="text-xs sm:text-sm md:text-base font-[family-name:var(--font-crimson)] tracking-[0.3em] text-zinc-400 uppercase">
