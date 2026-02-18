@@ -13,7 +13,7 @@ interface TimelineEvent {
 
 const timelineEvents: TimelineEvent[] = [
   { time: "2:00 PM", event: "Ceremony Begins", image: "/TimelineImage/WeddingCeremony.png" },
-  { time: "3:30 PM", event: "Fellowship (to be followed by Program)", image: "/TimelineImage/arrivalimage.png" },
+  { time: "3:30 PM", event: "Guest arrival & Fellowship (to be followed by Program)", image: "/TimelineImage/arrivalimage.png" },
   { time: "5:00 PM", event: "Early Dinner & Celebration", image: "/TimelineImage/DinnerTime.png" },
   { time: "7:30 PM", event: "Closing Blessings & Fond Farewell", image: "/TimelineImage/ext.png"  },
 ]

@@ -18,7 +18,7 @@ const faqItems: FAQItem[] = [
   {
     question: "What is the dress code?",
     answer:
-      "Guest Attire:Formal attire in Navy Blue, Royal Blue, Gold, or White — suits and tie are most preferred. Or a long‑sleeved shirt in these shades.\n• Elegant attire in Navy Blue, Royal Blue, Gold, or White — whether glittery, silky, or simply refined.\n\nPrincipal Sponsors follow the same guidelines:\n• Gentlemen: Formal attire in the wedding motif colors\n• Ladies: Elegant attire in the wedding motif colors\n\nPlease adhere to the dress code to maintain the elegance of our celebration.",
+      "Guest Attire: n/a\nGentlemen: Formal attire in Navy Blue, Royal Blue, Gold, or White — suits and tie are most preferred. Or a long‑sleeved shirt in these shades.\n•A Ladies: Elegant attire in Navy Blue, Royal Blue, Gold, or White — whether glittery, silky, or simply refined.\n\nPrincipal Sponsors follow the same guidelines:\n• Gentlemen: Formal attire in the wedding motif colors\n• Ladies: Elegant attire in the wedding motif colors\n\nPlease adhere to the dress code to maintain the elegance of our celebration.",
   },
   {
     question: "When is the RSVP deadline?",
