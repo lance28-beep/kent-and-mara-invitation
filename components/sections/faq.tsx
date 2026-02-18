@@ -13,12 +13,12 @@ const faqItems: FAQItem[] = [
   {
     question: "When and where is the wedding?",
     answer:
-      "Ceremony will be held on Thursday, February 26, 2026, at 9:00 AM at Municipal Trial Court, Prosperidad, Agusan del Sur. The reception will follow at RCBI Hotel, National Highway, San Isidro, San Francisco, Agusan del Sur.",
+      "Ceremony will be held on Thursday, February 26, 2026, at 2:00 PM at Municipal Trial Court, Prosperidad, Agusan del Sur. The reception will follow at RCBI Hotel, National Highway, San Isidro, San Francisco, Agusan del Sur.",
   },
   {
     question: "What is the dress code?",
     answer:
-      "Guest Attire:\n• Gentlemen: Formal attire in Navy Blue, Royal Blue, Gold, Sky Blue, or White — suits and tie are most preferred. Or a long‑sleeved shirt in these shades.\n• Ladies: Elegant attire in Navy Blue, Royal Blue, Gold, Sky Blue, or White — whether glittery, silky, or simply refined.\n\nPrincipal Sponsors follow the same guidelines:\n• Gentlemen: Formal attire in the wedding motif colors\n• Ladies: Elegant attire in the wedding motif colors\n\nPlease adhere to the dress code to maintain the elegance of our celebration.",
+      "Guest Attire:Formal attire in Navy Blue, Royal Blue, Gold, or White — suits and tie are most preferred. Or a long‑sleeved shirt in these shades.\n• Ladies: Elegant attire in Navy Blue, Royal Blue, Gold, Sky Blue, or White — whether glittery, silky, or simply refined.\n\nPrincipal Sponsors follow the same guidelines:\n• Gentlemen: Formal attire in the wedding motif colors\n• Ladies: Elegant attire in the wedding motif colors\n\nPlease adhere to the dress code to maintain the elegance of our celebration.",
   },
   {
     question: "When is the RSVP deadline?",
@@ -31,6 +31,11 @@ const faqItems: FAQItem[] = [
       "As we celebrate this moment with our closest loved ones, we kindly ask that attendance be limited to those named on the invitation. Thank you for your understanding and cooperation!",
   },
   {
+    question: "Am I invited to the ceremony, the reception, or both?",
+    answer:
+      "Because our courtroom ceremony has very limited seating, it will be an intimate gathering with immediate family and principal sponsors. Many of our beloved guests are invited to join us at the reception only. Your invitation will indicate where we will be celebrating together—ceremony & reception, or reception only. If you’re unsure, please feel free to reach out to us directly.",
+  },
+  {
     question: "Are children allowed?",
     answer:
       "We love your little ones, but to keep the celebration intimate, we kindly request an adults-only event. Children in our family and the entourage are the exception. We appreciate your understanding!",
@@ -38,12 +43,12 @@ const faqItems: FAQItem[] = [
   {
     question: "What is your gift policy?",
     answer:
-      "We kindly ask for no boxed gifts. Monetary gifts are welcome but never expected. Your presence at our wedding is the most precious gift we could ask for! If you wish to send a monetary gift, you can scan the GCash QR code in our Gift Registry section.",
+      "Your presence at our wedding is the most precious gift we could ask for! If you wish to send a monetary gift, you can scan the GCash QR code in our Gift Registry section.",
   },
   {
     question: "Can I take photos during the ceremony?",
     answer:
-      "We'd love for everyone to be fully present. Please avoid posting photos during the celebration or ahead of time—our photographers will take care of the memories. We want everyone to be in the moment with us!",
+      "We'd love for everyone to be fully present. Please avoid posting photos during the celebration or ahead of time. We want everyone to be in the moment with us!",
   },
   {
     question: "What if I have dietary restrictions or allergies?",
@@ -58,7 +63,7 @@ const faqItems: FAQItem[] = [
   {
     question: "Is there parking available?",
     answer:
-      "Yes! Both Municipal Trial Court and RCBI Hotel have parking facilities. We recommend arriving 15-20 minutes early to secure a spot and get settled comfortably. Ceremony begins at 9:00 AM.",
+      "Yes! Both Municipal Trial Court and RCBI Hotel have parking facilities. We recommend arriving 15-20 minutes early to secure a spot and get settled comfortably. ",
   },
   {
     question: "What should I do if I need to cancel or update my RSVP?",

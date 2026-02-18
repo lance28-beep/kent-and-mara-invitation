@@ -12,11 +12,10 @@ interface TimelineEvent {
 }
 
 const timelineEvents: TimelineEvent[] = [
-  { time: "8:30 AM", event: "Guest Arrival & Welcome", image: "/TimelineImage/arrivalimage.png" },
-  { time: "9:00 AM", event: "Ceremony Begins", image: "/TimelineImage/WeddingCeremony.png" },
-  { time: "11:00 AM", event: "Cocktail Hour & Fellowship", image: "/TimelineImage/Cocktail2.png" },
-  { time: "12:00 PM", event: "Lunch & Celebration", image: "/TimelineImage/DinnerTime.png" },
-  { time: "2:00 PM", event: "Closing Blessings & Fond Farewell", image: "/TimelineImage/ext.png"  },
+  { time: "2:00 PM", event: "Ceremony Begins", image: "/TimelineImage/WeddingCeremony.png" },
+  { time: "3:30 PM", event: "Guest Arrival & Welcome", image: "/TimelineImage/arrivalimage.png" },
+  { time: "5:00 PM", event: "Lunch & Celebration", image: "/TimelineImage/DinnerTime.png" },
+  { time: "7:30 PM", event: "Closing Blessings & Fond Farewell", image: "/TimelineImage/ext.png"  },
 ]
 
 export function WeddingTimeline() {

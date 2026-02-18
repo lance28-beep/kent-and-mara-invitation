@@ -144,8 +144,8 @@ export function SnapShare() {
             Snap & Share
           </h2>
           <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-400 font-light max-w-xl mx-auto leading-relaxed tracking-wide px-4">
-            Help us capture and share the magic of our special day
-          </p>
+          Join us in capturing and celebrating the moments of our wedding day!
+         </p>
         </motion.div>
 
         <motion.div

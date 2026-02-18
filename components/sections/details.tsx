@@ -1,7 +1,7 @@
 "use client"
 
 import { Section } from "@/components/section"
-import { Shirt, Copy, Check, Navigation, MapPin, Gift, Mail } from "lucide-react"
+import { Shirt, Copy, Check, Navigation, MapPin, Mail } from "lucide-react"
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import { QRCodeSVG } from "qrcode.react"
@@ -174,6 +174,9 @@ export function Details() {
                     <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] text-zinc-400 leading-relaxed mt-1">
                       {ceremonyVenueDetail}
                     </p>
+                    <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] text-zinc-300 leading-relaxed mt-1">
+                      Ceremony Time: 2:00 PM
+                    </p>
                   </div>
                   {/* QR Code */}
                   <div className="flex flex-col items-center gap-1.5 sm:gap-2 flex-shrink-0">
@@ -308,6 +311,9 @@ export function Details() {
                     </p>
                     <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] text-zinc-400 leading-relaxed">
                       {receptionAddress}
+                    </p>
+                    <p className="text-[10px] sm:text-xs md:text-sm font-[family-name:var(--font-crimson)] text-zinc-300 leading-relaxed mt-1">
+                      Reception Time: 3:00 PM
                     </p>
                   </div>
                   {/* QR Code */}
@@ -531,7 +537,17 @@ export function Details() {
                   <div className="flex items-start gap-3 sm:gap-4">
                     <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-300 mt-0.5 flex-shrink-0" aria-hidden />
                     <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-200 leading-relaxed">
-                    With love, we kindly ask that this invitation not be shared and be honored only by those who received it.
+                      With love, we kindly ask that this invitation not be shared and be honored only by those who received it.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Ceremony & Reception Clarification */}
+                <div className="bg-zinc-900/50 rounded-xl p-5 sm:p-6 md:p-7 border border-white/10">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-zinc-300 mt-0.5 flex-shrink-0" aria-hidden />
+                    <p className="text-sm sm:text-base md:text-lg font-[family-name:var(--font-crimson)] text-zinc-200 leading-relaxed">
+                      Due to limited space at the courtroom, our ceremony will be an intimate gathering with immediate family and principal sponsors. Many of our beloved guests are invited to join us at the reception only. Your invitation will show clearly where we will be celebrating together—ceremony &amp; reception, or reception only.
                     </p>
                   </div>
                 </div>
